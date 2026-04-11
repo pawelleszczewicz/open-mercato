@@ -36,6 +36,10 @@ describe('extractFeatureStrings', () => {
       ]),
     ).toEqual(['catalog.view', 'sales.edit'])
   })
+
+  it('returns an empty array when no feature entries are provided', () => {
+    expect(extractFeatureStrings([])).toEqual([])
+  })
 })
 
 describe('matchFeature', () => {
@@ -57,6 +61,11 @@ describe('matchFeature', () => {
     expect(matchFeature('cataloging.view', 'catalog.*')).toBe(false)
     expect(matchFeature('sales.view', 'catalog.*')).toBe(false)
   })
+
+  it('does not treat concrete grants as satisfying bare module requirements', () => {
+    expect(matchFeature('catalog', 'catalog.view')).toBe(false)
+    expect(matchFeature('catalog.products', 'catalog.products.edit')).toBe(false)
+  })
 })
 
 describe('hasAllFeatures', () => {
@@ -70,6 +79,10 @@ describe('hasAllFeatures', () => {
 
   it('returns true when every required feature is satisfied', () => {
     expect(hasAllFeatures(['catalog.view', 'sales.edit'], ['catalog.*', 'sales.edit'])).toBe(true)
+  })
+
+  it('treats bare module requirements as satisfied by a matching module wildcard', () => {
+    expect(hasAllFeatures(['catalog'], ['catalog.*'])).toBe(true)
   })
 
   it('returns false when any required feature is missing', () => {
