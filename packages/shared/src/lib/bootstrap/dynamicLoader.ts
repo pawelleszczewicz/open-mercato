@@ -3,6 +3,7 @@ import { findAppRoot, type AppRoot } from './appResolver'
 import { registerEntityIds } from '../encryption/entityIds'
 import path from 'node:path'
 import fs from 'node:fs'
+import { createRequire } from 'node:module'
 import { pathToFileURL } from 'node:url'
 
 /**
@@ -11,7 +12,8 @@ import { pathToFileURL } from 'node:url'
  * The compiled file is written next to the source file with a .mjs extension.
  */
 async function compileAndImport(tsPath: string): Promise<Record<string, unknown>> {
-  const jsPath = tsPath.replace(/\.ts$/, '.mjs')
+  const compiledExtension = process.env.JEST_WORKER_ID ? '.cjs' : '.mjs'
+  const jsPath = tsPath.replace(/\.ts$/, compiledExtension)
 
   // Check if we need to recompile (source newer than compiled)
   const tsExists = fs.existsSync(tsPath)
@@ -77,13 +79,20 @@ async function compileAndImport(tsPath: string): Promise<Record<string, unknown>
       entryPoints: [tsPath],
       outfile: jsPath,
       bundle: true,
-      format: 'esm',
+      format: compiledExtension === '.cjs' ? 'cjs' : 'esm',
       platform: 'node',
       target: 'node18',
       plugins: [aliasPlugin, externalNonJsonPlugin],
       // Allow JSON imports
       loader: { '.json': 'json' },
     })
+  }
+
+  if (compiledExtension === '.cjs') {
+    // Jest's CommonJS runtime cannot execute temp .mjs imports without VM ESM support.
+    const requireCompiled = createRequire(jsPath)
+
+    return requireCompiled(jsPath)
   }
 
   // Import the compiled JavaScript
