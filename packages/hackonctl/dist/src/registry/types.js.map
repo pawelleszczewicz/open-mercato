@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/registry/types.ts"],
-  "sourcesContent": ["import type { Lane } from '../config/schema'\n\nexport type RiskZone = 'green' | 'yellow' | 'red'\n\nexport type DuplicateRisk = 'none' | 'low' | 'medium' | 'likely_duplicate'\n\nexport type SourceType = 'github_issue' | 'repo_signal' | 'integration_gap'\n\nexport interface TaskSource {\n  type: SourceType\n  id: string\n  title: string\n}\n\nexport interface TaskRecord {\n  taskId: string\n  source: TaskSource\n  lane: Lane\n  riskZone: RiskZone\n  branchName: string\n  prNumber: number | null\n  expectedClasses: string[]\n  duplicateRisk: DuplicateRisk\n  abandoned: boolean\n  createdAt: string\n  notes: string[]\n}\n\nexport interface TaskRegistry {\n  version: 1\n  nextTaskNumber: number\n  tasks: TaskRecord[]\n}\n\nexport const EMPTY_REGISTRY: TaskRegistry = {\n  version: 1,\n  nextTaskNumber: 1,\n  tasks: [],\n}\n"],
-  "mappings": "AAkCO,MAAM,iBAA+B;AAAA,EAC1C,SAAS;AAAA,EACT,gBAAgB;AAAA,EAChB,OAAO,CAAC;AACV;",
-  "names": []
-}

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/gates/profiles.ts"],
-  "sourcesContent": ["import type { Lane, HackonConfig } from '../config/schema'\n\nexport interface GateProfile {\n  lint: boolean\n  typecheck: boolean\n  test: boolean\n  diffCheck: boolean\n  integrationTest: boolean\n  changedFileLimit: number\n  diffLineLimit: number\n}\n\nexport function getGateProfile(config: HackonConfig, lane: Lane): GateProfile {\n  return {\n    lint: true,\n    typecheck: true,\n    test: true,\n    diffCheck: true,\n    integrationTest: lane === 'tests',\n    changedFileLimit: config.policy.changedFileLimit[lane] ?? 20,\n    diffLineLimit: config.policy.diffLineLimit[lane] ?? 600,\n  }\n}\n"],
-  "mappings": "AAYO,SAAS,eAAe,QAAsB,MAAyB;AAC5E,SAAO;AAAA,IACL,MAAM;AAAA,IACN,WAAW;AAAA,IACX,MAAM;AAAA,IACN,WAAW;AAAA,IACX,iBAAiB,SAAS;AAAA,IAC1B,kBAAkB,OAAO,OAAO,iBAAiB,IAAI,KAAK;AAAA,IAC1D,eAAe,OAAO,OAAO,cAAc,IAAI,KAAK;AAAA,EACtD;AACF;",
-  "names": []
-}

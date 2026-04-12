@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/github/comments.ts"],
-  "sourcesContent": ["import type { HackonConfig } from '../config/schema'\n\nexport type AgentRole = 'coordinator' | 'implementer' | 'reviewer'\n\nexport function formatComment(config: HackonConfig, role: AgentRole, body: string): string {\n  const prefix = config.github.commentPrefixes[role]\n  return `${prefix} ${body}`\n}\n\nexport function parseCommentRole(config: HackonConfig, comment: string): AgentRole | null {\n  for (const [role, prefix] of Object.entries(config.github.commentPrefixes)) {\n    if (comment.startsWith(prefix)) {\n      return role as AgentRole\n    }\n  }\n  return null\n}\n"],
-  "mappings": "AAIO,SAAS,cAAc,QAAsB,MAAiB,MAAsB;AACzF,QAAM,SAAS,OAAO,OAAO,gBAAgB,IAAI;AACjD,SAAO,GAAG,MAAM,IAAI,IAAI;AAC1B;AAEO,SAAS,iBAAiB,QAAsB,SAAmC;AACxF,aAAW,CAAC,MAAM,MAAM,KAAK,OAAO,QAAQ,OAAO,OAAO,eAAe,GAAG;AAC1E,QAAI,QAAQ,WAAW,MAAM,GAAG;AAC9B,aAAO;AAAA,IACT;AAAA,EACF;AACA,SAAO;AACT;",
-  "names": []
-}

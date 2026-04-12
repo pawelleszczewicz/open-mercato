@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/registry/id.ts"],
-  "sourcesContent": ["export function formatTaskId(num: number): string {\n  return `HCK-${String(num).padStart(4, '0')}`\n}\n\nexport function parseTaskId(id: string): number | null {\n  const match = id.match(/^HCK-(\\d{4,})$/)\n  if (!match) return null\n  return parseInt(match[1], 10)\n}\n"],
-  "mappings": "AAAO,SAAS,aAAa,KAAqB;AAChD,SAAO,OAAO,OAAO,GAAG,EAAE,SAAS,GAAG,GAAG,CAAC;AAC5C;AAEO,SAAS,YAAY,IAA2B;AACrD,QAAM,QAAQ,GAAG,MAAM,gBAAgB;AACvC,MAAI,CAAC,MAAO,QAAO;AACnB,SAAO,SAAS,MAAM,CAAC,GAAG,EAAE;AAC9B;",
-  "names": []
-}

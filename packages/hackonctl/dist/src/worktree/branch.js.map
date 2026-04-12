@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/worktree/branch.ts"],
-  "sourcesContent": ["import type { Lane } from '../config/schema'\n\nconst LANE_PREFIX: Record<Lane, string> = {\n  docs: 'docs',\n  tests: 'test',\n  simple_bugs: 'fix',\n  experimental: 'feat',\n}\n\nexport function generateBranchName(lane: Lane, taskId: string, slug: string): string {\n  const prefix = LANE_PREFIX[lane]\n  const cleanSlug = slug\n    .toLowerCase()\n    .replace(/[^a-z0-9]+/g, '-')\n    .replace(/^-|-$/g, '')\n    .slice(0, 60)\n  return `${prefix}/hackon/${taskId.toLowerCase()}-${cleanSlug}`\n}\n\nexport function slugify(title: string): string {\n  return title\n    .toLowerCase()\n    .replace(/[^a-z0-9]+/g, '-')\n    .replace(/^-|-$/g, '')\n    .slice(0, 50)\n}\n"],
-  "mappings": "AAEA,MAAM,cAAoC;AAAA,EACxC,MAAM;AAAA,EACN,OAAO;AAAA,EACP,aAAa;AAAA,EACb,cAAc;AAChB;AAEO,SAAS,mBAAmB,MAAY,QAAgB,MAAsB;AACnF,QAAM,SAAS,YAAY,IAAI;AAC/B,QAAM,YAAY,KACf,YAAY,EACZ,QAAQ,eAAe,GAAG,EAC1B,QAAQ,UAAU,EAAE,EACpB,MAAM,GAAG,EAAE;AACd,SAAO,GAAG,MAAM,WAAW,OAAO,YAAY,CAAC,IAAI,SAAS;AAC9D;AAEO,SAAS,QAAQ,OAAuB;AAC7C,SAAO,MACJ,YAAY,EACZ,QAAQ,eAAe,GAAG,EAC1B,QAAQ,UAAU,EAAE,EACpB,MAAM,GAAG,EAAE;AAChB;",
-  "names": []
-}
