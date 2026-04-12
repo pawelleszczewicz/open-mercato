@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/gates/profiles.ts"],
+  "sourcesContent": ["import type { Lane } from '../config/schema.js'\n\nexport interface GateProfile {\n  runLint: boolean\n  runTypecheck: boolean\n  runTest: boolean\n  runIntegrationTest: boolean\n}\n\nconst GATE_PROFILES: Record<Lane, GateProfile> = {\n  docs: {\n    runLint: true,\n    runTypecheck: false,\n    runTest: false,\n    runIntegrationTest: false,\n  },\n  tests: {\n    runLint: true,\n    runTypecheck: true,\n    runTest: true,\n    runIntegrationTest: false,\n  },\n  simple_bugs: {\n    runLint: true,\n    runTypecheck: true,\n    runTest: true,\n    runIntegrationTest: false,\n  },\n  experimental: {\n    runLint: true,\n    runTypecheck: true,\n    runTest: true,\n    runIntegrationTest: true,\n  },\n}\n\nexport function getGateProfile(lane: Lane): GateProfile {\n  return GATE_PROFILES[lane]\n}\n"],
+  "mappings": "AASA,MAAM,gBAA2C;AAAA,EAC/C,MAAM;AAAA,IACJ,SAAS;AAAA,IACT,cAAc;AAAA,IACd,SAAS;AAAA,IACT,oBAAoB;AAAA,EACtB;AAAA,EACA,OAAO;AAAA,IACL,SAAS;AAAA,IACT,cAAc;AAAA,IACd,SAAS;AAAA,IACT,oBAAoB;AAAA,EACtB;AAAA,EACA,aAAa;AAAA,IACX,SAAS;AAAA,IACT,cAAc;AAAA,IACd,SAAS;AAAA,IACT,oBAAoB;AAAA,EACtB;AAAA,EACA,cAAc;AAAA,IACZ,SAAS;AAAA,IACT,cAAc;AAAA,IACd,SAAS;AAAA,IACT,oBAAoB;AAAA,EACtB;AACF;AAEO,SAAS,eAAe,MAAyB;AACtD,SAAO,cAAc,IAAI;AAC3B;",
+  "names": []
+}

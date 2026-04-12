@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/lib/pre-pr-blocks.ts"],
+  "sourcesContent": ["import type { TaskRecord } from './state/model.js'\n\nexport function shouldAutoAbandonPrePrBlockedTask(\n  task: Pick<TaskRecord, 'prNumber' | 'prUrl'>,\n  checkpoint: 'before_validation' | 'before_draft_pr_open' | 'before_ready' | 'before_portal_submission',\n): boolean {\n  if (!['before_validation', 'before_draft_pr_open'].includes(checkpoint)) {\n    return false\n  }\n\n  return task.prNumber == null && task.prUrl == null\n}\n"],
+  "mappings": "AAEO,SAAS,kCACd,MACA,YACS;AACT,MAAI,CAAC,CAAC,qBAAqB,sBAAsB,EAAE,SAAS,UAAU,GAAG;AACvE,WAAO;AAAA,EACT;AAEA,SAAO,KAAK,YAAY,QAAQ,KAAK,SAAS;AAChD;",
+  "names": []
+}

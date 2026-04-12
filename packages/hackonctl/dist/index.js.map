@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts"],
+  "sourcesContent": ["export { run } from './hackonctl.js'\nexport * from './lib/config.js'\nexport * from './lib/state/model.js'\nexport * from './lib/state/store.js'\nexport * from './lib/qualification.js'\nexport * from './lib/duplicates.js'\nexport * from './lib/discovery.js'\nexport * from './lib/dispatch.js'\nexport * from './lib/codex.js'\nexport * from './lib/change-policy.js'\nexport * from './lib/task-focus.js'\n"],
+  "mappings": "AAAA,SAAS,WAAW;AACpB,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;AACd,cAAc;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/lib/drive-loop.ts"],
+  "sourcesContent": ["export type GreenDriveCycleLike = {\n  dispatchedTaskIds: string[]\n  progressResults: Array<{\n    result: {\n      exitCode: number\n    }\n  }>\n  discoveryBatches: Array<{\n    qualifiedTaskIds: string[]\n  }>\n}\n\nexport function shouldContinueGreenDriveLoopImmediately(\n  dispatchCapacity: number,\n  cycle: GreenDriveCycleLike,\n): boolean {\n  if (dispatchCapacity <= 0) {\n    return false\n  }\n\n  if (cycle.dispatchedTaskIds.length > 0) {\n    return true\n  }\n\n  if (cycle.discoveryBatches.some((batch) => batch.qualifiedTaskIds.length > 0)) {\n    return true\n  }\n\n  return cycle.progressResults.some((result) => result.result.exitCode === 0)\n}\n"],
+  "mappings": "AAYO,SAAS,wCACd,kBACA,OACS;AACT,MAAI,oBAAoB,GAAG;AACzB,WAAO;AAAA,EACT;AAEA,MAAI,MAAM,kBAAkB,SAAS,GAAG;AACtC,WAAO;AAAA,EACT;AAEA,MAAI,MAAM,iBAAiB,KAAK,CAAC,UAAU,MAAM,iBAAiB,SAAS,CAAC,GAAG;AAC7E,WAAO;AAAA,EACT;AAEA,SAAO,MAAM,gBAAgB,KAAK,CAAC,WAAW,OAAO,OAAO,aAAa,CAAC;AAC5E;",
+  "names": []
+}

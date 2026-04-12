@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/lib/prune.ts"],
+  "sourcesContent": ["import type { TaskRecord } from './state/model.js'\nimport type { TaskState } from './types.js'\n\nexport const defaultPrunableWorktreeStates: TaskState[] = [\n  'abandoned',\n  'judge_pending',\n  'judge_approved',\n  'judge_adjusted',\n  'judge_rejected',\n]\n\nexport function isTaskWorktreePrunable(task: TaskRecord, allowedStates: ReadonlyArray<TaskState> = defaultPrunableWorktreeStates): boolean {\n  return Boolean(task.worktreePath) && allowedStates.includes(task.state)\n}\n\nexport function selectPrunableTaskWorktrees(tasks: TaskRecord[], allowedStates: ReadonlyArray<TaskState> = defaultPrunableWorktreeStates): TaskRecord[] {\n  return tasks.filter((task) => isTaskWorktreePrunable(task, allowedStates))\n}\n"],
+  "mappings": "AAGO,MAAM,gCAA6C;AAAA,EACxD;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,EACA;AACF;AAEO,SAAS,uBAAuB,MAAkB,gBAA0C,+BAAwC;AACzI,SAAO,QAAQ,KAAK,YAAY,KAAK,cAAc,SAAS,KAAK,KAAK;AACxE;AAEO,SAAS,4BAA4B,OAAqB,gBAA0C,+BAA6C;AACtJ,SAAO,MAAM,OAAO,CAAC,SAAS,uBAAuB,MAAM,aAAa,CAAC;AAC3E;",
+  "names": []
+}

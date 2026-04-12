@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/discovery/rank.ts"],
+  "sourcesContent": ["import type { Candidate } from './types.js'\n\nexport function rankCandidates(candidates: Candidate[]): Candidate[] {\n  return [...candidates].sort((a, b) => {\n    if (b.expectedPoints !== a.expectedPoints) {\n      return b.expectedPoints - a.expectedPoints\n    }\n\n    const confidenceOrder = { high: 3, medium: 2, low: 1 }\n    if (confidenceOrder[b.confidence] !== confidenceOrder[a.confidence]) {\n      return confidenceOrder[b.confidence] - confidenceOrder[a.confidence]\n    }\n\n    const riskOrder = { green: 3, yellow: 2, red: 1 }\n    return riskOrder[b.suggestedRisk] - riskOrder[a.suggestedRisk]\n  })\n}\n"],
+  "mappings": "AAEO,SAAS,eAAe,YAAsC;AACnE,SAAO,CAAC,GAAG,UAAU,EAAE,KAAK,CAAC,GAAG,MAAM;AACpC,QAAI,EAAE,mBAAmB,EAAE,gBAAgB;AACzC,aAAO,EAAE,iBAAiB,EAAE;AAAA,IAC9B;AAEA,UAAM,kBAAkB,EAAE,MAAM,GAAG,QAAQ,GAAG,KAAK,EAAE;AACrD,QAAI,gBAAgB,EAAE,UAAU,MAAM,gBAAgB,EAAE,UAAU,GAAG;AACnE,aAAO,gBAAgB,EAAE,UAAU,IAAI,gBAAgB,EAAE,UAAU;AAAA,IACrE;AAEA,UAAM,YAAY,EAAE,OAAO,GAAG,QAAQ,GAAG,KAAK,EAAE;AAChD,WAAO,UAAU,EAAE,aAAa,IAAI,UAAU,EAAE,aAAa;AAAA,EAC/D,CAAC;AACH;",
+  "names": []
+}

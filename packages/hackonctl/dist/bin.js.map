@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/bin.ts"],
+  "sourcesContent": ["import { run } from './hackonctl.js'\n\nasync function main(): Promise<void> {\n  const exitCode = await run(process.argv)\n  process.exit(exitCode)\n}\n\nmain().catch((error: unknown) => {\n  if (error instanceof Error) {\n    console.error(error.message)\n  } else {\n    console.error(error)\n  }\n  process.exit(1)\n})\n"],
+  "mappings": "AAAA,SAAS,WAAW;AAEpB,eAAe,OAAsB;AACnC,QAAM,WAAW,MAAM,IAAI,QAAQ,IAAI;AACvC,UAAQ,KAAK,QAAQ;AACvB;AAEA,KAAK,EAAE,MAAM,CAAC,UAAmB;AAC/B,MAAI,iBAAiB,OAAO;AAC1B,YAAQ,MAAM,MAAM,OAAO;AAAA,EAC7B,OAAO;AACL,YAAQ,MAAM,KAAK;AAAA,EACrB;AACA,UAAQ,KAAK,CAAC;AAChB,CAAC;",
+  "names": []
+}

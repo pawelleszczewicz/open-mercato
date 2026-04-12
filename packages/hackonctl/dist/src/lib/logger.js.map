@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/lib/logger.ts"],
+  "sourcesContent": ["export type LogLevel = 'info' | 'warn' | 'error' | 'debug'\n\nexport function log(level: LogLevel, message: string, data?: Record<string, unknown>): void {\n  const prefix = {\n    info: '\\x1b[36m[info]\\x1b[0m',\n    warn: '\\x1b[33m[warn]\\x1b[0m',\n    error: '\\x1b[31m[error]\\x1b[0m',\n    debug: '\\x1b[90m[debug]\\x1b[0m',\n  }[level]\n\n  const line = data\n    ? `${prefix} ${message} ${JSON.stringify(data)}`\n    : `${prefix} ${message}`\n\n  if (level === 'error') {\n    console.error(line)\n  } else {\n    console.log(line)\n  }\n}\n"],
+  "mappings": "AAEO,SAAS,IAAI,OAAiB,SAAiB,MAAsC;AAC1F,QAAM,SAAS;AAAA,IACb,MAAM;AAAA,IACN,MAAM;AAAA,IACN,OAAO;AAAA,IACP,OAAO;AAAA,EACT,EAAE,KAAK;AAEP,QAAM,OAAO,OACT,GAAG,MAAM,IAAI,OAAO,IAAI,KAAK,UAAU,IAAI,CAAC,KAC5C,GAAG,MAAM,IAAI,OAAO;AAExB,MAAI,UAAU,SAAS;AACrB,YAAQ,MAAM,IAAI;AAAA,EACpB,OAAO;AACL,YAAQ,IAAI,IAAI;AAAA,EAClB;AACF;",
+  "names": []
+}

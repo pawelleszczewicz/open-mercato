@@ -1,0 +1,1019 @@
+{
+  "version": 1,
+  "runtime": {
+    "stateDir": ".state",
+    "workspaceDir": ".workspace"
+  },
+  "policy": {
+    "maxActiveExperimental": 1,
+    "requireDifferentiationNoteOnOverride": true,
+    "laneGuardrails": {
+      "docs": {
+        "maxChangedFiles": 20,
+        "maxDiffLines": 20000,
+        "forbiddenPathPatterns": []
+      },
+      "tests": {
+        "maxChangedFiles": 30,
+        "maxDiffLines": 1500,
+        "forbiddenPathPatterns": []
+      },
+      "simple_bugs": {
+        "maxChangedFiles": 35,
+        "maxDiffLines": 20000,
+        "forbiddenPathPatterns": []
+      },
+      "experimental": {
+        "maxChangedFiles": 80,
+        "maxDiffLines": 5000,
+        "forbiddenPathPatterns": []
+      }
+    }
+  },
+  "github": {
+    "provider": "github_mcp_then_pat_api",
+    "mcpUrl": "https://api.githubcopilot.com/mcp/",
+    "mcpTokenEnvVar": "GITHUB_PERSONAL_ACCESS_TOKEN"
+  },
+  "codex": {
+    "binary": "codex",
+    "implementer": {
+      "model": "gpt-5.4",
+      "sandboxMode": "danger-full-access",
+      "timeoutMs": 2700000,
+      "maxAutomaticRetries": 1,
+      "failFastOnApprovalSensitive": true
+    },
+    "testImplementer": {
+      "model": "gpt-5.4",
+      "sandboxMode": "danger-full-access",
+      "timeoutMs": 3600000,
+      "maxAutomaticRetries": 1,
+      "failFastOnApprovalSensitive": true
+    },
+    "reviewer": {
+      "model": "gpt-5.4",
+      "sandboxMode": "danger-full-access",
+      "timeoutMs": 1200000,
+      "maxAutomaticRetries": 1,
+      "failFastOnApprovalSensitive": true
+    }
+  },
+  "validationProfiles": [
+    {
+      "id": "docs-basic",
+      "description": "Diff hygiene checks for documentation-only changes.",
+      "commands": [
+        [
+          "git",
+          "diff",
+          "--check"
+        ]
+      ],
+      "cwdMode": "worktree",
+      "required": true,
+      "parser": "exit_code",
+      "baselineProfile": "none",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "docs-app-build",
+      "description": "Build the docs app when docs application sources are touched.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "open-mercato-docs",
+          "build"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": false,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "app-package-checks",
+      "description": "Typecheck and unit tests for the main app workspace.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/app",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/app",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "ai-assistant-package-checks",
+      "description": "Typecheck and unit tests for the AI assistant package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/ai-assistant",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/ai-assistant",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "cache-package-checks",
+      "description": "Typecheck and unit tests for the cache package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/cache",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/cache",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "checkout-package-checks",
+      "description": "Typecheck and unit tests for the checkout package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/checkout",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/checkout",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "cli-package-checks",
+      "description": "Typecheck and unit tests for the CLI workspace package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/cli",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/cli",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "content-package-checks",
+      "description": "Typecheck and unit tests for the content package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/content",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/content",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "core-package-checks",
+      "description": "Typecheck and unit tests for the core package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/core",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/core",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "create-app-package-checks",
+      "description": "Typecheck and tests for create-mercato-app.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "create-mercato-app",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "create-mercato-app",
+          "test"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "enterprise-package-checks",
+      "description": "Typecheck and unit tests for the enterprise package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/enterprise",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/enterprise",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "events-package-checks",
+      "description": "Typecheck and unit tests for the events package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/events",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/events",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "gateway-stripe-package-checks",
+      "description": "Typecheck and unit tests for the Stripe gateway package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/gateway-stripe",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/gateway-stripe",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "integration-test-gap-coverage",
+      "description": "Targeted spec-coverage check for dedicated integration-gap tasks.",
+      "commands": [
+        [
+          "yarn",
+          "mercato",
+          "test:integration:spec-coverage",
+          "--json"
+        ]
+      ],
+      "cwdMode": "worktree",
+      "required": true,
+      "parser": "integration_spec_coverage",
+      "baselineProfile": "none",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "integration-tests",
+      "description": "Playwright integration suite for dedicated test tasks.",
+      "commands": [
+        [
+          "yarn",
+          "mercato",
+          "test:integration"
+        ]
+      ],
+      "cwdMode": "worktree",
+      "required": false,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "approval_sensitive"
+    },
+    {
+      "id": "onboarding-package-checks",
+      "description": "Typecheck and unit tests for the onboarding package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/onboarding",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/onboarding",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "queue-package-checks",
+      "description": "Typecheck and unit tests for the queue package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/queue",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/queue",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "scheduler-package-checks",
+      "description": "Typecheck and unit tests for the scheduler package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/scheduler",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/scheduler",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "search-package-checks",
+      "description": "Typecheck and unit tests for the search package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/search",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/search",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "shared-package-checks",
+      "description": "Typecheck and unit tests for the shared workspace package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/shared",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/shared",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "sync-akeneo-package-checks",
+      "description": "Typecheck and unit tests for the Akeneo sync package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/sync-akeneo",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/sync-akeneo",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "ui-package-checks",
+      "description": "Typecheck and unit tests for the UI package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/ui",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/ui",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    },
+    {
+      "id": "webhooks-package-checks",
+      "description": "Typecheck and unit tests for the webhooks package.",
+      "commands": [
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/webhooks",
+          "typecheck"
+        ],
+        [
+          "yarn",
+          "workspace",
+          "@open-mercato/webhooks",
+          "test",
+          "--",
+          "--runInBand"
+        ]
+      ],
+      "cwdMode": "target_root",
+      "required": true,
+      "parser": "line_set",
+      "baselineProfile": "target_head",
+      "autonomyClass": "fully_autonomous"
+    }
+  ],
+  "targets": [
+    {
+      "id": "open-mercato",
+      "repoUrl": "https://github.com/open-mercato/open-mercato.git",
+      "defaultBaseBranch": "develop",
+      "clonePath": ".workspace/targets/open-mercato",
+      "worktreeRoot": ".workspace/worktrees/open-mercato",
+      "artifactRoot": ".workspace/artifacts",
+      "upstreamOwner": "open-mercato",
+      "upstreamRepo": "open-mercato",
+      "forkOwner": "pawelleszczewicz",
+      "forkRepoUrl": "https://github.com/pawelleszczewicz/open-mercato.git",
+      "forkRemoteName": "fork",
+      "areaRules": [
+        {
+          "id": "docs-root",
+          "patterns": [
+            "README.md",
+            "CONTRIBUTING.md",
+            ".ai/specs/**",
+            "docs/**"
+          ],
+          "lane": "docs",
+          "riskZone": "low",
+          "primaryAreaOwners": [
+            "docs"
+          ],
+          "validationProfileIds": [
+            "docs-basic"
+          ],
+          "expectedContributionClasses": [
+            "docs"
+          ]
+        },
+        {
+          "id": "docs-app",
+          "patterns": [
+            "apps/docs/**"
+          ],
+          "lane": "docs",
+          "riskZone": "low",
+          "primaryAreaOwners": [
+            "docs"
+          ],
+          "validationProfileIds": [
+            "docs-basic",
+            "docs-app-build"
+          ],
+          "expectedContributionClasses": [
+            "docs"
+          ]
+        },
+        {
+          "id": "tests",
+          "patterns": [
+            "tests/**",
+            ".ai/qa/**"
+          ],
+          "lane": "tests",
+          "riskZone": "low",
+          "primaryAreaOwners": [
+            "qa"
+          ],
+          "validationProfileIds": [
+            "integration-tests"
+          ],
+          "expectedContributionClasses": [
+            "tests"
+          ]
+        },
+        {
+          "id": "app",
+          "patterns": [
+            "apps/mercato/**"
+          ],
+          "lane": "experimental",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "app"
+          ],
+          "validationProfileIds": [
+            "app-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "ai-assistant",
+          "patterns": [
+            "packages/ai-assistant/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "ai-assistant"
+          ],
+          "validationProfileIds": [
+            "ai-assistant-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "cache",
+          "patterns": [
+            "packages/cache/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "cache"
+          ],
+          "validationProfileIds": [
+            "cache-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "checkout",
+          "patterns": [
+            "packages/checkout/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "checkout"
+          ],
+          "validationProfileIds": [
+            "checkout-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "cli",
+          "patterns": [
+            "packages/cli/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "cli"
+          ],
+          "validationProfileIds": [
+            "cli-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "content",
+          "patterns": [
+            "packages/content/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "content"
+          ],
+          "validationProfileIds": [
+            "content-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "core",
+          "patterns": [
+            "packages/core/**"
+          ],
+          "lane": "experimental",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "core"
+          ],
+          "validationProfileIds": [
+            "core-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "create-app",
+          "patterns": [
+            "packages/create-app/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "create-app"
+          ],
+          "validationProfileIds": [
+            "create-app-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "enterprise",
+          "patterns": [
+            "packages/enterprise/**"
+          ],
+          "lane": "experimental",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "enterprise"
+          ],
+          "validationProfileIds": [
+            "enterprise-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "events",
+          "patterns": [
+            "packages/events/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "events"
+          ],
+          "validationProfileIds": [
+            "events-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "gateway-stripe",
+          "patterns": [
+            "packages/gateway-stripe/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "gateway-stripe"
+          ],
+          "validationProfileIds": [
+            "gateway-stripe-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "onboarding",
+          "patterns": [
+            "packages/onboarding/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "onboarding"
+          ],
+          "validationProfileIds": [
+            "onboarding-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "queue",
+          "patterns": [
+            "packages/queue/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "queue"
+          ],
+          "validationProfileIds": [
+            "queue-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "scheduler",
+          "patterns": [
+            "packages/scheduler/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "scheduler"
+          ],
+          "validationProfileIds": [
+            "scheduler-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "search",
+          "patterns": [
+            "packages/search/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "search"
+          ],
+          "validationProfileIds": [
+            "search-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "shared",
+          "patterns": [
+            "packages/shared/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "shared"
+          ],
+          "validationProfileIds": [
+            "shared-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "sync-akeneo",
+          "patterns": [
+            "packages/sync-akeneo/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "sync-akeneo"
+          ],
+          "validationProfileIds": [
+            "sync-akeneo-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "ui",
+          "patterns": [
+            "packages/ui/**"
+          ],
+          "lane": "experimental",
+          "riskZone": "medium",
+          "primaryAreaOwners": [
+            "ui"
+          ],
+          "validationProfileIds": [
+            "ui-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        },
+        {
+          "id": "webhooks",
+          "patterns": [
+            "packages/webhooks/**"
+          ],
+          "lane": "simple_bugs",
+          "riskZone": "high",
+          "primaryAreaOwners": [
+            "webhooks"
+          ],
+          "validationProfileIds": [
+            "webhooks-package-checks"
+          ],
+          "expectedContributionClasses": [
+            "bugfix",
+            "tests"
+          ]
+        }
+      ]
+    }
+  ],
+  "doctorExpectations": []
+}
