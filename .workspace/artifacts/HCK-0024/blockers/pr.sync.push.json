@@ -1,7 +1,0 @@
-{
-  "taskId": "HCK-0024",
-  "checkpoint": "pr.sync.push",
-  "reason": "target_repo_unavailable",
-  "summary": "To https://github.com/pawelleszczewicz/open-mercato.git\n ! [rejected]            fix/hackon/hck-0024-tests-add-low-level-coverage-for-openapi-paths-ts -> fix/hackon/hck-0024-tests-add-low-level-coverage-for-openapi-paths-ts (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/pawelleszczewicz/open-mercato.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
-  "createdAt": "2026-04-12T04:59:56.508Z"
-}
