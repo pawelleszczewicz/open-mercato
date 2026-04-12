@@ -128,6 +128,20 @@ test.describe('TC-UMES-011: CLI commands', () => {
     expect(output).not.toMatch(/integrations\.injection\.external-ids[\s\S]*?priority: 0/)
   })
 
+  test('umes:inspect materializes translation manager injection widgets from translatable fields', () => {
+    const { stdout, stderr, exitCode } = runMercato(['umes:inspect', '--module', 'translations'])
+    expect(exitCode).toBe(0)
+    expect(stderr.trim()).toBe('')
+
+    const output = stdout.replace(/\r\n/g, '\n')
+    expect(output).toContain('UMES Extensions for module: translations')
+    expect(output).toContain('Injection Widgets (')
+    expect(output).toContain('translations.injection.translation-manager')
+    expect(output).toContain('target: crud-form:catalog.product:header')
+    expect(output).toContain('target: crud-form:resources.resource:header')
+    expect(output).not.toContain('No UMES extensions found for this module.')
+  })
+
   test('umes:inspect reports missing modules on stderr and exits non-zero', () => {
     const { stderr, exitCode } = runMercato(['umes:inspect', '--module', 'missing-module'])
     expect(exitCode).toBe(1)

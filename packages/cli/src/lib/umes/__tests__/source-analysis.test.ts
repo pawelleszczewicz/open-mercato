@@ -129,4 +129,24 @@ describe('createStaticModuleReader', () => {
       }),
     }))
   })
+
+  it('invokes factory exports that build tables through local statements and loops', () => {
+    const reader = createStaticModuleReader()
+
+    const injectionTable = reader.invokeExport(
+      repoPath('packages/core/src/modules/translations/widgets/injection-table.ts'),
+      ['buildInjectionTable'],
+      [{
+        'catalog:catalog_product': ['title'],
+        'resources:resources_resource': ['title'],
+      }],
+    )
+
+    expect(injectionTable).toEqual(expect.objectContaining({
+      'crud-form:catalog.catalog_product:header': 'translations.injection.translation-manager',
+      'crud-form:catalog.product:header': 'translations.injection.translation-manager',
+      'crud-form:resources.resources_resource:header': 'translations.injection.translation-manager',
+      'crud-form:resources.resource:header': 'translations.injection.translation-manager',
+    }))
+  })
 })

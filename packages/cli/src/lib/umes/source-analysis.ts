@@ -43,6 +43,12 @@ type EvaluationState = {
   values: Map<string, unknown>
 }
 
+type StatementCompletion =
+  | { kind: 'normal' }
+  | { kind: 'return'; value: unknown }
+
+const NORMAL_COMPLETION: StatementCompletion = { kind: 'normal' }
+
 function inferScriptKind(filePath: string): ts.ScriptKind {
   if (filePath.endsWith('.tsx')) return ts.ScriptKind.TSX
   if (filePath.endsWith('.jsx')) return ts.ScriptKind.JSX
@@ -245,20 +251,6 @@ function createEvaluationState(): EvaluationState {
   }
 }
 
-function readReturnExpression(node: FunctionNode): ts.Expression | undefined {
-  if (ts.isArrowFunction(node) && !ts.isBlock(node.body)) {
-    return node.body
-  }
-  const body = node.body
-  if (!body || !ts.isBlock(body)) return undefined
-  for (const statement of body.statements) {
-    if (ts.isReturnStatement(statement) && statement.expression) {
-      return statement.expression
-    }
-  }
-  return undefined
-}
-
 export function createStaticModuleReader() {
   const state = createEvaluationState()
 
@@ -359,27 +351,218 @@ export function createStaticModuleReader() {
     }
   }
 
-  function callFunctionRef(
+  function assignBindingName(
+    filePath: string,
+    name: ts.BindingName,
+    value: unknown,
+    locals: Map<string, unknown>,
+  ): void {
+    if (ts.isIdentifier(name)) {
+      locals.set(name.text, value)
+      return
+    }
+
+    if (ts.isArrayBindingPattern(name)) {
+      const values = Array.isArray(value) ? value : []
+      let index = 0
+      for (const element of name.elements) {
+        if (ts.isOmittedExpression(element)) {
+          index += 1
+          continue
+        }
+        const elementValue = element.dotDotDotToken ? values.slice(index) : values[index]
+        const resolvedValue = element.initializer && elementValue === undefined
+          ? evaluateExpression(filePath, element.initializer, locals)
+          : elementValue
+        assignBindingName(filePath, element.name, resolvedValue, locals)
+        index += 1
+      }
+      return
+    }
+
+    const record = value && typeof value === 'object' && !Array.isArray(value)
+      ? value as Record<string, unknown>
+      : {}
+
+    for (const element of name.elements) {
+      const propertyName = element.propertyName ?? element.name
+      let key: string | undefined
+      if (ts.isIdentifier(propertyName) || ts.isStringLiteralLike(propertyName) || ts.isNumericLiteral(propertyName)) {
+        key = propertyName.text
+      }
+      if (!key) continue
+      const elementValue = record[key]
+      const resolvedValue = element.initializer && elementValue === undefined
+        ? evaluateExpression(filePath, element.initializer, locals)
+        : elementValue
+      assignBindingName(filePath, element.name, resolvedValue, locals)
+    }
+  }
+
+  function assignTarget(
+    filePath: string,
+    target: ts.Expression,
+    value: unknown,
+    locals: Map<string, unknown>,
+  ): boolean {
+    if (ts.isIdentifier(target)) {
+      locals.set(target.text, value)
+      return true
+    }
+
+    if (ts.isPropertyAccessExpression(target)) {
+      const record = evaluateExpression(filePath, target.expression, locals)
+      if (record && typeof record === 'object' && !Array.isArray(record)) {
+        (record as Record<string, unknown>)[target.name.text] = value
+        return true
+      }
+      return false
+    }
+
+    if (ts.isElementAccessExpression(target)) {
+      const record = evaluateExpression(filePath, target.expression, locals)
+      const key = evaluateExpression(filePath, target.argumentExpression, locals)
+      if (
+        record
+        && typeof record === 'object'
+        && !Array.isArray(record)
+        && (typeof key === 'string' || typeof key === 'number')
+      ) {
+        (record as Record<string, unknown>)[String(key)] = value
+        return true
+      }
+    }
+
+    return false
+  }
+
+  function executeBlock(
+    filePath: string,
+    block: ts.Block,
+    locals: Map<string, unknown>,
+  ): StatementCompletion {
+    for (const statement of block.statements) {
+      const completion = executeStatement(filePath, statement, locals)
+      if (completion.kind === 'return') {
+        return completion
+      }
+    }
+    return NORMAL_COMPLETION
+  }
+
+  function executeStatement(
+    filePath: string,
+    statement: ts.Statement,
+    locals: Map<string, unknown>,
+  ): StatementCompletion {
+    if (ts.isBlock(statement)) {
+      return executeBlock(filePath, statement, new Map(locals))
+    }
+
+    if (ts.isVariableStatement(statement)) {
+      for (const declaration of statement.declarationList.declarations) {
+        const value = declaration.initializer
+          ? evaluateExpression(filePath, declaration.initializer, locals)
+          : undefined
+        assignBindingName(filePath, declaration.name, value, locals)
+      }
+      return NORMAL_COMPLETION
+    }
+
+    if (ts.isExpressionStatement(statement)) {
+      const expression = statement.expression
+      if (
+        ts.isBinaryExpression(expression)
+        && expression.operatorToken.kind === ts.SyntaxKind.EqualsToken
+      ) {
+        const value = evaluateExpression(filePath, expression.right, locals)
+        assignTarget(filePath, expression.left, value, locals)
+        return NORMAL_COMPLETION
+      }
+      evaluateExpression(filePath, expression, locals)
+      return NORMAL_COMPLETION
+    }
+
+    if (ts.isIfStatement(statement)) {
+      const branch = toBoolean(evaluateExpression(filePath, statement.expression, locals))
+        ? statement.thenStatement
+        : statement.elseStatement
+      if (!branch) return NORMAL_COMPLETION
+      return executeStatement(filePath, branch, locals)
+    }
+
+    if (ts.isForOfStatement(statement)) {
+      const iterable = evaluateExpression(filePath, statement.expression, locals)
+      if (!Array.isArray(iterable)) {
+        return NORMAL_COMPLETION
+      }
+
+      for (const entry of iterable) {
+        const iterationLocals = new Map(locals)
+        if (ts.isVariableDeclarationList(statement.initializer)) {
+          const declaration = statement.initializer.declarations[0]
+          if (declaration) {
+            assignBindingName(filePath, declaration.name, entry, iterationLocals)
+          }
+        } else {
+          assignTarget(filePath, statement.initializer, entry, iterationLocals)
+        }
+
+        const completion = executeStatement(filePath, statement.statement, iterationLocals)
+        if (completion.kind === 'return') {
+          return completion
+        }
+      }
+
+      return NORMAL_COMPLETION
+    }
+
+    if (ts.isReturnStatement(statement)) {
+      return {
+        kind: 'return',
+        value: statement.expression
+          ? evaluateExpression(filePath, statement.expression, locals)
+          : undefined,
+      }
+    }
+
+    return NORMAL_COMPLETION
+  }
+
+  function invokeFunctionRef(
     functionRef: FunctionRef,
-    args: readonly ts.Expression[],
+    argValues: unknown[],
     parentLocals: Map<string, unknown>,
   ): unknown {
     const locals = new Map(parentLocals)
     for (let index = 0; index < functionRef.node.parameters.length; index += 1) {
       const parameter = functionRef.node.parameters[index]
-      if (!ts.isIdentifier(parameter.name)) continue
-      const argExpression = args[index]
-      const argValue = argExpression
-        ? evaluateExpression(functionRef.filePath, argExpression, parentLocals)
+      const argValue = index < argValues.length
+        ? argValues[index]
         : parameter.initializer
-          ? evaluateExpression(functionRef.filePath, parameter.initializer, parentLocals)
+          ? evaluateExpression(functionRef.filePath, parameter.initializer, locals)
           : undefined
-      locals.set(parameter.name.text, argValue)
+      assignBindingName(functionRef.filePath, parameter.name, argValue, locals)
     }
 
-    const returnExpression = readReturnExpression(functionRef.node)
-    if (!returnExpression) return UNKNOWN_STATIC_VALUE
-    return evaluateExpression(functionRef.filePath, returnExpression, locals)
+    if (ts.isArrowFunction(functionRef.node) && !ts.isBlock(functionRef.node.body)) {
+      return evaluateExpression(functionRef.filePath, functionRef.node.body, locals)
+    }
+
+    const body = functionRef.node.body
+    if (!body || !ts.isBlock(body)) return UNKNOWN_STATIC_VALUE
+
+    const completion = executeBlock(functionRef.filePath, body, locals)
+    return completion.kind === 'return' ? completion.value : UNKNOWN_STATIC_VALUE
+  }
+
+  function callFunctionRef(
+    functionRef: FunctionRef,
+    args: readonly ts.Expression[],
+    parentLocals: Map<string, unknown>,
+  ): unknown {
+    const argValues = args.map((arg) => evaluateExpression(functionRef.filePath, arg, parentLocals))
+    return invokeFunctionRef(functionRef, argValues, parentLocals)
   }
 
   function evaluateExpression(
@@ -535,6 +718,12 @@ export function createStaticModuleReader() {
         return process.env[expression.name.text]
       }
       const target = evaluateExpression(filePath, expression.expression, locals)
+      if (typeof target === 'string' && expression.name.text === 'length') {
+        return target.length
+      }
+      if (Array.isArray(target) && expression.name.text === 'length') {
+        return target.length
+      }
       if (target && typeof target === 'object' && !Array.isArray(target)) {
         return (target as Record<string, unknown>)[expression.name.text] ?? UNKNOWN_STATIC_VALUE
       }
@@ -565,6 +754,28 @@ export function createStaticModuleReader() {
     }
 
     if (ts.isCallExpression(expression)) {
+      if (
+        ts.isPropertyAccessExpression(expression.expression)
+        && ts.isIdentifier(expression.expression.expression)
+        && expression.expression.expression.text === 'Object'
+      ) {
+        const target = expression.arguments[0]
+          ? evaluateExpression(filePath, expression.arguments[0], locals)
+          : undefined
+        if (target && typeof target === 'object' && !Array.isArray(target)) {
+          switch (expression.expression.name.text) {
+            case 'keys':
+              return Object.keys(target)
+            case 'values':
+              return Object.values(target)
+            case 'entries':
+              return Object.entries(target)
+            default:
+              break
+          }
+        }
+      }
+
       if (ts.isIdentifier(expression.expression)) {
         if (expression.expression.text === 'parseBooleanWithDefault') {
           const rawValue = expression.arguments[0]
@@ -586,6 +797,27 @@ export function createStaticModuleReader() {
           return typeof integrationId === 'string'
             ? `integrations.detail:${integrationId}`
             : UNKNOWN_STATIC_VALUE
+        }
+      }
+
+      if (ts.isPropertyAccessExpression(expression.expression)) {
+        const target = evaluateExpression(filePath, expression.expression.expression, locals)
+        const args = expression.arguments.map((arg) => evaluateExpression(filePath, arg, locals))
+        const methodName = expression.expression.name.text
+
+        if (typeof target === 'string') {
+          switch (methodName) {
+            case 'split':
+              return typeof args[0] === 'string' ? target.split(args[0]) : UNKNOWN_STATIC_VALUE
+            case 'startsWith':
+              return typeof args[0] === 'string' ? target.startsWith(args[0]) : UNKNOWN_STATIC_VALUE
+            case 'slice':
+              return args.length === 0 || args.every((arg) => typeof arg === 'number')
+                ? target.slice(...(args as number[]))
+                : UNKNOWN_STATIC_VALUE
+            default:
+              break
+          }
         }
       }
 
@@ -632,6 +864,22 @@ export function createStaticModuleReader() {
   }
 
   return {
+    invokeExport(filePath: string, exportNames: string[], args: unknown[]): unknown {
+      for (const exportName of exportNames) {
+        const value = evaluateNamedExport(filePath, exportName)
+        if (isFunctionRef(value)) {
+          const invoked = invokeFunctionRef(value, args, new Map())
+          if (invoked !== undefined && !isUnknownStaticValue(invoked)) {
+            return invoked
+          }
+          continue
+        }
+        if (value !== undefined && !isUnknownStaticValue(value) && args.length === 0) {
+          return value
+        }
+      }
+      return undefined
+    },
     readExport,
   }
 }

@@ -3,7 +3,7 @@ import type { PackageResolver } from '../resolver'
 import { resolveModuleFile } from '../generators/scanner'
 import { createStaticModuleReader } from './source-analysis'
 
-const requireModule = createRequire(import.meta.url)
+const requireModule = createRequire(`${process.cwd()}/.open-mercato-collector-require.cjs`)
 
 export interface UmesExtensionEntry {
   moduleId: string
@@ -56,10 +56,90 @@ function readExportValue(options: {
   return undefined
 }
 
+function readModuleExport(options: {
+  exportNames: string[]
+  fromSource: boolean
+  resolvedFile: { absolutePath: string }
+  sourceReader: ReturnType<typeof createStaticModuleReader>
+}) {
+  const { exportNames, fromSource, resolvedFile, sourceReader } = options
+  return fromSource
+    ? sourceReader.readExport(resolvedFile.absolutePath, exportNames)
+    : readExportValue({ exportNames, resolvedFile })
+}
+
+function invokeModuleExport(options: {
+  args: unknown[]
+  exportNames: string[]
+  fromSource: boolean
+  resolvedFile: { absolutePath: string }
+  sourceReader: ReturnType<typeof createStaticModuleReader>
+}) {
+  const { args, exportNames, fromSource, resolvedFile, sourceReader } = options
+  if (fromSource) {
+    return sourceReader.invokeExport(resolvedFile.absolutePath, exportNames, args)
+  }
+
+  const loaded = readExportValue({ exportNames, resolvedFile })
+  return typeof loaded === 'function' ? loaded(...args) : undefined
+}
+
+function readTranslatableFieldsRegistry(options: {
+  enabled: ReturnType<PackageResolver['loadEnabledModules']>
+  resolver: PackageResolver
+  sourceReader: ReturnType<typeof createStaticModuleReader>
+}): Record<string, string[]> {
+  const { enabled, resolver, sourceReader } = options
+  const registry: Record<string, string[]> = {}
+
+  for (const entry of enabled) {
+    const roots = resolver.getModulePaths(entry)
+    const imports = resolver.getModuleImportBase(entry)
+    const isAppModule = entry.from === '@app'
+    const appImportBase = isAppModule ? `../../src/modules/${entry.id}` : imports.appBase
+    const moduleImports = { appBase: appImportBase, pkgBase: imports.pkgBase }
+    const fromSource = resolver.isMonorepo() || isAppModule
+
+    const translationsFile = resolveModuleFile(roots, moduleImports, 'translations.ts')
+    if (!translationsFile) continue
+
+    const fields = readModuleExport({
+      exportNames: ['translatableFields', 'default'],
+      fromSource,
+      resolvedFile: translationsFile,
+      sourceReader,
+    })
+    const record = readRecord(fields)
+    if (!record) continue
+
+    for (const [entityType, value] of Object.entries(record)) {
+      if (!Array.isArray(value)) continue
+      const fieldsList = value.filter((field): field is string => typeof field === 'string' && field.length > 0)
+      if (fieldsList.length > 0) {
+        registry[entityType] = fieldsList
+      }
+    }
+  }
+
+  return registry
+}
+
 export function collectUmesData(resolver: PackageResolver): UmesModuleData[] {
   const enabled = resolver.loadEnabledModules()
   const results: UmesModuleData[] = []
   const sourceReader = createStaticModuleReader()
+  let translatableFieldsRegistry: Record<string, string[]> | null = null
+
+  function getTranslatableFieldsRegistry(): Record<string, string[]> {
+    if (!translatableFieldsRegistry) {
+      translatableFieldsRegistry = readTranslatableFieldsRegistry({
+        enabled,
+        resolver,
+        sourceReader,
+      })
+    }
+    return translatableFieldsRegistry
+  }
 
   for (const entry of enabled) {
     const modId = entry.id
@@ -77,9 +157,12 @@ export function collectUmesData(resolver: PackageResolver): UmesModuleData[] {
     const aclFile = resolveModuleFile(roots, moduleImps, 'acl.ts')
     if (aclFile) {
       try {
-        const features = fromSource
-          ? sourceReader.readExport(aclFile.absolutePath, ['features', 'default']) ?? []
-          : readExportValue({ exportNames: ['features', 'default'], resolvedFile: aclFile }) ?? []
+        const features = readModuleExport({
+          exportNames: ['features', 'default'],
+          fromSource,
+          resolvedFile: aclFile,
+          sourceReader,
+        }) ?? []
         if (Array.isArray(features)) {
           for (const feat of features) {
             if (typeof feat === 'string') {
@@ -98,9 +181,12 @@ export function collectUmesData(resolver: PackageResolver): UmesModuleData[] {
     const enrichersFile = resolveModuleFile(roots, moduleImps, 'data/enrichers.ts')
     if (enrichersFile) {
       try {
-        const enrichers = fromSource
-          ? sourceReader.readExport(enrichersFile.absolutePath, ['enrichers', 'default']) ?? []
-          : readExportValue({ exportNames: ['enrichers', 'default'], resolvedFile: enrichersFile }) ?? []
+        const enrichers = readModuleExport({
+          exportNames: ['enrichers', 'default'],
+          fromSource,
+          resolvedFile: enrichersFile,
+          sourceReader,
+        }) ?? []
         if (Array.isArray(enrichers)) {
           for (const enricher of enrichers) {
             const enricherRecord = readRecord(enricher)
@@ -130,9 +216,12 @@ export function collectUmesData(resolver: PackageResolver): UmesModuleData[] {
     const interceptorsFile = resolveModuleFile(roots, moduleImps, 'api/interceptors.ts')
     if (interceptorsFile) {
       try {
-        const interceptors = fromSource
-          ? sourceReader.readExport(interceptorsFile.absolutePath, ['interceptors', 'default']) ?? []
-          : readExportValue({ exportNames: ['interceptors', 'default'], resolvedFile: interceptorsFile }) ?? []
+        const interceptors = readModuleExport({
+          exportNames: ['interceptors', 'default'],
+          fromSource,
+          resolvedFile: interceptorsFile,
+          sourceReader,
+        }) ?? []
         if (Array.isArray(interceptors)) {
           for (const interceptor of interceptors) {
             const interceptorRecord = readRecord(interceptor)
@@ -164,9 +253,12 @@ export function collectUmesData(resolver: PackageResolver): UmesModuleData[] {
     const componentsFile = resolveModuleFile(roots, moduleImps, 'widgets/components.ts')
     if (componentsFile) {
       try {
-        const overrides = fromSource
-          ? sourceReader.readExport(componentsFile.absolutePath, ['componentOverrides', 'default']) ?? []
-          : readExportValue({ exportNames: ['componentOverrides', 'default'], resolvedFile: componentsFile }) ?? []
+        const overrides = readModuleExport({
+          exportNames: ['componentOverrides', 'default'],
+          fromSource,
+          resolvedFile: componentsFile,
+          sourceReader,
+        }) ?? []
         if (Array.isArray(overrides)) {
           for (const override of overrides) {
             const overrideRecord = readRecord(override)
@@ -196,10 +288,25 @@ export function collectUmesData(resolver: PackageResolver): UmesModuleData[] {
     const injectionTableFile = resolveModuleFile(roots, moduleImps, 'widgets/injection-table.ts')
     if (injectionTableFile) {
       try {
-        const table = fromSource
-          ? sourceReader.readExport(injectionTableFile.absolutePath, ['injectionTable', 'default']) ?? {}
-          : readExportValue({ exportNames: ['injectionTable', 'default'], resolvedFile: injectionTableFile }) ?? {}
-        for (const [spotId, value] of Object.entries(table)) {
+        let table = readModuleExport({
+          exportNames: ['injectionTable', 'default'],
+          fromSource,
+          resolvedFile: injectionTableFile,
+          sourceReader,
+        }) ?? {}
+
+        if (modId === 'translations') {
+          table = invokeModuleExport({
+            args: [getTranslatableFieldsRegistry()],
+            exportNames: ['buildInjectionTable'],
+            fromSource,
+            resolvedFile: injectionTableFile,
+            sourceReader,
+          }) ?? table
+        }
+
+        const tableRecord = readRecord(table) ?? {}
+        for (const [spotId, value] of Object.entries(tableRecord)) {
           const entries = Array.isArray(value) ? value : [value]
           for (const entry of entries) {
             const entryRecord = readRecord(entry)
