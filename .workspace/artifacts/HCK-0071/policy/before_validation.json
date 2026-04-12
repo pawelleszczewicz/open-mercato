@@ -1,0 +1,22 @@
+{
+  "taskId": "HCK-0071",
+  "checkpoint": "before_validation",
+  "lane": "docs",
+  "guardrail": {
+    "maxChangedFiles": 20,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "apps/docs/sidebars.ts"
+      ],
+      "addedLines": 1,
+      "removedLines": 0,
+      "totalDiffLines": 1
+    }
+  }
+}

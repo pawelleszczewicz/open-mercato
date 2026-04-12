@@ -1,0 +1,73 @@
+{
+  "taskId": "HCK-0058",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-integration-scenario-tc-docker-002",
+  "sourceTitle": "tests: implement missing integration scenario TC-DOCKER-002",
+  "sourceEvidence": [
+    "Integration spec coverage reports TC-DOCKER-002 as uncovered.",
+    "Scenario file: .ai/qa/scenarios/TC-DOCKER-002-exec-generate.md.",
+    "Create a module-local Playwright integration spec that implements this scenario."
+  ],
+  "candidatePaths": [
+    ".ai/qa/scenarios/TC-DOCKER-002-exec-generate.md"
+  ],
+  "expectedContributionClasses": [
+    "tests"
+  ],
+  "lane": "tests",
+  "riskZone": "low",
+  "state": "blocked",
+  "duplicateRiskClass": "likely_duplicate",
+  "duplicateSignals": [
+    {
+      "kind": "upstream-open-similarity",
+      "duplicateRiskClass": "likely_duplicate",
+      "summary": "Open upstream PR #1258 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1258,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1258",
+      "overlapPaths": []
+    }
+  ],
+  "primaryAreaOwners": [
+    "qa"
+  ],
+  "validationProfileIds": [
+    "integration-tests",
+    "integration-test-gap-coverage"
+  ],
+  "worktreePath": null,
+  "branchName": "test/hackon/hck-0058-tests-implement-missing-integration-scenario-tc-docker-002",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-integration-scenario-tc-docker-002",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T18:37:31.943Z",
+    "decision": "Blocked pending human override due to duplicate risk.",
+    "rationale": "Open upstream PR #1258 is strongly similar to this task title.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:36:16.634Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0058 discovered from repo_signal:TESTSIG-integration-scenario-tc-docker-002.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:37:31.943Z",
+      "type": "task.blocked",
+      "message": "Blocked pending human override due to duplicate risk.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:36:16.634Z",
+  "updatedAt": "2026-04-11T18:37:31.943Z"
+}

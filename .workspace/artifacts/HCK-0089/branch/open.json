@@ -1,0 +1,18 @@
+{
+  "taskId": "HCK-0089",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T22:40:19.133Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/cli/src/lib/generators/__tests__/module-subset.test.ts"
+    ],
+    "addedLines": 108,
+    "removedLines": 0,
+    "totalDiffLines": 108,
+    "branchName": "fix/hackon/hck-0089-tests-add-low-level-coverage-for-module-registry-ts",
+    "headSha": "56e4c3bd98103f9371eb37555e65212ee8bff11b",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

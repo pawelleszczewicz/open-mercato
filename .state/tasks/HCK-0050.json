@@ -1,0 +1,96 @@
+{
+  "taskId": "HCK-0050",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-integration-scenario-tc-sec-004",
+  "sourceTitle": "tests: implement missing integration scenario TC-SEC-004",
+  "sourceEvidence": [],
+  "candidatePaths": [
+    ".ai/qa/scenarios/TC-SEC-004.md"
+  ],
+  "expectedContributionClasses": [
+    "tests"
+  ],
+  "lane": "tests",
+  "riskZone": "low",
+  "state": "judge_pending",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "qa"
+  ],
+  "validationProfileIds": [
+    "integration-tests",
+    "integration-test-gap-coverage"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0050",
+  "branchName": "test/hackon/hck-0050-tests-implement-missing-integration-scenario-tc-sec-004",
+  "prNumber": 1259,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1259",
+  "contributionGroupId": "TESTSIG-integration-scenario-tc-sec-004",
+  "portalStatus": "submitted",
+  "judgeStatus": "pending",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T18:56:50Z",
+    "decision": "Cleared false duplicate hold after reviewer-ready verification; awaiting portal submission.",
+    "rationale": "PR #1259 has reviewer ready comments and should not be blocked by duplicate checkpoint against itself or the unrelated TC-SEC-002 task.",
+    "overrideApplied": true,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:14:47Z",
+      "type": "task.rehydrated",
+      "message": "Rehydrated from open draft PR #1259 during runtime reset.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:25:59.037Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0050/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:32:31.481Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:48:50.267Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:55:13.789Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:56:50Z",
+      "type": "state.repaired",
+      "message": "Coordinator cleared false duplicate block after verifying reviewer ready comments on PR #1259.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:51:00.693Z",
+      "type": "portal.submitted",
+      "message": "Manual portal submission confirmed.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:51:02.801Z",
+      "type": "judge.pending",
+      "message": "Submission is now waiting for judge handling.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:14:47Z",
+  "updatedAt": "2026-04-11T20:51:02.801Z"
+}

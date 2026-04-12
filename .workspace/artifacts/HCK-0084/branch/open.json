@@ -1,0 +1,18 @@
+{
+  "taskId": "HCK-0084",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T21:41:42.417Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/shared/src/lib/api/__tests__/context.test.ts"
+    ],
+    "addedLines": 70,
+    "removedLines": 0,
+    "totalDiffLines": 70,
+    "branchName": "fix/hackon/hck-0084-tests-add-low-level-coverage-for-context-ts",
+    "headSha": "73e8ba418a57902dccb989e09c2699d3bcb69c2b",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

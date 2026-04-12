@@ -1,0 +1,31 @@
+{
+  "taskId": "HCK-0077",
+  "prNumber": 1284,
+  "checkedAt": "2026-04-11T20:02:21.123Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": null,
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf[bot]",
+        "createdAt": "2026-04-11T20:00:39Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking issues found in the current branch diff against `origin/develop`.\n\nThe change is limited to [creating-workflows.mdx](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0077/apps/docs/docs/user-guide/workflows/creating-workflows.mdx:17) and the new screenshot asset [open-mercato-workflows-visual-editor.png](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0077/apps/docs/static/screenshots/open-mercato-workflows-visual-editor.png). I visually inspected the PNG; it appears to be an actual Open Mercato demo/backend workflow editor capture, and it matches the documented visual-editor workflow behavior well enough for this page. I did not rerun a full docs build because the review scope was the branch diff and touched-area inspection.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T20:02:20Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "taskId": "HCK-0084",
+  "checkpoint": "pr.open.github",
+  "reason": "github_provider_unavailable",
+  "summary": "GitHub MCP created a pull request but returned an unexpected payload.",
+  "createdAt": "2026-04-11T21:41:43.943Z"
+}

@@ -1,0 +1,672 @@
+{
+  "snapshotId": "discover-2026-04-12T00-22-39-659Z",
+  "generatedAt": "2026-04-12T00:22:39.659Z",
+  "targetId": "open-mercato",
+  "lanes": [
+    "docs",
+    "tests",
+    "simple_bugs"
+  ],
+  "limit": 24,
+  "queries": [
+    {
+      "lane": "docs",
+      "query": "state:open label:documentation"
+    },
+    {
+      "lane": "docs",
+      "query": "state:open label:docs"
+    },
+    {
+      "lane": "docs",
+      "query": "state:open readme"
+    },
+    {
+      "lane": "docs",
+      "query": "state:open \"user guide\""
+    },
+    {
+      "lane": "docs",
+      "query": "state:open \"broken link\" docs"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open label:test"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open label:qa"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open coverage"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open \"regression test\""
+    },
+    {
+      "lane": "tests",
+      "query": "state:open \"skipped test\""
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open label:bug"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open regression"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open fix"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open typo"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open \"empty state\""
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "ISSUE-1068",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "1068",
+      "sourceTitle": "bug: Delivery Log missing retry action in \"Actions\" column",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1068",
+      "sourceEvidence": [
+        "Delivery Log table does not provide any actions (e.g. retry) despite being defined in the specification.",
+        "Steps to reproduce",
+        "1. Go to Settings → Webhooks"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1317 already references #1068.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1317,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1317",
+          "overlapPaths": []
+        }
+      ],
+      "score": 38,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected."
+      ],
+      "labels": [
+        "bug"
+      ],
+      "assigneeLogins": [],
+      "comments": 2,
+      "updatedAt": "2026-03-25T20:50:44Z"
+    },
+    {
+      "candidateId": "ISSUE-1018",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "1018",
+      "sourceTitle": "bug: [Validation] Shipment form allows invalid email and phone values without validation",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1018",
+      "sourceEvidence": [
+        "The shipment creation form does not validate email and phone fields, allowing invalid input values to be submitted.",
+        "Steps to reproduce",
+        "1. Navigate to Shipping carriers → Create"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1304 already references #1018.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1304,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1304",
+          "overlapPaths": []
+        }
+      ],
+      "score": 38,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected."
+      ],
+      "labels": [
+        "bug"
+      ],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-03-18T22:09:46Z"
+    },
+    {
+      "candidateId": "ISSUE-979",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "979",
+      "sourceTitle": "bug: Inconsistent extracted text display in attachment metadata preview",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/979",
+      "sourceEvidence": [
+        "Attachment preview shows inconsistent behavior when no text is extracted from images.",
+        "Steps to reproduce",
+        "1. Upload different image files"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1315 already references #979.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1315,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1315",
+          "overlapPaths": []
+        }
+      ],
+      "score": 38,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected."
+      ],
+      "labels": [
+        "bug"
+      ],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-03-16T21:54:39Z"
+    },
+    {
+      "candidateId": "ISSUE-793",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "793",
+      "sourceTitle": "bug: PUT /api/customers/people returns ok=true for ignored nested profile updates",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/793",
+      "sourceEvidence": [
+        "`PUT /api/customers/people` returns `{ \"ok\": true }` even when nested `profile` updates are ignored.",
+        "Steps to reproduce",
+        "2. API returns:"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1320 already references #793.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1320,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1320",
+          "overlapPaths": []
+        }
+      ],
+      "score": 38,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected."
+      ],
+      "labels": [
+        "bug",
+        "domain"
+      ],
+      "assigneeLogins": [],
+      "comments": 1,
+      "updatedAt": "2026-03-15T20:44:48Z"
+    },
+    {
+      "candidateId": "ISSUE-958",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "958",
+      "sourceTitle": "bug: Inconsistent validation when organization context is missing",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/958",
+      "sourceEvidence": [
+        "When creating resources without selecting an organization in the header dropdown, the system shows inconsistent validation errors depending on the module.",
+        "Steps to reproduce",
+        "1. Login as superadmin"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1321 already references #958.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1321,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1321",
+          "overlapPaths": []
+        }
+      ],
+      "score": 28,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected.",
+        "Framework or architecture label penalty."
+      ],
+      "labels": [
+        "bug",
+        "framework"
+      ],
+      "assigneeLogins": [],
+      "comments": 1,
+      "updatedAt": "2026-03-15T20:45:44Z"
+    },
+    {
+      "candidateId": "ISSUE-946",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "946",
+      "sourceTitle": "bug: Inconsistent timestamp formatting between table view and tooltip",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/946",
+      "sourceEvidence": [
+        "In the Payments table on an Order, the timestamp formatting differs between the visible column and the tooltip.",
+        "Table column:",
+        "12.03.2026, 15:12:32"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1312 already references #946.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1312,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1312",
+          "overlapPaths": []
+        }
+      ],
+      "score": 28,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected.",
+        "Framework or architecture label penalty."
+      ],
+      "labels": [
+        "bug",
+        "framework"
+      ],
+      "assigneeLogins": [],
+      "comments": 2,
+      "updatedAt": "2026-03-15T20:45:38Z"
+    },
+    {
+      "candidateId": "ISSUE-792",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "792",
+      "sourceTitle": "bug: POST /api/customers/people accepts nested profile payload but silently drops profile.linkedInUrl",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/792",
+      "sourceEvidence": [
+        "`POST /api/customers/people` accepts nested `profile.linkedInUrl` payload shape, returns success, but silently drops the value.",
+        "Steps to reproduce",
+        "1. Call `POST /api/customers/people` with payload:"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "likely_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-open-issue",
+          "duplicateRiskClass": "likely_duplicate",
+          "summary": "Open upstream PR #1320 already references #792.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1320,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1320",
+          "overlapPaths": []
+        }
+      ],
+      "score": 28,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Likely-duplicate signal detected.",
+        "Framework or architecture label penalty."
+      ],
+      "labels": [
+        "bug",
+        "framework"
+      ],
+      "assigneeLogins": [],
+      "comments": 1,
+      "updatedAt": "2026-03-15T20:44:46Z"
+    },
+    {
+      "candidateId": "ISSUE-1113",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "1113",
+      "sourceTitle": "bug: [UI] \"Blocked\" checkbox incorrectly placed inside the Attachments section in TODO task creation form",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1113",
+      "sourceEvidence": [
+        "In the general task creation form, the \"Blocked\" checkbox is located inside the \"Attachments\" section. This placement is highly confusing for the user, as the \"Blocked\" status usually refers to the state of the task itself, not its attachme",
+        "Steps to reproduce",
+        "1. Navigate to Quick Add todo general task creation form"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "hard_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-merged-issue",
+          "duplicateRiskClass": "hard_duplicate",
+          "summary": "Merged upstream PR #1178 already references #1113.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1178,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1178",
+          "overlapPaths": []
+        }
+      ],
+      "score": -100,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Issue is already assigned.",
+        "Hard-duplicate signal detected."
+      ],
+      "labels": [
+        "bug"
+      ],
+      "assigneeLogins": [
+        "michalpanek"
+      ],
+      "comments": 3,
+      "updatedAt": "2026-04-10T07:06:45Z"
+    },
+    {
+      "candidateId": "ISSUE-959",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "959",
+      "sourceTitle": "bug: Organization creation requires tenant header switch even when tenant is selected in the form",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/959",
+      "sourceEvidence": [
+        "When creating a new organization as superadmin, selecting the tenant in the form is not sufficient.",
+        "The organization cannot be created unless the tenant is also selected in the global header tenant switcher.",
+        "This leads to a confusing UX where the form suggests the tenant is configurable, but the backend requires the header tenant context to match."
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "hard_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-merged-issue",
+          "duplicateRiskClass": "hard_duplicate",
+          "summary": "Merged upstream PR #1195 already references #959.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1195,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1195",
+          "overlapPaths": []
+        }
+      ],
+      "score": -100,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Hard-duplicate signal detected."
+      ],
+      "labels": [
+        "bug",
+        "domain"
+      ],
+      "assigneeLogins": [],
+      "comments": 1,
+      "updatedAt": "2026-03-15T20:45:45Z"
+    },
+    {
+      "candidateId": "ISSUE-901",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "901",
+      "sourceTitle": "bug: Product description not marked as required and SEO helper prevents saving product",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/901",
+      "sourceEvidence": [
+        "The product description field is not marked as required (*), but the product cannot be saved without it. Additionally, the SEO helper validation blocks saving the product during the same product creation flow.",
+        "This creates confusion because the UI does not indicate that the description is required.",
+        "Steps to reproduce"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "hard_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-merged-issue",
+          "duplicateRiskClass": "hard_duplicate",
+          "summary": "Merged upstream PR #1155 already references #901.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1155,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1155",
+          "overlapPaths": []
+        }
+      ],
+      "score": -100,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Hard-duplicate signal detected."
+      ],
+      "labels": [
+        "bug",
+        "domain"
+      ],
+      "assigneeLogins": [],
+      "comments": 1,
+      "updatedAt": "2026-03-15T20:45:05Z"
+    },
+    {
+      "candidateId": "ISSUE-1112",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "1112",
+      "sourceTitle": "bug: resolveOrganizationScope ignores 'All Organizations' selection for non-superAdmin users with __all__ ACL access",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1112",
+      "sourceEvidence": [
+        "`resolveOrganizationScope` always falls back to `accountOrgId` for non-superAdmin users, even when:",
+        "1. The user explicitly selects \"All Organizations\" in the org switcher",
+        "2. Their ACL grants `__all__` organization access (`allowedIds === null`)"
+      ],
+      "candidatePaths": [
+        "organizationScope.ts"
+      ],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "hard_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-merged-issue",
+          "duplicateRiskClass": "hard_duplicate",
+          "summary": "Merged upstream PR #1147 already references #1112.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1147,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1147",
+          "overlapPaths": []
+        }
+      ],
+      "score": -110,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "Issue references concrete paths.",
+        "Single-file or single-area scope signal.",
+        "Hard-duplicate signal detected.",
+        "Framework or architecture label penalty."
+      ],
+      "labels": [
+        "bug",
+        "framework"
+      ],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-03-30T18:29:58Z"
+    },
+    {
+      "candidateId": "ISSUE-967",
+      "targetId": "open-mercato",
+      "sourceType": "github_issue",
+      "sourceId": "967",
+      "sourceTitle": "bug: Logout from develop environment redirects to demo environment",
+      "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/967",
+      "sourceEvidence": [
+        "Logging out from the develop environment redirects the user to the demo environment login page.",
+        "Steps to reproduce",
+        "1. Open https://develop.openmercato.com"
+      ],
+      "candidatePaths": [],
+      "expectedContributionClasses": [
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "unassigned"
+      ],
+      "validationProfileIds": [],
+      "duplicateRiskClass": "hard_duplicate",
+      "duplicateSignals": [
+        {
+          "kind": "upstream-merged-issue",
+          "duplicateRiskClass": "hard_duplicate",
+          "summary": "Merged upstream PR #1242 already references #967.",
+          "source": "github",
+          "relatedTaskId": null,
+          "prNumber": 1242,
+          "prUrl": "https://github.com/open-mercato/open-mercato/pull/1242",
+          "overlapPaths": []
+        }
+      ],
+      "score": -110,
+      "scoreReasons": [
+        "Lane simple_bugs base score.",
+        "No concrete file or module path found in the issue.",
+        "Hard-duplicate signal detected.",
+        "Framework or architecture label penalty."
+      ],
+      "labels": [
+        "bug",
+        "framework"
+      ],
+      "assigneeLogins": [],
+      "comments": 1,
+      "updatedAt": "2026-03-15T20:45:48Z"
+    }
+  ],
+  "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-12T00-22-39-659Z.json"
+}

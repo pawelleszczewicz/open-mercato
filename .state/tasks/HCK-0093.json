@@ -1,0 +1,188 @@
+{
+  "taskId": "HCK-0093",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-setup-ts",
+  "sourceTitle": "tests: add low-level coverage for agentic-setup.ts",
+  "sourceEvidence": [
+    "packages/cli/src/lib/agentic-setup.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/cli/src/lib/agentic-setup.ts.",
+    "Checked: packages/cli/src/lib/agentic-setup.test.ts",
+    "packages/cli/src/lib/__tests__/agentic-setup.test.ts",
+    "packages/cli/src/lib/agentic-setup.spec.ts",
+    "packages/cli/src/lib/__tests__/agentic-setup.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/cli/src/lib/agentic-setup.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "awaiting_portal_submission",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "cli"
+  ],
+  "validationProfileIds": [
+    "cli-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0093",
+  "branchName": "fix/hackon/hck-0093-tests-add-low-level-coverage-for-agentic-setup-ts",
+  "prNumber": 1322,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1322",
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-setup-ts",
+  "portalStatus": "awaiting_submission",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-12T00:17:45.217Z",
+    "decision": "Duplicate checkpoint before_portal_submission passed.",
+    "rationale": "No duplicate-risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T20:14:34.925Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0093 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-setup-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:15:50.091Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:25:39.228Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0093.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:25:39.234Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:35:36.884Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-11T23-25-39-237Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-11T23-25-39-237Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:37:42.138Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:37:48.136Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:39:03.940Z",
+      "type": "pr.opened",
+      "message": "Draft PR #1322 opened.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/branch/open.json"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:39:04.149Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:43:52.502Z",
+      "type": "review.blocking",
+      "message": "Reviewer reported blocking findings.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-11T23-39-04-152Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-11T23-39-04-152Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-12T00:02:30.836Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-12T00:10:30.773Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-12T00-02-30-843Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-12T00-02-30-843Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-12T00:10:31.779Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-12T00:10:34.241Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-12T00:11:29.173Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-12T00:17:45.220Z",
+      "type": "review.complete",
+      "message": "Reviewer marked the PR ready.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/reviews/ready-check.json",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-12T00-11-29-175Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0093/runs/2026-04-12T00-11-29-175Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-12T00:17:45.221Z",
+      "type": "ready.pr",
+      "message": "PR is ready for portal submission.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-12T00:17:45.223Z",
+      "type": "portal.awaiting",
+      "message": "Waiting for manual portal submission.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T20:14:34.925Z",
+  "updatedAt": "2026-04-12T00:17:45.223Z"
+}

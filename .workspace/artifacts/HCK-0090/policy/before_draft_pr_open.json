@@ -1,0 +1,22 @@
+{
+  "taskId": "HCK-0090",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/cli/src/lib/generators/__tests__/entity-ids.test.ts"
+      ],
+      "addedLines": 112,
+      "removedLines": 0,
+      "totalDiffLines": 112
+    }
+  }
+}

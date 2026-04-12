@@ -1,0 +1,19 @@
+{
+  "taskId": "HCK-0076",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T20:41:52.722Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/shared/src/lib/bootstrap/__tests__/dynamicLoader.test.ts",
+      "packages/shared/src/lib/bootstrap/dynamicLoader.ts"
+    ],
+    "addedLines": 238,
+    "removedLines": 2,
+    "totalDiffLines": 240,
+    "branchName": "fix/hackon/hck-0076-tests-add-low-level-coverage-for-dynamicloader-ts",
+    "headSha": "ed17da8555657fee0fc9c5e4b01680114f5db11b",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

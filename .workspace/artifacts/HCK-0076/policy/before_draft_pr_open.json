@@ -1,0 +1,23 @@
+{
+  "taskId": "HCK-0076",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/shared/src/lib/bootstrap/__tests__/dynamicLoader.test.ts",
+        "packages/shared/src/lib/bootstrap/dynamicLoader.ts"
+      ],
+      "addedLines": 11,
+      "removedLines": 2,
+      "totalDiffLines": 13
+    }
+  }
+}

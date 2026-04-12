@@ -1,0 +1,120 @@
+{
+  "taskId": "HCK-0084",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-context-ts",
+  "sourceTitle": "tests: add low-level coverage for context.ts",
+  "sourceEvidence": [
+    "packages/shared/src/lib/api/context.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/shared/src/lib/api/context.ts.",
+    "Checked: packages/shared/src/lib/api/context.test.ts",
+    "packages/shared/src/lib/api/__tests__/context.test.ts",
+    "packages/shared/src/lib/api/context.spec.ts",
+    "packages/shared/src/lib/api/__tests__/context.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/shared/src/lib/api/context.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "blocked",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "shared"
+  ],
+  "validationProfileIds": [
+    "shared-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0084",
+  "branchName": "fix/hackon/hck-0084-tests-add-low-level-coverage-for-context-ts",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-context-ts",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [
+    {
+      "reason": "github_provider_unavailable",
+      "summary": "GitHub MCP created a pull request but returned an unexpected payload.",
+      "artifactPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/blockers/pr.open.github.json",
+      "createdAt": "2026-04-11T21:41:43.943Z"
+    }
+  ],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T21:41:43.943Z",
+    "decision": "Blocked at pr.open.github.",
+    "rationale": "GitHub MCP created a pull request but returned an unexpected payload.",
+    "overrideApplied": false,
+    "artifactRefs": [
+      "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/blockers/pr.open.github.json"
+    ]
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T19:39:31.936Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0084 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-shared-src-lib-api-context-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:40:46.391Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:28:26.910Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0084.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:28:26.913Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:33:05.559Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/runs/2026-04-11T21-28-26-915Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/runs/2026-04-11T21-28-26-915Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:40:23.655Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:40:27.998Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:41:43.943Z",
+      "type": "blocker.pr.open.github",
+      "message": "GitHub MCP created a pull request but returned an unexpected payload.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0084/blockers/pr.open.github.json"
+      ]
+    }
+  ],
+  "createdAt": "2026-04-11T19:39:31.936Z",
+  "updatedAt": "2026-04-11T21:41:43.943Z"
+}

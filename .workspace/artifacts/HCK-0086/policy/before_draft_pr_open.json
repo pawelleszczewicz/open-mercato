@@ -1,0 +1,26 @@
+{
+  "taskId": "HCK-0086",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        ".ai/lessons.md",
+        "apps/mercato/src/modules/example/__integration__/TC-UMES-011.spec.ts",
+        "packages/cli/src/lib/umes/__tests__/inspect.test.ts",
+        "packages/cli/src/lib/umes/__tests__/source-analysis.test.ts",
+        "packages/cli/src/lib/umes/source-analysis.ts"
+      ],
+      "addedLines": 991,
+      "removedLines": 72,
+      "totalDiffLines": 1063
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "taskId": "HCK-0036",
+  "checkpoint": "before_ready",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/core/src/modules/customers/__integration__/TC-CRM-034.spec.ts",
+        "packages/core/src/modules/customers/commands/deals.ts",
+        "packages/core/src/modules/customers/components/detail/DealForm.tsx",
+        "packages/core/src/modules/customers/components/detail/DealsSection.tsx",
+        "packages/core/src/modules/customers/components/detail/__tests__/DealsSection.test.tsx",
+        "packages/core/src/modules/customers/data/__tests__/",
+        "packages/core/src/modules/customers/data/validators.ts",
+        "packages/core/src/modules/customers/i18n/de.json",
+        "packages/core/src/modules/customers/i18n/en.json",
+        "packages/core/src/modules/customers/i18n/es.json",
+        "packages/core/src/modules/customers/i18n/pl.json"
+      ],
+      "addedLines": 859,
+      "removedLines": 15231,
+      "totalDiffLines": 16090
+    }
+  }
+}

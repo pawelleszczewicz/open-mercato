@@ -1,0 +1,34 @@
+{
+  "taskId": "HCK-0087",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/cli/coverage/clover.xml",
+        "packages/cli/coverage/coverage-final.json",
+        "packages/cli/coverage/lcov-report/base.css",
+        "packages/cli/coverage/lcov-report/block-navigation.js",
+        "packages/cli/coverage/lcov-report/favicon.png",
+        "packages/cli/coverage/lcov-report/index.html",
+        "packages/cli/coverage/lcov-report/list.ts.html",
+        "packages/cli/coverage/lcov-report/prettify.css",
+        "packages/cli/coverage/lcov-report/prettify.js",
+        "packages/cli/coverage/lcov-report/sort-arrow-sprite.png",
+        "packages/cli/coverage/lcov-report/sorter.js",
+        "packages/cli/coverage/lcov.info",
+        "packages/cli/src/lib/umes/__integration__/"
+      ],
+      "addedLines": 0,
+      "removedLines": 0,
+      "totalDiffLines": 0
+    }
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "taskId": "HCK-0071",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "DOCSIG-sidebar-user-guide-self-service-onboarding",
+  "sourceTitle": "docs: add missing sidebar entry for user-guide/self-service-onboarding",
+  "sourceEvidence": [
+    "apps/docs/docs/user-guide/self-service-onboarding.mdx exists as a documentation page.",
+    "apps/docs/sidebars.ts does not reference \"user-guide/self-service-onboarding\"."
+  ],
+  "candidatePaths": [
+    "apps/docs/sidebars.ts",
+    "apps/docs/docs/user-guide/self-service-onboarding.mdx"
+  ],
+  "expectedContributionClasses": [
+    "docs"
+  ],
+  "lane": "docs",
+  "riskZone": "low",
+  "state": "judge_pending",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "docs"
+  ],
+  "validationProfileIds": [
+    "docs-basic",
+    "docs-app-build"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0071",
+  "branchName": "docs/hackon/hck-0071-docs-add-missing-sidebar-entry-for-user-guide-self-service-onboarding",
+  "prNumber": 1290,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1290",
+  "contributionGroupId": "DOCSIG-sidebar-user-guide-self-service-onboarding",
+  "portalStatus": "submitted",
+  "judgeStatus": "pending",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T21:06:28.650Z",
+    "decision": "Duplicate checkpoint before_portal_submission passed.",
+    "rationale": "No duplicate-risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:57:58.326Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0071 discovered from repo_signal:DOCSIG-sidebar-user-guide-self-service-onboarding.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:59:13.062Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:07:34.074Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0071.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T19:07:34.078Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T19:11:36.310Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/runs/2026-04-11T19-07-34-080Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/runs/2026-04-11T19-07-34-080Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T20:41:09.719Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:41:11.752Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:01:45.162Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:01:48.460Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:03:11.324Z",
+      "type": "pr.opened",
+      "message": "Draft PR #1290 opened.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/branch/open.json"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:03:11.521Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:06:28.653Z",
+      "type": "review.complete",
+      "message": "Reviewer marked the PR ready.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/reviews/ready-check.json",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/runs/2026-04-11T21-03-11-523Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0071/runs/2026-04-11T21-03-11-523Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:06:28.654Z",
+      "type": "ready.pr",
+      "message": "PR is ready for portal submission.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:06:28.655Z",
+      "type": "portal.awaiting",
+      "message": "Waiting for manual portal submission.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:02:34.187Z",
+      "type": "portal.submitted",
+      "message": "Manual portal submission confirmed.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:02:34.190Z",
+      "type": "judge.pending",
+      "message": "Submission is now waiting for judge handling.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:57:58.326Z",
+  "updatedAt": "2026-04-11T22:02:34.190Z"
+}

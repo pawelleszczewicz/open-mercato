@@ -1,0 +1,23 @@
+{
+  "taskId": "HCK-0077",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "docs",
+  "guardrail": {
+    "maxChangedFiles": 20,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "apps/docs/docs/user-guide/workflows/creating-workflows.mdx",
+        "apps/docs/static/screenshots/open-mercato-workflows-visual-editor.png"
+      ],
+      "addedLines": 4,
+      "removedLines": 0,
+      "totalDiffLines": 4
+    }
+  }
+}

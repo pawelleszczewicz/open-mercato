@@ -1,0 +1,22 @@
+{
+  "taskId": "HCK-0063",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "tests",
+  "guardrail": {
+    "maxChangedFiles": 30,
+    "maxDiffLines": 1500,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/core/src/modules/core/__integration__/docker/"
+      ],
+      "addedLines": 0,
+      "removedLines": 0,
+      "totalDiffLines": 0
+    }
+  }
+}

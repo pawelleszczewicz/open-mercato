@@ -1,0 +1,22 @@
+{
+  "taskId": "HCK-0062",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "tests",
+  "guardrail": {
+    "maxChangedFiles": 30,
+    "maxDiffLines": 1500,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        ".ai/qa/tests/integration/TC-DOCKER-006.spec.ts"
+      ],
+      "addedLines": 0,
+      "removedLines": 0,
+      "totalDiffLines": 0
+    }
+  }
+}

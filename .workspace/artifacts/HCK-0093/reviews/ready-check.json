@@ -1,0 +1,41 @@
+{
+  "taskId": "HCK-0093",
+  "prNumber": 1322,
+  "checkedAt": "2026-04-12T00:16:30.344Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": null,
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf[bot]",
+        "createdAt": "2026-04-11T23:39:09Z"
+      },
+      {
+        "body": "[reviewer-agent] Blocking:\n1. `packages/cli/src/lib/agentic-setup.ts:180` generates the Playwright config at `.ai/qa/playwright.config.ts`, but standalone apps and the CLI integration runner both look for `.ai/qa/tests/playwright.config.ts` (`packages/create-app/template/package.json.template:20`, `packages/cli/src/lib/testing/integration.ts:215`). I reproduced this by building the CLI and running `agentic:init` in a temp app fixture: the command only created `.ai/qa/playwright.config.ts`. That means an existing app that uses `agentic:init` still won’t have the config file required by `yarn test:integration` or `mercato test:integration`.\n\n2. The new Playwright coverage does not protect that contract. `.ai/qa/tests/integration/TC-INT-008.spec.ts:82` maps shared source files straight to `.ai/...`, and `:181` uses that derived list as the assertion set, so the test encodes the same wrong destination path instead of checking the runnable standalone-app layout. I ran `npx playwright test --config .ai/qa/tests/playwright.config.ts .ai/qa/tests/integration/TC-INT-008.spec.ts --retries=0`; it passes even though the generated fixture is missing `.ai/qa/tests/playwright.config.ts`, so this regression would ship undetected.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T23:43:52Z"
+      },
+      {
+        "body": "[implementer-agent] Updated: Branch fix/hackon/hck-0093-tests-add-low-level-coverage-for-agentic-setup-ts was synchronized by the coordinator.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-12T00:11:28Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking findings.\n\nI reviewed the branch diff around [`packages/cli/src/lib/agentic-setup.ts`](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0093/packages/cli/src/lib/agentic-setup.ts), the paired build/bootstrap changes, and the new Playwright coverage in [`packages/cli/src/lib/__integration__/TC-INT-008.spec.ts`](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0093/packages/cli/src/lib/__integration__/TC-INT-008.spec.ts). The implementation is internally consistent: the CLI now copies the same standalone agentic assets and guide files as `create-app`, `agentic:init` is bootstrap-free, and the QA config path is aligned to `.ai/qa/tests/playwright.config.ts` across the touched surfaces.\n\nValidation evidence I checked:\n- `npx playwright test --config .ai/qa/tests/playwright.config.ts packages/cli/src/lib/__integration__/TC-INT-008.spec.ts --retries=0` passed.\n- `npx playwright test --config .ai/qa/tests/playwright.config.ts --list` includes `packages/cli/src/lib/__integration__/TC-INT-008.spec.ts`, so the new test is discoverable by the standard integration runner.\n\nResidual risk is limited to broader packaged standalone parity, since I did not rerun the heavier `yarn test:create-app:integration` flow in this review.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-12T00:16:29Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

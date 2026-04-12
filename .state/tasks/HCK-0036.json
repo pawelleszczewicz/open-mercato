@@ -1,0 +1,95 @@
+{
+  "taskId": "HCK-0036",
+  "targetId": "open-mercato",
+  "sourceType": "github_issue",
+  "sourceId": "109",
+  "sourceTitle": "bug: deleting a deal from Customer or Company page should deassign, not delete the record",
+  "sourceEvidence": [],
+  "candidatePaths": [
+    "packages/core/src/modules/customers/components/detail/DealsSection.tsx",
+    "packages/core/src/modules/customers/commands/deals.ts"
+  ],
+  "expectedContributionClasses": [
+    "bugfix",
+    "tests"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "judge_pending",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "core"
+  ],
+  "validationProfileIds": [
+    "core-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0036",
+  "branchName": "fix/hackon/hck-0036-bug-deleting-a-deal-from-customer-or-company-page-should-deassign-not-d",
+  "prNumber": 1228,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1228",
+  "contributionGroupId": "issue-109",
+  "portalStatus": "submitted",
+  "judgeStatus": "pending",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T18:31:44.827Z",
+    "decision": "Duplicate checkpoint before_portal_submission passed.",
+    "rationale": "No duplicate-risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:14:47Z",
+      "type": "task.rehydrated",
+      "message": "Rehydrated from open draft PR #1228 during runtime reset.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:25:59.091Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0036/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:31:44.829Z",
+      "type": "review.complete",
+      "message": "Reviewer marked the PR ready.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0036/reviews/ready-check.json",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0036/runs/2026-04-11T18-25-59-095Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0036/runs/2026-04-11T18-25-59-095Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:31:44.830Z",
+      "type": "ready.pr",
+      "message": "PR is ready for portal submission.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:31:44.831Z",
+      "type": "portal.awaiting",
+      "message": "Waiting for manual portal submission.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:51:40.715Z",
+      "type": "portal.submitted",
+      "message": "Manual portal submission confirmed.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:51:40.718Z",
+      "type": "judge.pending",
+      "message": "Submission is now waiting for judge handling.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:14:47Z",
+  "updatedAt": "2026-04-11T18:51:40.718Z"
+}

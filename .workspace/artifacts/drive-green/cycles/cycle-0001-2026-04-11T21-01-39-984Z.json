@@ -1,0 +1,3875 @@
+{
+  "cycleId": "cycle-0001-2026-04-11T21-01-39-984Z",
+  "cycleNumber": 1,
+  "activeGreenTasks": 9,
+  "targetActive": 10,
+  "dispatchCapacity": 1,
+  "startedAt": "2026-04-11T21:01:39.984Z",
+  "completedAt": "2026-04-11T21:17:20.462Z",
+  "durationMs": 940478,
+  "queuedTaskIds": [
+    "HCK-0081"
+  ],
+  "dispatchedTaskIds": [
+    "HCK-0081"
+  ],
+  "progressedTaskIds": [
+    "HCK-0048",
+    "HCK-0059",
+    "HCK-0064",
+    "HCK-0057",
+    "HCK-0063",
+    "HCK-0071",
+    "HCK-0078",
+    "HCK-0079",
+    "HCK-0080"
+  ],
+  "queueSnapshotBeforeDispatch": {
+    "queuedTotal": 17,
+    "queuedGithub": 0,
+    "queuedRepoSignal": 17
+  },
+  "queueSnapshotAfterCycle": {
+    "queuedTotal": 16,
+    "queuedGithub": 0,
+    "queuedRepoSignal": 16
+  },
+  "discoveryBatches": [
+    {
+      "sourceKind": "repo_signal",
+      "attempt": 1,
+      "startedAt": "2026-04-11T21:08:35.956Z",
+      "completedAt": "2026-04-11T21:08:36.893Z",
+      "durationMs": 948,
+      "excludedSourceKeyCount": 0,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-08-36-890Z.json",
+      "selection": {
+        "selected": [],
+        "skipped": [
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-tutorials-testing-test-watch",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-tutorials-testing-test-watch",
+              "sourceTitle": "docs: replace stale command \"test:watch\" in tutorials/testing",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-tutorials-testing-test-watch",
+              "sourceEvidence": [
+                "Command \"yarn test:watch\" in apps/docs/docs/tutorials/testing.mdx:19 references a missing root script.",
+                "package.json does not define the script \"test:watch\".",
+                "Declaration: - Watch mode: `yarn test:watch`"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/tutorials/testing.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.087Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-installation-setup-docker",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-installation-setup-docker",
+              "sourceTitle": "docs: replace stale command \"docker:\" in installation/setup",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-installation-setup-docker",
+              "sourceEvidence": [
+                "Command \"yarn docker:\" in apps/docs/docs/installation/setup.mdx:214 references a missing root script.",
+                "package.json does not define the script \"docker:\".",
+                "Declaration: The repository also exposes root-level `yarn docker:*` commands that run the matching workflow inside the running `app` container. These wrappers exist so container-first contributors can use the same command surface without translating eve"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/installation/setup.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.086Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+              "sourceTitle": "docs: replace stale command \"test:workflows\" in framework/workflows/testing",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+              "sourceEvidence": [
+                "Command \"yarn test:workflows\" in apps/docs/docs/framework/workflows/testing.mdx:562 references a missing root script.",
+                "package.json does not define the script \"test:workflows\".",
+                "Declaration: run: yarn test:workflows"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/workflows/testing.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.085Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-runtime-workers-start-workers",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-runtime-workers-start-workers",
+              "sourceTitle": "docs: replace stale command \"start:workers\" in framework/runtime/workers",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-runtime-workers-start-workers",
+              "sourceEvidence": [
+                "Command \"yarn start:workers\" in apps/docs/docs/framework/runtime/workers.mdx:169 references a missing root script.",
+                "package.json does not define the script \"start:workers\".",
+                "Declaration: 2. Run workers as separate processes using `yarn start:workers`"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/runtime/workers.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.081Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-modules-overview-db",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-modules-overview-db",
+              "sourceTitle": "docs: replace stale command \"db:\" in framework/modules/overview",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-modules-overview-db",
+              "sourceEvidence": [
+                "Command \"yarn db:\" in apps/docs/docs/framework/modules/overview.mdx:249 references a missing root script.",
+                "package.json does not define the script \"db:\".",
+                "Declaration: - Generators (`yarn generate`) and migrations (`yarn db:*`) only include enabled modules."
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/modules/overview.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.080Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+              "sourceTitle": "docs: replace stale command \"modules:prepare\" in framework/modules/checkout",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+              "sourceEvidence": [
+                "Command \"npm run modules:prepare\" in apps/docs/docs/framework/modules/checkout.mdx:29 references a missing root script.",
+                "package.json does not define the script \"modules:prepare\".",
+                "Declaration: After enabling the module, run migrations and `npm run modules:prepare` when you add or modify auto-discovered module files."
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/modules/checkout.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.076Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-events-queue-workers-start-app",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-events-queue-workers-start-app",
+              "sourceTitle": "docs: replace stale command \"start:app\" in framework/events/queue-workers",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-events-queue-workers-start-app",
+              "sourceEvidence": [
+                "Command \"yarn start:app\" in apps/docs/docs/framework/events/queue-workers.mdx:211 references a missing root script.",
+                "package.json does not define the script \"start:app\".",
+                "Declaration: | `yarn start:app` | Production mode (app only) |"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/events/queue-workers.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.074Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+              "sourceTitle": "docs: replace stale command \"start:workers\" in framework/events/queue-workers",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+              "sourceEvidence": [
+                "Command \"yarn start:workers\" in apps/docs/docs/framework/events/queue-workers.mdx:180 references a missing root script.",
+                "package.json does not define the script \"start:workers\".",
+                "Declaration: 2. Run worker processes separately using `yarn start:workers` or `yarn mercato queue worker --all`"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/events/queue-workers.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.074Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+              "sourceTitle": "docs: replace stale command \"openapi:generate\" in framework/api/building-api-modules",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+              "sourceEvidence": [
+                "Command \"yarn openapi:generate\" in apps/docs/docs/framework/api/building-api-modules.mdx:890 references a missing root script.",
+                "package.json does not define the script \"openapi:generate\".",
+                "Declaration: yarn openapi:generate"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/api/building-api-modules.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.069Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-cli-db-migrate-script",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-cli-db-migrate-script",
+              "sourceTitle": "docs: replace stale command \"script\" in cli/db-migrate",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-migrate-script",
+              "sourceEvidence": [
+                "Command \"yarn script\" in apps/docs/docs/cli/db-migrate.mdx:16 references a missing root script.",
+                "package.json does not define the script \"script\".",
+                "Declaration: # Using yarn script (includes generators + entity install)"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/cli/db-migrate.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.064Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-cli-db-generate-script",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-cli-db-generate-script",
+              "sourceTitle": "docs: replace stale command \"script\" in cli/db-generate",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-generate-script",
+              "sourceEvidence": [
+                "Command \"yarn script\" in apps/docs/docs/cli/db-generate.mdx:12 references a missing root script.",
+                "package.json does not define the script \"script\".",
+                "Declaration: # Using yarn script"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/cli/db-generate.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.063Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-cli-db-greenfield-script",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-cli-db-greenfield-script",
+              "sourceTitle": "docs: replace stale command \"script\" in cli/db-greenfield",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-greenfield-script",
+              "sourceEvidence": [
+                "Command \"yarn script\" in apps/docs/docs/cli/db-greenfield.mdx:12 references a missing root script.",
+                "package.json does not define the script \"script\".",
+                "Declaration: # Using yarn script"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/cli/db-greenfield.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T21:08:36.063Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          }
+        ]
+      },
+      "qualifiedTaskIds": [],
+      "discoveredCandidates": 12,
+      "queueSnapshot": {
+        "queuedTotal": 17,
+        "queuedGithub": 0,
+        "queuedRepoSignal": 17
+      }
+    },
+    {
+      "sourceKind": "github_issue",
+      "attempt": 1,
+      "startedAt": "2026-04-11T21:08:36.918Z",
+      "completedAt": "2026-04-11T21:10:00.009Z",
+      "durationMs": 83100,
+      "excludedSourceKeyCount": 0,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-09-59-996Z.json",
+      "selection": {
+        "selected": [],
+        "skipped": [
+          {
+            "candidate": {
+              "candidateId": "ISSUE-557",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "557",
+              "sourceTitle": "feat: Add exploratory integration test stream for uncovered high-risk flows",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/557",
+              "sourceEvidence": [
+                "Proposed solution",
+                "Create a new exploratory integration-testing stream to uncover high-risk user flows not yet represented in scenario docs and convert validated discoveries into durable Playwright tests.",
+                "Run exploratory sessions across core modules (`auth`, `customers/crm`, `catalog`, `sales`, `admin`, cross-module integration)"
+              ],
+              "candidatePaths": [
+                "TC-*.md",
+                ".spec.ts"
+              ],
+              "expectedContributionClasses": [
+                "tests"
+              ],
+              "lane": "tests",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "qa"
+              ],
+              "validationProfileIds": [
+                "integration-tests"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 106,
+              "scoreReasons": [
+                "Lane tests base score.",
+                "Low risk zone.",
+                "Issue references concrete paths."
+              ],
+              "labels": [
+                "feature",
+                "missing-integration-tests",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 4,
+              "updatedAt": "2026-03-15T20:43:46Z"
+            },
+            "reasons": [
+              "Test title suggests a broad campaign rather than a bounded green-lane task."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-316",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "316",
+              "sourceTitle": "feat: currency rates docs extensions",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/316",
+              "sourceEvidence": [
+                "Proposed solution",
+                "Please add to the docs how to register a custom fetching service provider (we need to get the service from the `di` and register a provider)",
+                "Add to docs how to user some nice helpers to quickly get the rates"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 104,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence."
+              ],
+              "labels": [
+                "documentation",
+                "feature",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:43:01Z"
+            },
+            "reasons": [
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-174",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "174",
+              "sourceTitle": "feat: add docs on price kinds",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/174",
+              "sourceEvidence": [
+                "Proposed solution",
+                "Describe the change you would like to see, including any UI or API impacts.",
+                "Additional context"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 104,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence."
+              ],
+              "labels": [
+                "documentation",
+                "feature",
+                "stale",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:42:23Z"
+            },
+            "reasons": [
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-122",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "122",
+              "sourceTitle": "feat: test and enrich the docs regarding the customization guide",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/122",
+              "sourceEvidence": [
+                "Go on and create some modules following the guide: https://docs.openmercato.com/customization/create-first-module",
+                "then extend the docs + maybe record some tutorial videos (?)"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs",
+                "tests"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 104,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence."
+              ],
+              "labels": [
+                "documentation",
+                "enhancement",
+                "good first issue",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:42:02Z"
+            },
+            "reasons": [
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-57",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "57",
+              "sourceTitle": "feat: add user guide docs about customer module",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/57",
+              "sourceEvidence": [
+                "Let's add the docs about how to use the customer module:",
+                "[ ] screenshots",
+                "[ ] write the docs using Codex or Cursor"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 104,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence."
+              ],
+              "labels": [
+                "documentation",
+                "good first issue",
+                "needs-response",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:41:37Z"
+            },
+            "reasons": [
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-556",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "556",
+              "sourceTitle": "feat: Create integration Playwright tests for all QA scenarios using existing skills",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/556",
+              "sourceEvidence": [
+                "Proposed solution",
+                "Create integration Playwright specs for **all** scenario markdown files in `.ai/qa/scenarios/` by standardizing on the existing skills workflow:",
+                "Primary: `create-qa-scenario`"
+              ],
+              "candidatePaths": [
+                ".ai/qa/scenarios/*.md",
+                ".ai/qa/tests/**/*.spec.ts",
+                "TC-*.md",
+                ".spec.ts",
+                ".ai/qa/tests/<domain>/TC-*.spec.ts"
+              ],
+              "expectedContributionClasses": [
+                "tests"
+              ],
+              "lane": "tests",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "qa"
+              ],
+              "validationProfileIds": [
+                "integration-tests"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 100,
+              "scoreReasons": [
+                "Lane tests base score.",
+                "Low risk zone.",
+                "Issue references concrete paths.",
+                "Higher discussion count suggests active churn."
+              ],
+              "labels": [
+                "feature",
+                "missing-integration-tests",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 5,
+              "updatedAt": "2026-04-04T00:59:38Z"
+            },
+            "reasons": [
+              "Feature-style title requires manual review instead of auto-dispatch.",
+              "Test title suggests a broad campaign rather than a bounded green-lane task."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-919",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "919",
+              "sourceTitle": "bug: Convert quote to order keeps quote document number",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/919",
+              "sourceEvidence": [
+                "After converting a Quote to an Order, the resulting document still uses the QUOTE document number format and prefix.",
+                "Steps to reproduce",
+                "1. Create a Quote"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs",
+                "bugfix"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 94,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-30T07:55:15Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-165",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "165",
+              "sourceTitle": "feat: add user guids - docs to catalog products, sales channels, attachments, price kinds",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/165",
+              "sourceEvidence": [
+                "Proposed solution",
+                "Add docs with the screenshots to all new sections from the #142"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 92,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "documentation",
+                "good first issue",
+                "feature",
+                "framework"
+              ],
+              "assigneeLogins": [
+                "migsilva89"
+              ],
+              "comments": 4,
+              "updatedAt": "2026-03-15T20:42:15Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-966",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "966",
+              "sourceTitle": "bug: enterprise security module isn't installed but bootstrap.ts",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/966",
+              "sourceEvidence": [
+                "Issue with running standalone app, the enterprise security module isn't installed but bootstrap.ts is trying to import from it.",
+                "<img width=\"991\" height=\"586\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/27f59c03-09f7-42d1-84d3-e71c31fa0184\" />",
+                "Steps to reproduce"
+              ],
+              "candidatePaths": [
+                "src/bootstrap.ts"
+              ],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 88,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "Issue references concrete paths.",
+                "Single-file or single-area scope signal.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:54Z"
+            },
+            "reasons": [
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-172",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "172",
+              "sourceTitle": "task: deploy new docs",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/172",
+              "sourceEvidence": [
+                "Proposed solution",
+                "After merging the #142 in - deploy the https://docs.openmercato.com"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 86,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence.",
+                "Task-oriented title penalty."
+              ],
+              "labels": [
+                "documentation",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:42:20Z"
+            },
+            "reasons": [
+              "Task-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1088",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1088",
+              "sourceTitle": "bug: Generator silently drops app-level workers — moduleHasExport can't resolve relative paths",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1088",
+              "sourceEvidence": [
+                "App-level workers (in `src/modules/<module>/workers/*.ts`) are found by the scanner but silently dropped by the generator. The `moduleHasExport()` check fails because:",
+                "1. For **relative paths**: `import()` can't resolve relative paths at generator runtime",
+                "2. For **absolute paths**: `import()` can't import `.ts` files without a TypeScript loader (tsx/ts-node) — the CLI runs as compiled JS via esbuild"
+              ],
+              "candidatePaths": [
+                "src/modules",
+                "src/modules/mymodule/workers/my-worker.ts",
+                "packages/cli/src/lib/utils.ts",
+                "src/modules/<module>/workers/*.ts"
+              ],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "cli"
+              ],
+              "validationProfileIds": [
+                "cli-package-checks"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 84,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "Issue references concrete paths.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-28T18:35:47Z"
+            },
+            "reasons": [
+              "Score 84 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-936",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "936",
+              "sourceTitle": "bug: catalog - searching does not work in the datatable (products imported from akeneo)",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/936",
+              "sourceEvidence": [
+                "<img width=\"2726\" height=\"823\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/48bedde8-75cd-45df-8b25-8e574850a131\" />"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug",
+                "integration"
+              ],
+              "assigneeLogins": [],
+              "comments": 4,
+              "updatedAt": "2026-04-10T20:17:24Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1033",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1033",
+              "sourceTitle": "bug: Creating Business Rule results in 500 Internal Server Error and invalid JSON response",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1033",
+              "sourceEvidence": [
+                "When attempting to create a Business Rule via the UI, the request returns HTTP 500 and the frontend throws a JSON parsing error.",
+                "Steps to reproduce",
+                "1. log in as Admin"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 4,
+              "updatedAt": "2026-04-06T07:18:06Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1077",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1077",
+              "sourceTitle": "bug: AI chat returns no response on first message and “APIError: Unknown error” on subsequent messages",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1077",
+              "sourceEvidence": [
+                "AI Assistant chat does not respond to the first message and returns a generic error on every subsequent message, making the feature unusable.",
+                "Steps to reproduce",
+                "1. Open AI chat (ctrl+J)"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-30T14:04:03Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1068",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1068",
+              "sourceTitle": "bug: Delivery Log missing retry action in \"Actions\" column",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1068",
+              "sourceEvidence": [
+                "Delivery Log table does not provide any actions (e.g. retry) despite being defined in the specification.",
+                "Steps to reproduce",
+                "1. Go to Settings → Webhooks"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-25T20:50:44Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1019",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1019",
+              "sourceTitle": "bug: [UI] Duplicate/ambiguous options in \"C2C sending method\" dropdown",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1019",
+              "sourceEvidence": [
+                "The \"C2C sending method\" dropdown contains duplicate or ambiguous options representing the same underlying value (dispatch_order), which can confuse users.",
+                "Steps to reproduce",
+                "1. Navigate to Shipping carriers → Create shipment"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-18T22:24:13Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1018",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1018",
+              "sourceTitle": "bug: [Validation] Shipment form allows invalid email and phone values without validation",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1018",
+              "sourceEvidence": [
+                "The shipment creation form does not validate email and phone fields, allowing invalid input values to be submitted.",
+                "Steps to reproduce",
+                "1. Navigate to Shipping carriers → Create"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-18T22:09:46Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1016",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1016",
+              "sourceTitle": "bug: [UI/API] InPost shipping integration fails to fetch rates due to missing credentials configuration",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1016",
+              "sourceEvidence": [
+                "The InPost shipping integration cannot fetch rates because required credentials (organizationId, apiToken) are not configurable in the UI, resulting in API errors and blocking the shipment creation flow.",
+                "Steps to reproduce",
+                "1. Log in as Super Admin"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-18T22:06:01Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1017",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1017",
+              "sourceTitle": "bug: [UX] Shipment wizard does not render service selection when rates fail, blocking user flow",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1017",
+              "sourceEvidence": [
+                "When shipping rates fail to load, the \"Select service\" step remains empty and does not provide any fallback or recovery option, preventing the user from completing shipment creation.",
+                "Steps to reproduce",
+                "1. Log in as Super Admin"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-18T22:04:30Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-979",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "979",
+              "sourceTitle": "bug: Inconsistent extracted text display in attachment metadata preview",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/979",
+              "sourceEvidence": [
+                "Attachment preview shows inconsistent behavior when no text is extracted from images.",
+                "Steps to reproduce",
+                "1. Upload different image files"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-16T21:54:39Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-894",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "894",
+              "sourceTitle": "bug: default unit of measure not selected + check if search by name works on edit/add quote item",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/894",
+              "sourceEvidence": [
+                "<img width=\"1087\" height=\"780\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8103730c-c74e-4704-9a61-51ed54a081ed\" />"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:45:28Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-917",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "917",
+              "sourceTitle": "bug: Variant list not restored after clearing variant selection when adding item to quote",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/917",
+              "sourceEvidence": [
+                "When adding a product with multiple variants to a Quote, clearing the selected variant does not restore the full variant list. Only the previously selected variant remains available, preventing the user from selecting a different variant wi",
+                "Steps to reproduce",
+                "1. Create a Quote"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:12Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-892",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "892",
+              "sourceTitle": "bug: product catalog - editing product - display media from variants + set default variant media as default product media if none set",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/892",
+              "sourceEvidence": [
+                "<img width=\"914\" height=\"539\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/af904850-f1e5-4a37-9d0a-cbb1bdf039c4\" />"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:59Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-793",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "793",
+              "sourceTitle": "bug: PUT /api/customers/people returns ok=true for ignored nested profile updates",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/793",
+              "sourceEvidence": [
+                "`PUT /api/customers/people` returns `{ \"ok\": true }` even when nested `profile` updates are ignored.",
+                "Steps to reproduce",
+                "2. API returns:"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:48Z"
+            },
+            "reasons": [
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          }
+        ]
+      },
+      "qualifiedTaskIds": [],
+      "discoveredCandidates": 24,
+      "queueSnapshot": {
+        "queuedTotal": 17,
+        "queuedGithub": 0,
+        "queuedRepoSignal": 17
+      }
+    },
+    {
+      "sourceKind": "github_issue",
+      "attempt": 2,
+      "startedAt": "2026-04-11T21:10:00.028Z",
+      "completedAt": "2026-04-11T21:11:21.837Z",
+      "durationMs": 81821,
+      "excludedSourceKeyCount": 24,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-11-21-835Z.json",
+      "selection": {
+        "selected": [],
+        "skipped": [
+          {
+            "candidate": {
+              "candidateId": "ISSUE-333",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "333",
+              "sourceTitle": "bug: add missing open-api specs for responses for workflows api",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/333",
+              "sourceEvidence": [
+                "<img width=\"1685\" height=\"1579\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1ffb4ef7-edf2-4737-8012-0b301cb0d22f\" />",
+                "We need to have a detailed response specs in the docs as we do for other modules"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs",
+                "bugfix",
+                "tests"
+              ],
+              "lane": "tests",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "qa"
+              ],
+              "validationProfileIds": [
+                "integration-tests"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 78,
+              "scoreReasons": [
+                "Lane tests base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "documentation",
+                "framework"
+              ],
+              "assigneeLogins": [
+                "pat-lewczuk"
+              ],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:43:06Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 78 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-59",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "59",
+              "sourceTitle": "feat: add REST API docs for the Exporting feature",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/59",
+              "sourceEvidence": [
+                "GitHub issue #59 requires follow-up based on its reported problem statement."
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 76,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Documentation label boosts confidence.",
+                "Feature-oriented title penalty."
+              ],
+              "labels": [
+                "documentation",
+                "good first issue",
+                "stale",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:41:38Z"
+            },
+            "reasons": [
+              "Score 76 is below the auto-dispatch threshold.",
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-238",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "238",
+              "sourceTitle": "bug: test quotes and orders filter by tags",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/238",
+              "sourceEvidence": [
+                "In the Filters it shows selected tag id instead of name and does not show the assigned records"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "tests",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "qa"
+              ],
+              "validationProfileIds": [
+                "integration-tests"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 72,
+              "scoreReasons": [
+                "Lane tests base score.",
+                "Low risk zone.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned.",
+                "Higher discussion count suggests active churn."
+              ],
+              "labels": [
+                "bug",
+                "ui",
+                "framework"
+              ],
+              "assigneeLogins": [
+                "MORY33"
+              ],
+              "comments": 6,
+              "updatedAt": "2026-03-15T20:42:38Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 72 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-864",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "864",
+              "sourceTitle": "Feature: Implement SPEC-058 sales-native payment gateway refactor",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/864",
+              "sourceEvidence": [
+                "Implement **SPEC-058 — Sales Native Payment Gateway Refactor (No Legacy Bridges)** to make `sales` fully gateway-native and aligned with the new integration infrastructure.",
+                "Spec: `.ai/specs/SPEC-058-2026-03-05-sales-native-payment-gateway-refactor.md`",
+                "`sales` still contains legacy payment execution/credential paths while `payment_gateways` already provides the canonical adapter + transaction + webhook/status infrastructure."
+              ],
+              "candidatePaths": [
+                ".ai/specs/SPEC-058-2026-03-05-sales-native-payment-gateway-refactor.md"
+              ],
+              "expectedContributionClasses": [
+                "tests",
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 70,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "Issue references concrete paths.",
+                "Single-file or single-area scope signal.",
+                "Docs-only path scope.",
+                "Feature-oriented title penalty.",
+                "Implementation-spec scope penalty."
+              ],
+              "labels": [
+                "enhancement",
+                "feature",
+                "refactor",
+                "integration"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:57Z"
+            },
+            "reasons": [
+              "Score 70 is below the auto-dispatch threshold.",
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-420",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "420",
+              "sourceTitle": "feat: Implement Husky pre-push hooks for automated linting and testing",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/420",
+              "sourceEvidence": [
+                "Problem Statement",
+                "Currently, code quality checks (linting, tests) are only enforced at the CI/CD level after code is pushed. This creates several issues:",
+                "1. Delayed feedback - Developers only discover issues after pushing, waiting for CI pipeline (2-5+ minutes)"
+              ],
+              "candidatePaths": [
+                "CONTRIBUTING.md"
+              ],
+              "expectedContributionClasses": [
+                "tests",
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 70,
+              "scoreReasons": [
+                "Lane docs base score.",
+                "Low risk zone.",
+                "Issue references concrete paths.",
+                "Single-file or single-area scope signal.",
+                "Docs-only path scope.",
+                "Feature-oriented title penalty.",
+                "Implementation-spec scope penalty."
+              ],
+              "labels": [
+                "feature",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:43:22Z"
+            },
+            "reasons": [
+              "Score 70 is below the auto-dispatch threshold.",
+              "Feature-style title requires manual review instead of auto-dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-958",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "958",
+              "sourceTitle": "bug: Inconsistent validation when organization context is missing",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/958",
+              "sourceEvidence": [
+                "When creating resources without selecting an organization in the header dropdown, the system shows inconsistent validation errors depending on the module.",
+                "Steps to reproduce",
+                "1. Login as superadmin"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:44Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-946",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "946",
+              "sourceTitle": "bug: Inconsistent timestamp formatting between table view and tooltip",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/946",
+              "sourceEvidence": [
+                "In the Payments table on an Order, the timestamp formatting differs between the visible column and the tooltip.",
+                "Table column:",
+                "12.03.2026, 15:12:32"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:45:38Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-792",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "792",
+              "sourceTitle": "bug: POST /api/customers/people accepts nested profile payload but silently drops profile.linkedInUrl",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/792",
+              "sourceEvidence": [
+                "`POST /api/customers/people` accepts nested `profile.linkedInUrl` payload shape, returns success, but silently drops the value.",
+                "Steps to reproduce",
+                "1. Call `POST /api/customers/people` with payload:"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:46Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-774",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "774",
+              "sourceTitle": "bug: To-do's custom atributes",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/774",
+              "sourceEvidence": [
+                "Clicking the \"Manage Fields\" icon triggers an incorrect redirect to the task list instead of opening the configuration modal.",
+                "Steps to reproduce",
+                "1. Go to To-Dos"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:44Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-728",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "728",
+              "sourceTitle": "bug: Redirects to /login on 403 Forbidden after organization switch (cross-org record access)",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/728",
+              "sourceEvidence": [
+                "When switching organizations while viewing a company record, the app redirects to the login page (/login) after the",
+                "backend returns 403 Forbidden for the record (which belongs to the previous organization). The user is not actually",
+                "logged out (session remains valid), but the login screen is shown, which is"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:34Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-690",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "690",
+              "sourceTitle": "bug: backend/catalog/products/:id path auto-redirect back to login",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/690",
+              "sourceEvidence": [
+                "When I navigate to individual product page - I am redirected back to login page",
+                "Steps to reproduce",
+                "1. Login to Open Mercato backend"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 4,
+              "updatedAt": "2026-03-15T20:44:19Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-660",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "660",
+              "sourceTitle": "bug: support conflict-resolution dialog on `onDelete`",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/660",
+              "sourceEvidence": [
+                "Steps to reproduce:",
+                "open any deal record",
+                "on the separate backend session (other user)"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "enterprise",
+                "for-core-contributors",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:05Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-659",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "659",
+              "sourceTitle": "bug: record-locks does not support `sales-channel-offers`",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/659",
+              "sourceEvidence": [
+                "It works for most `CrudForms` but by some reasons the alerts on co-editing and conflicts are not supported by the `sales-channel-offers`. Compare it to `sales-channel` that works fine and find the reason",
+                "Note: this is an enteprise edition bug - please do not contribute to it due to IP constraints on enterprise, this is for Open Mercato core-team only"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "enterprise",
+                "for-core-contributors",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:04Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-658",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "658",
+              "sourceTitle": "bug: record-locks - fix the `Accpet mine` on conflicts on non-crud forms (sales, customers)",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/658",
+              "sourceEvidence": [
+                "Steps to reproduce:",
+                "open any person/company record",
+                "on the separate backend session (other user)"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "enterprise",
+                "for-core-contributors",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:03Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-339",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "339",
+              "sourceTitle": "bug: excessive memory usage",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/339",
+              "sourceEvidence": [
+                "In the development environment trying to render any page results in memory exhaustion on a system with 8GB RAM. The system kernel kills the next-server process resulting in a shutdown of the whole open-mercato instance.",
+                "The problem (at a smaller scale, and not always) exists also in the production environment after \"yarn build\" command:",
+                "It started with the 0.3.13 version, previous releases worked fine."
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:43:07Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-304",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "304",
+              "sourceTitle": "bug: fix all remaining imports from generated",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/304",
+              "sourceEvidence": [
+                "This is related to #301 - there's still quite few imports",
+                "<img width=\"802\" height=\"1462\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/25ef4e5e-5819-4099-a30b-7f47156da14b\" />",
+                "I'll update the newly created booking module to have it fixed but we still need to fix the other ones"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:42:57Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-246",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "246",
+              "sourceTitle": "bug: improve how upgrade actions discover the currently installed version",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/246",
+              "sourceEvidence": [
+                "After the clean install, regardless of which version is on, all the upgrade actions from 0.3.4 are willing to pop up and be executed. It should save the latest version somewhere in the database, after:",
+                "`yarn mercato init`",
+                "running the upgrade actions"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:42:41Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-112",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "112",
+              "sourceTitle": "bug: yarn `db:generate` by some reason generates drops",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/112",
+              "sourceEvidence": [
+                "... for existing tables from other modules while it should've been using the module-oriented snapshots",
+                "<img width=\"376\" height=\"421\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/8b445313-d0b2-490f-be1f-003d150e194c\" />",
+                "we need to find out why the isometric modules mechanism is not supporting this generation well"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 68,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "dependencies",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:41:56Z"
+            },
+            "reasons": [
+              "Score 68 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1042",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1042",
+              "sourceTitle": "bug: Admin cannot create message (access denied)",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1042",
+              "sourceEvidence": [
+                "Admin user is unable to create a new message in the Messages module due to lack of permissions.",
+                "Steps to reproduce",
+                "1. Log in as Admin"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [
+                "dominikpalatynski"
+              ],
+              "comments": 2,
+              "updatedAt": "2026-03-24T07:42:00Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-947",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "947",
+              "sourceTitle": "bug: Payment method from payment record not reflected in Order details",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/947",
+              "sourceEvidence": [
+                "When adding a payment to an Order, the payment method selected in the payment record is not reflected in the Order details section.",
+                "Payment table entry:",
+                "Method: Bank Transfer"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [
+                "michal1986"
+              ],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:45:37Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-899",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "899",
+              "sourceTitle": "bug: accepting reply draft does not work",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/899",
+              "sourceEvidence": [
+                "<img width=\"495\" height=\"223\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/e69e22c2-6969-4568-9a71-2eff6bc26fe7\" />",
+                "Same when clicking \"Edit\" -> save"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [
+                "haxiorz"
+              ],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:04Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-891",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "891",
+              "sourceTitle": "bug: inbox-ops - create default variants with product create action",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/891",
+              "sourceEvidence": [
+                "The default variant is required for quotes to work. Inbox ops nicely creates products but with no variants and then when editing the quote i've got the issue like this:",
+                "<img width=\"1102\" height=\"746\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/015f992e-8d46-40ce-8909-323d438ad26e\" />"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [
+                "haxiorz"
+              ],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:45:01Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-897",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "897",
+              "sourceTitle": "bug: missing translation in `inbox-ops`",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/897",
+              "sourceEvidence": [
+                "<img width=\"385\" height=\"105\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/74d89db6-70ae-4045-a96c-16cf444895d5\" />"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [
+                "haxiorz"
+              ],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:00Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-661",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "661",
+              "sourceTitle": "bug: business rules - efective dates",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/661",
+              "sourceEvidence": [
+                "It is impossible to save Business Rule once Effective from or Effective to fields are set.",
+                "Error message appears on each of these fields",
+                "\"Invalid input: expected date, received string\""
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [
+                "pat-lewczuk"
+              ],
+              "comments": 3,
+              "updatedAt": "2026-03-15T20:44:07Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          }
+        ]
+      },
+      "qualifiedTaskIds": [],
+      "discoveredCandidates": 24,
+      "queueSnapshot": {
+        "queuedTotal": 17,
+        "queuedGithub": 0,
+        "queuedRepoSignal": 17
+      }
+    },
+    {
+      "sourceKind": "github_issue",
+      "attempt": 3,
+      "startedAt": "2026-04-11T21:11:21.859Z",
+      "completedAt": "2026-04-11T21:12:44.320Z",
+      "durationMs": 82469,
+      "excludedSourceKeyCount": 48,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-12-44-318Z.json",
+      "selection": {
+        "selected": [],
+        "skipped": [
+          {
+            "candidate": {
+              "candidateId": "ISSUE-378",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "378",
+              "sourceTitle": "bug: mcp / vs. search",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/378",
+              "sourceEvidence": [
+                "I started the `mcp:server-http` that successfully indexed the endpoints into `meilisearch`. However there is an issue that the Search settings shows 0 documents:",
+                "<img width=\"1144\" height=\"809\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/1b8c7620-4155-473b-a2e1-34f41f6bb77f\" />",
+                "the other issue is what happens when I click `Reindex all`? I mean it seems like it's removing the API docs and they're not indexed properly again as they're only indexed by `mcp:server-http`  we need to fix it and have the API docs re-inde"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 66,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned."
+              ],
+              "labels": [
+                "bug",
+                "integration"
+              ],
+              "assigneeLogins": [
+                "fto-aubergine"
+              ],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:43:12Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 66 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-559",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "559",
+              "sourceTitle": "bug: CLI/ESM Compatibility with Next.js Imports",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/559",
+              "sourceEvidence": [
+                "bug: CLI/ESM Compatibility with Next.js Imports",
+                "Date**: 2026-02-14",
+                "Severity**: High (Blocks CI/CD and tooling workflows)"
+              ],
+              "candidatePaths": [
+                "src/lib/auth/server.ts",
+                "packages/shared/dist/lib/auth/server.js",
+                "packages/shared/src/lib/auth/server.ts",
+                "repro-crash.ts",
+                "yarn ts-node repro-crash.ts",
+                "packages/shared",
+                "packages/cli"
+              ],
+              "expectedContributionClasses": [
+                "bugfix",
+                "tests"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "shared"
+              ],
+              "validationProfileIds": [
+                "shared-package-checks"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 64,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "Issue references concrete paths.",
+                "Framework or architecture label penalty.",
+                "Architecture or runtime-coupling penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 4,
+              "updatedAt": "2026-03-15T20:43:47Z"
+            },
+            "reasons": [
+              "Score 64 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch.",
+              "Architecture or runtime-coupled bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-933",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "933",
+              "sourceTitle": "bug: messages autosuggest works only for 1 letter strings",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/933",
+              "sourceEvidence": [
+                "<img width=\"812\" height=\"403\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/ecfeb256-a069-406d-a41c-d0312033630d\" />"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 56,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [
+                "dominikpalatynski"
+              ],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:24Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 56 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-815",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "815",
+              "sourceTitle": "bug: Scheduler - tenant-scoped and system-scoped jobs invisible on list page due to unconditional   organization_id filter",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/815",
+              "sourceEvidence": [
+                "Scheduled jobs created with scope type \"Tenant\" or \"System\" are invisible on the list page. The list API   unconditionally filters by `organization_id = ctx.auth?.orgId`, but tenant-scoped jobs are created with   `organizationId = null` and",
+                "Steps to reproduce",
+                "1. Navigate to `/backend/config/scheduled-jobs/new`"
+              ],
+              "candidatePaths": [
+                "packages/scheduler/src/modules/scheduler/api/jobs/route.ts"
+              ],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "high",
+              "primaryAreaOwners": [
+                "scheduler"
+              ],
+              "validationProfileIds": [
+                "scheduler-package-checks"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 50,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "High risk zone penalty.",
+                "Issue references concrete paths.",
+                "Single-file or single-area scope signal.",
+                "Cross-cutting scope signal penalty.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:44:51Z"
+            },
+            "reasons": [
+              "Score 50 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-770",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "770",
+              "sourceTitle": "bug: [UI/UX] Mental model conflict (sidebar)",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/770",
+              "sourceEvidence": [
+                "The Perspectives panel opens from the left side and overlays the main sidebar navigation, causing a navigation conflict and loss of user context. Additionally, the panel can be triggered from multiple entry points (e.g. “Perspectives” butto",
+                "Steps to reproduce",
+                "1. Go to any table-based view (e.g. Exchange Rates)"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 48,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Framework or architecture label penalty.",
+                "Architecture or runtime-coupling penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:44:40Z"
+            },
+            "reasons": [
+              "Score 48 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1032",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1032",
+              "sourceTitle": "bug: Inconsistent and incorrect access control behavior (logout, empty states, partial access)",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1032",
+              "sourceEvidence": [
+                "When a user without required permissions accesses restricted Settings sections, the system behaves inconsistently: sometimes logging out the user, sometimes showing empty data, and sometimes displaying access denied messages.",
+                "Steps to reproduce",
+                "1. Log in as an Employee"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 46,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned.",
+                "Architecture or runtime-coupling penalty."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [
+                "pkarw"
+              ],
+              "comments": 3,
+              "updatedAt": "2026-04-06T21:53:53Z"
+            },
+            "reasons": [
+              "Issue already has an assignee.",
+              "Score 46 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-794",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "794",
+              "sourceTitle": "bug: /api/customers/comments and /api/customers/activities return misleading 404 for deal UUID in entityId",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/794",
+              "sourceEvidence": [
+                "Timeline write endpoints return misleading `404 Customer not found` when `entityId` contains a deal UUID.",
+                "Steps to reproduce",
+                "1. Create a deal (example id: `<deal-id>`)."
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "likely_duplicate",
+              "duplicateSignals": [
+                {
+                  "kind": "upstream-open-issue",
+                  "duplicateRiskClass": "likely_duplicate",
+                  "summary": "Open upstream PR #1262 already references #794.",
+                  "source": "github",
+                  "relatedTaskId": null,
+                  "prNumber": 1262,
+                  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1262",
+                  "overlapPaths": []
+                }
+              ],
+              "score": 38,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Likely-duplicate signal detected."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 2,
+              "updatedAt": "2026-03-15T20:44:49Z"
+            },
+            "reasons": [
+              "Duplicate risk is likely_duplicate.",
+              "Score 38 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1113",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1113",
+              "sourceTitle": "bug: [UI] \"Blocked\" checkbox incorrectly placed inside the Attachments section in TODO task creation form",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1113",
+              "sourceEvidence": [
+                "In the general task creation form, the \"Blocked\" checkbox is located inside the \"Attachments\" section. This placement is highly confusing for the user, as the \"Blocked\" status usually refers to the state of the task itself, not its attachme",
+                "Steps to reproduce",
+                "1. Navigate to Quick Add todo general task creation form"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "hard_duplicate",
+              "duplicateSignals": [
+                {
+                  "kind": "upstream-merged-issue",
+                  "duplicateRiskClass": "hard_duplicate",
+                  "summary": "Merged upstream PR #1178 already references #1113.",
+                  "source": "github",
+                  "relatedTaskId": null,
+                  "prNumber": 1178,
+                  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1178",
+                  "overlapPaths": []
+                }
+              ],
+              "score": -100,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Issue is already assigned.",
+                "Hard-duplicate signal detected."
+              ],
+              "labels": [
+                "bug"
+              ],
+              "assigneeLogins": [
+                "michalpanek"
+              ],
+              "comments": 3,
+              "updatedAt": "2026-04-10T07:06:45Z"
+            },
+            "reasons": [
+              "Duplicate risk is hard_duplicate.",
+              "Issue already has an assignee.",
+              "Score -100 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-959",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "959",
+              "sourceTitle": "bug: Organization creation requires tenant header switch even when tenant is selected in the form",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/959",
+              "sourceEvidence": [
+                "When creating a new organization as superadmin, selecting the tenant in the form is not sufficient.",
+                "The organization cannot be created unless the tenant is also selected in the global header tenant switcher.",
+                "This leads to a confusing UX where the form suggests the tenant is configurable, but the backend requires the header tenant context to match."
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "hard_duplicate",
+              "duplicateSignals": [
+                {
+                  "kind": "upstream-merged-issue",
+                  "duplicateRiskClass": "hard_duplicate",
+                  "summary": "Merged upstream PR #1195 already references #959.",
+                  "source": "github",
+                  "relatedTaskId": null,
+                  "prNumber": 1195,
+                  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1195",
+                  "overlapPaths": []
+                }
+              ],
+              "score": -100,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Hard-duplicate signal detected."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:45Z"
+            },
+            "reasons": [
+              "Duplicate risk is hard_duplicate.",
+              "Score -100 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-901",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "901",
+              "sourceTitle": "bug: Product description not marked as required and SEO helper prevents saving product",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/901",
+              "sourceEvidence": [
+                "The product description field is not marked as required (*), but the product cannot be saved without it. Additionally, the SEO helper validation blocks saving the product during the same product creation flow.",
+                "This creates confusion because the UI does not indicate that the description is required.",
+                "Steps to reproduce"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "hard_duplicate",
+              "duplicateSignals": [
+                {
+                  "kind": "upstream-merged-issue",
+                  "duplicateRiskClass": "hard_duplicate",
+                  "summary": "Merged upstream PR #1155 already references #901.",
+                  "source": "github",
+                  "relatedTaskId": null,
+                  "prNumber": 1155,
+                  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1155",
+                  "overlapPaths": []
+                }
+              ],
+              "score": -100,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Hard-duplicate signal detected."
+              ],
+              "labels": [
+                "bug",
+                "domain"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:05Z"
+            },
+            "reasons": [
+              "Duplicate risk is hard_duplicate.",
+              "Score -100 is below the auto-dispatch threshold."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-1112",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "1112",
+              "sourceTitle": "bug: resolveOrganizationScope ignores 'All Organizations' selection for non-superAdmin users with __all__ ACL access",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/1112",
+              "sourceEvidence": [
+                "`resolveOrganizationScope` always falls back to `accountOrgId` for non-superAdmin users, even when:",
+                "1. The user explicitly selects \"All Organizations\" in the org switcher",
+                "2. Their ACL grants `__all__` organization access (`allowedIds === null`)"
+              ],
+              "candidatePaths": [
+                "organizationScope.ts"
+              ],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "hard_duplicate",
+              "duplicateSignals": [
+                {
+                  "kind": "upstream-merged-issue",
+                  "duplicateRiskClass": "hard_duplicate",
+                  "summary": "Merged upstream PR #1147 already references #1112.",
+                  "source": "github",
+                  "relatedTaskId": null,
+                  "prNumber": 1147,
+                  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1147",
+                  "overlapPaths": []
+                }
+              ],
+              "score": -110,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "Issue references concrete paths.",
+                "Single-file or single-area scope signal.",
+                "Hard-duplicate signal detected.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-03-30T18:29:58Z"
+            },
+            "reasons": [
+              "Duplicate risk is hard_duplicate.",
+              "Score -110 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "ISSUE-967",
+              "targetId": "open-mercato",
+              "sourceType": "github_issue",
+              "sourceId": "967",
+              "sourceTitle": "bug: Logout from develop environment redirects to demo environment",
+              "sourceUrl": "https://github.com/open-mercato/open-mercato/issues/967",
+              "sourceEvidence": [
+                "Logging out from the develop environment redirects the user to the demo environment login page.",
+                "Steps to reproduce",
+                "1. Open https://develop.openmercato.com"
+              ],
+              "candidatePaths": [],
+              "expectedContributionClasses": [
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "unassigned"
+              ],
+              "validationProfileIds": [],
+              "duplicateRiskClass": "hard_duplicate",
+              "duplicateSignals": [
+                {
+                  "kind": "upstream-merged-issue",
+                  "duplicateRiskClass": "hard_duplicate",
+                  "summary": "Merged upstream PR #1242 already references #967.",
+                  "source": "github",
+                  "relatedTaskId": null,
+                  "prNumber": 1242,
+                  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1242",
+                  "overlapPaths": []
+                }
+              ],
+              "score": -110,
+              "scoreReasons": [
+                "Lane simple_bugs base score.",
+                "No concrete file or module path found in the issue.",
+                "Hard-duplicate signal detected.",
+                "Framework or architecture label penalty."
+              ],
+              "labels": [
+                "bug",
+                "framework"
+              ],
+              "assigneeLogins": [],
+              "comments": 1,
+              "updatedAt": "2026-03-15T20:45:48Z"
+            },
+            "reasons": [
+              "Duplicate risk is hard_duplicate.",
+              "Score -110 is below the auto-dispatch threshold.",
+              "Framework or architecture bugs require manual review before dispatch."
+            ]
+          }
+        ]
+      },
+      "qualifiedTaskIds": [],
+      "discoveredCandidates": 12,
+      "queueSnapshot": {
+        "queuedTotal": 17,
+        "queuedGithub": 0,
+        "queuedRepoSignal": 17
+      }
+    }
+  ],
+  "judgeSyncResults": [],
+  "startResults": [
+    {
+      "taskId": "HCK-0081",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0081\timplementing\t/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0081\n",
+        "stderr": "(node:416539) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    }
+  ],
+  "progressResults": [
+    {
+      "taskId": "HCK-0063",
+      "step": "validate",
+      "result": {
+        "exitCode": 1,
+        "stdout": "",
+        "stderr": "(node:412339) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\nerror: could not lock config file .git/config: File exists\n\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0057",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0057\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:412333) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0057",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0057\tabandoned\tlikely_duplicate\n",
+        "stderr": "(node:413615) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0080",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0080\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:412361) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0080",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0080\tblocked\n",
+        "stderr": "(node:413687) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0079",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0079\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:412358) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0079",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0079\tblocked\n",
+        "stderr": "(node:413723) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0071",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0071\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:412346) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0071",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0071\tdraft_pr_open\thttps://github.com/open-mercato/open-mercato/pull/1290\n",
+        "stderr": "(node:413551) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0071",
+      "step": "ready",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0071\tawaiting_portal_submission\thttps://github.com/open-mercato/open-mercato/pull/1290\n",
+        "stderr": "(node:414594) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0048",
+      "step": "ready",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0048\tblocked\tlikely_duplicate\n",
+        "stderr": "(node:412325) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0078",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0078\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:412340) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0078",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0078\tdraft_pr_open\thttps://github.com/open-mercato/open-mercato/pull/1289\n",
+        "stderr": "(node:413746) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0078",
+      "step": "ready",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0078\tawaiting_portal_submission\thttps://github.com/open-mercato/open-mercato/pull/1289\n",
+        "stderr": "(node:414230) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0059",
+      "step": "ready",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0059\tchanges_requested\n",
+        "stderr": "(node:412327) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0064",
+      "step": "start",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0064\timplementing\t/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0064\n",
+        "stderr": "(node:412326) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0064",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0064\tdraft_pr_open\t2 validation artifacts\n",
+        "stderr": "(node:416310) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0064",
+      "step": "pr_sync",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0064\tblocked\tlikely_duplicate\n",
+        "stderr": "(node:416381) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-04-11T21:01:39.984Z",
+      "phase": "judge_sync",
+      "status": "started",
+      "taskIds": [
+        "HCK-0022",
+        "HCK-0024",
+        "HCK-0035",
+        "HCK-0036",
+        "HCK-0050",
+        "HCK-0077"
+      ],
+      "message": "Checking 6 submitted PR(s) for merged, changes-requested, or rejected outcomes."
+    },
+    {
+      "at": "2026-04-11T21:01:43.698Z",
+      "phase": "judge_sync",
+      "status": "completed",
+      "taskIds": [
+        "HCK-0022",
+        "HCK-0024",
+        "HCK-0035",
+        "HCK-0036",
+        "HCK-0050",
+        "HCK-0077"
+      ],
+      "successCount": 0,
+      "message": "Checked 6 submitted PR(s) and applied 0 submitted-PR update(s)."
+    },
+    {
+      "at": "2026-04-11T21:01:39.984Z",
+      "phase": "progress",
+      "status": "started",
+      "taskIds": [
+        "HCK-0048",
+        "HCK-0059",
+        "HCK-0064",
+        "HCK-0057",
+        "HCK-0063",
+        "HCK-0071",
+        "HCK-0078",
+        "HCK-0079",
+        "HCK-0080"
+      ],
+      "message": "Starting progression for 9 active green-lane task(s)."
+    },
+    {
+      "at": "2026-04-11T21:08:35.956Z",
+      "phase": "progress",
+      "status": "completed",
+      "taskIds": [
+        "HCK-0048",
+        "HCK-0059",
+        "HCK-0064",
+        "HCK-0057",
+        "HCK-0063",
+        "HCK-0071",
+        "HCK-0078",
+        "HCK-0079",
+        "HCK-0080"
+      ],
+      "successCount": 11,
+      "failureCount": 7,
+      "message": "Completed progression for 9 active green-lane task(s)."
+    },
+    {
+      "at": "2026-04-11T21:08:36.893Z",
+      "phase": "discover",
+      "status": "completed",
+      "label": "repo_signal-batch",
+      "sourceKind": "repo_signal",
+      "attempt": 1,
+      "durationMs": 948,
+      "discoveredCandidates": 12,
+      "selectedCount": 0,
+      "skippedCount": 12,
+      "qualifiedCount": 0,
+      "excludedSourceKeyCount": 0,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-08-36-890Z.json",
+      "message": "Discovery batch completed for repo_signal."
+    },
+    {
+      "at": "2026-04-11T21:08:36.893Z",
+      "phase": "queue",
+      "status": "snapshot",
+      "sourceKind": "repo_signal",
+      "attempt": 1,
+      "queuedTotal": 17,
+      "queuedGithub": 0,
+      "queuedRepoSignal": 17,
+      "message": "Queue snapshot after repo_signal discovery."
+    },
+    {
+      "at": "2026-04-11T21:10:00.009Z",
+      "phase": "discover",
+      "status": "completed",
+      "label": "github_issue-batch",
+      "sourceKind": "github_issue",
+      "attempt": 1,
+      "durationMs": 83100,
+      "discoveredCandidates": 24,
+      "selectedCount": 0,
+      "skippedCount": 24,
+      "qualifiedCount": 0,
+      "excludedSourceKeyCount": 0,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-09-59-996Z.json",
+      "message": "Discovery batch completed for github_issue."
+    },
+    {
+      "at": "2026-04-11T21:10:00.009Z",
+      "phase": "queue",
+      "status": "snapshot",
+      "sourceKind": "github_issue",
+      "attempt": 1,
+      "queuedTotal": 17,
+      "queuedGithub": 0,
+      "queuedRepoSignal": 17,
+      "message": "Queue snapshot after github_issue discovery."
+    },
+    {
+      "at": "2026-04-11T21:11:21.837Z",
+      "phase": "discover",
+      "status": "completed",
+      "label": "github_issue-batch",
+      "sourceKind": "github_issue",
+      "attempt": 2,
+      "durationMs": 81821,
+      "discoveredCandidates": 24,
+      "selectedCount": 0,
+      "skippedCount": 24,
+      "qualifiedCount": 0,
+      "excludedSourceKeyCount": 24,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-11-21-835Z.json",
+      "message": "Discovery batch completed for github_issue."
+    },
+    {
+      "at": "2026-04-11T21:11:21.837Z",
+      "phase": "queue",
+      "status": "snapshot",
+      "sourceKind": "github_issue",
+      "attempt": 2,
+      "queuedTotal": 17,
+      "queuedGithub": 0,
+      "queuedRepoSignal": 17,
+      "message": "Queue snapshot after github_issue discovery."
+    },
+    {
+      "at": "2026-04-11T21:12:44.320Z",
+      "phase": "discover",
+      "status": "completed",
+      "label": "github_issue-batch",
+      "sourceKind": "github_issue",
+      "attempt": 3,
+      "durationMs": 82469,
+      "discoveredCandidates": 12,
+      "selectedCount": 0,
+      "skippedCount": 12,
+      "qualifiedCount": 0,
+      "excludedSourceKeyCount": 48,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T21-12-44-318Z.json",
+      "message": "Discovery batch completed for github_issue."
+    },
+    {
+      "at": "2026-04-11T21:12:44.320Z",
+      "phase": "queue",
+      "status": "snapshot",
+      "sourceKind": "github_issue",
+      "attempt": 3,
+      "queuedTotal": 17,
+      "queuedGithub": 0,
+      "queuedRepoSignal": 17,
+      "message": "Queue snapshot after github_issue discovery."
+    },
+    {
+      "at": "2026-04-11T21:12:44.350Z",
+      "phase": "start",
+      "status": "started",
+      "taskIds": [
+        "HCK-0081"
+      ],
+      "dispatchCount": 1,
+      "message": "Starting 1 queued green-lane task(s)."
+    },
+    {
+      "at": "2026-04-11T21:17:20.450Z",
+      "phase": "start",
+      "status": "completed",
+      "taskIds": [
+        "HCK-0081"
+      ],
+      "dispatchCount": 1,
+      "successCount": 1,
+      "failureCount": 0,
+      "message": "Completed start attempts for 1 queued green-lane task(s)."
+    }
+  ]
+}

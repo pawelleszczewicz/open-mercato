@@ -1,0 +1,31 @@
+{
+  "taskId": "HCK-0071",
+  "prNumber": 1290,
+  "checkedAt": "2026-04-11T21:05:15.035Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": null,
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf[bot]",
+        "createdAt": "2026-04-11T21:03:17Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No findings in the branch-scoped change.\n\nThe only branch diff is [apps/docs/sidebars.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0071/apps/docs/sidebars.ts:31), adding `user-guide/self-service-onboarding` to the User Guide sidebar. That doc already exists at [apps/docs/docs/user-guide/self-service-onboarding.mdx](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0071/apps/docs/docs/user-guide/self-service-onboarding.mdx:1), so the change is consistent and fixes discoverability without introducing a new content contract.\n\nI also ran `yarn --cwd apps/docs build`, and it completed successfully, which confirms the sidebar entry resolves cleanly in the docs app. No screenshot assets were added or modified on this branch, so there was nothing new to validate for UI-image authenticity. Residual risk is low; I did not re-validate the underlying onboarding product flow because this branch only changes docs navigation.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T21:05:14Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

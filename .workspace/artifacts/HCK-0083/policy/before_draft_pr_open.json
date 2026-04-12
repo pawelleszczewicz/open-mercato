@@ -1,0 +1,24 @@
+{
+  "taskId": "HCK-0083",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/core/src/modules/directory/utils/__tests__/",
+        "packages/core/src/modules/directory/utils/organizationScope.ts",
+        "packages/shared/src/lib/crud/__tests__/crud-factory.test.ts"
+      ],
+      "addedLines": 341,
+      "removedLines": 24,
+      "totalDiffLines": 365
+    }
+  }
+}

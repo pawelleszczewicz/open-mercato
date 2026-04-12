@@ -1,0 +1,120 @@
+{
+  "taskId": "HCK-0079",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-boolean-ts",
+  "sourceTitle": "tests: add low-level coverage for boolean.ts",
+  "sourceEvidence": [
+    "packages/shared/src/lib/boolean.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/shared/src/lib/boolean.ts.",
+    "Checked: packages/shared/src/lib/boolean.test.ts",
+    "packages/shared/src/lib/__tests__/boolean.test.ts",
+    "packages/shared/src/lib/boolean.spec.ts",
+    "packages/shared/src/lib/__tests__/boolean.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/shared/src/lib/boolean.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "blocked",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "shared"
+  ],
+  "validationProfileIds": [
+    "shared-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0079",
+  "branchName": "fix/hackon/hck-0079-tests-add-low-level-coverage-for-boolean-ts",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-boolean-ts",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [
+    {
+      "reason": "target_repo_unavailable",
+      "summary": "Branch fix/hackon/hck-0079-tests-add-low-level-coverage-for-boolean-ts has no commits ahead of origin/develop.",
+      "artifactPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/blockers/pr.open.prepare.json",
+      "createdAt": "2026-04-11T21:03:07.896Z"
+    }
+  ],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T21:03:07.896Z",
+    "decision": "Blocked at pr.open.prepare.",
+    "rationale": "Branch fix/hackon/hck-0079-tests-add-low-level-coverage-for-boolean-ts has no commits ahead of origin/develop.",
+    "overrideApplied": false,
+    "artifactRefs": [
+      "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/blockers/pr.open.prepare.json"
+    ]
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T19:33:22.632Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0079 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-shared-src-lib-boolean-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:34:36.416Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:48:15.261Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0079.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T20:48:15.265Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T20:55:16.030Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/runs/2026-04-11T20-48-15-267Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/runs/2026-04-11T20-48-15-267Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:01:45.253Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:01:50.830Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:03:07.896Z",
+      "type": "blocker.pr.open.prepare",
+      "message": "Branch fix/hackon/hck-0079-tests-add-low-level-coverage-for-boolean-ts has no commits ahead of origin/develop.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0079/blockers/pr.open.prepare.json"
+      ]
+    }
+  ],
+  "createdAt": "2026-04-11T19:33:22.632Z",
+  "updatedAt": "2026-04-11T21:03:07.896Z"
+}

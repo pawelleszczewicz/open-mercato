@@ -1,0 +1,58 @@
+{
+  "taskId": "HCK-0006",
+  "targetId": "open-mercato",
+  "sourceType": "github_issue",
+  "sourceId": "173",
+  "sourceTitle": "feat: add docs to user guide section about attachments",
+  "sourceEvidence": [],
+  "candidatePaths": [
+    "docs/user-guide"
+  ],
+  "expectedContributionClasses": [
+    "docs"
+  ],
+  "lane": "docs",
+  "riskZone": "low",
+  "state": "human_required",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "docs"
+  ],
+  "validationProfileIds": [
+    "docs-basic"
+  ],
+  "worktreePath": null,
+  "branchName": "docs/hackon/hck-0006-feat-add-docs-to-user-guide-section-about-attachments",
+  "prNumber": 1190,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1190",
+  "contributionGroupId": "issue-173",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [
+    {
+      "reason": "review_unresolved",
+      "summary": "Open PR #1190 was preserved during runtime reset and needs manual follow-up.",
+      "artifactPath": "https://github.com/open-mercato/open-mercato/pull/1190",
+      "createdAt": "2026-04-11T18:14:47Z"
+    }
+  ],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T18:14:47Z",
+    "decision": "Rehydrated from open PR #1190 during runtime reset.",
+    "rationale": "Preserved the open non-draft PR in a manual-follow-up state while rebuilding runtime state from backups.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:14:47Z",
+      "type": "task.rehydrated",
+      "message": "Rehydrated from open PR #1190 during runtime reset.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:14:47Z",
+  "updatedAt": "2026-04-11T18:14:47Z"
+}

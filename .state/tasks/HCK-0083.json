@@ -1,0 +1,235 @@
+{
+  "taskId": "HCK-0083",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-crud-ts",
+  "sourceTitle": "tests: add low-level coverage for crud.ts",
+  "sourceEvidence": [
+    "packages/shared/src/lib/api/crud.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/shared/src/lib/api/crud.ts.",
+    "Checked: packages/shared/src/lib/api/crud.test.ts",
+    "packages/shared/src/lib/api/__tests__/crud.test.ts",
+    "packages/shared/src/lib/api/crud.spec.ts",
+    "packages/shared/src/lib/api/__tests__/crud.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/shared/src/lib/api/crud.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "awaiting_portal_submission",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "shared"
+  ],
+  "validationProfileIds": [
+    "shared-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083",
+  "branchName": "fix/hackon/hck-0083-tests-add-low-level-coverage-for-crud-ts",
+  "prNumber": 1307,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1307",
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-crud-ts",
+  "portalStatus": "awaiting_submission",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T23:56:12.250Z",
+    "decision": "Duplicate checkpoint before_portal_submission passed.",
+    "rationale": "No duplicate-risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T19:38:18.003Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0083 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-shared-src-lib-api-crud-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:39:31.933Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:26:42.107Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T22:26:42.110Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T22:36:47.896Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T22-26-42-112Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T22-26-42-112Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T22:38:52.733Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:38:58.658Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:40:22.348Z",
+      "type": "pr.opened",
+      "message": "Draft PR #1307 opened.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/branch/open.json"
+      ]
+    },
+    {
+      "at": "2026-04-11T22:40:22.663Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T22:43:36.024Z",
+      "type": "review.blocking",
+      "message": "Reviewer reported blocking findings.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T22-40-22-667Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T22-40-22-667Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T22:59:59.739Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:10:56.477Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T22-59-59-745Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T22-59-59-745Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:10:57.009Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:10:59.418Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:12:20.202Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:17:33.563Z",
+      "type": "review.blocking",
+      "message": "Reviewer reported blocking findings.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T23-12-20-205Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T23-12-20-205Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:37:41.677Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:49:30.990Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T23-37-41-680Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T23-37-41-680Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:49:31.538Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:49:33.991Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:50:51.056Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:56:12.252Z",
+      "type": "review.complete",
+      "message": "Reviewer marked the PR ready.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/reviews/ready-check.json",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T23-50-51-059Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0083/runs/2026-04-11T23-50-51-059Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T23:56:12.253Z",
+      "type": "ready.pr",
+      "message": "PR is ready for portal submission.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T23:56:12.254Z",
+      "type": "portal.awaiting",
+      "message": "Waiting for manual portal submission.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T19:38:18.003Z",
+  "updatedAt": "2026-04-11T23:56:12.254Z"
+}

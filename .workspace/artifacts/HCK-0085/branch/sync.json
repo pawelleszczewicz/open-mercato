@@ -1,0 +1,18 @@
+{
+  "taskId": "HCK-0085",
+  "prCommand": "sync",
+  "preparedAt": "2026-04-11T23:45:07.443Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/create-app/template/.ai/qa/tests/TC-APP-001-metadata.spec.ts"
+    ],
+    "addedLines": 39,
+    "removedLines": 0,
+    "totalDiffLines": 39,
+    "branchName": "fix/hackon/hck-0085-tests-add-low-level-coverage-for-metadata-ts",
+    "headSha": "da8194efff1e3ee7b70866611c3bd362100d172b",
+    "aheadBy": 2,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

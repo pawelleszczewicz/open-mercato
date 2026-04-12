@@ -1,0 +1,22 @@
+{
+  "taskId": "HCK-0093",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T23:39:01.298Z",
+  "branchState": {
+    "changedFiles": [
+      ".ai/qa/tests/integration/TC-INT-008.spec.ts",
+      "packages/cli/AGENTS.md",
+      "packages/cli/build.mjs",
+      "packages/cli/src/bin.ts",
+      "packages/cli/src/lib/agentic-setup.ts"
+    ],
+    "addedLines": 332,
+    "removedLines": 2,
+    "totalDiffLines": 334,
+    "branchName": "fix/hackon/hck-0093-tests-add-low-level-coverage-for-agentic-setup-ts",
+    "headSha": "9988cc535285692070f87851c63938e981069a8b",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

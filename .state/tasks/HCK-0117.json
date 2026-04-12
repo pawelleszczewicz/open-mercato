@@ -1,0 +1,65 @@
+{
+  "taskId": "HCK-0117",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-ast-imports-ts",
+  "sourceTitle": "tests: add low-level coverage for imports.ts",
+  "sourceEvidence": [
+    "packages/cli/src/lib/generators/ast/imports.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/cli/src/lib/generators/ast/imports.ts.",
+    "Checked: packages/cli/src/lib/generators/ast/imports.test.ts",
+    "packages/cli/src/lib/generators/ast/__tests__/imports.test.ts",
+    "packages/cli/src/lib/generators/ast/imports.spec.ts",
+    "packages/cli/src/lib/generators/ast/__tests__/imports.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/cli/src/lib/generators/ast/imports.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "qualified",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "cli"
+  ],
+  "validationProfileIds": [
+    "cli-package-checks"
+  ],
+  "worktreePath": null,
+  "branchName": "fix/hackon/hck-0117-tests-add-low-level-coverage-for-imports-ts",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-ast-imports-ts",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T22:50:25.555Z",
+    "decision": "Qualified for coordinator workflow.",
+    "rationale": "No duplicate risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T22:49:49.207Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0117 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-ast-imports-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:50:25.555Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T22:49:49.207Z",
+  "updatedAt": "2026-04-11T22:50:25.555Z"
+}

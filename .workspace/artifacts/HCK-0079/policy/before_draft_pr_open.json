@@ -1,0 +1,20 @@
+{
+  "taskId": "HCK-0079",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [],
+      "addedLines": 0,
+      "removedLines": 0,
+      "totalDiffLines": 0
+    }
+  }
+}

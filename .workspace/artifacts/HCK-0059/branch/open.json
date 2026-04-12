@@ -1,0 +1,19 @@
+{
+  "taskId": "HCK-0059",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T19:25:08.212Z",
+  "branchState": {
+    "changedFiles": [
+      ".ai/qa/scenarios/TC-DOCKER-003-exec-initialize-reinstall.md",
+      "packages/core/src/modules/core/__integration__/integration/TC-DOCKER-003.spec.ts"
+    ],
+    "addedLines": 173,
+    "removedLines": 1,
+    "totalDiffLines": 174,
+    "branchName": "test/hackon/hck-0059-tests-implement-missing-integration-scenario-tc-docker-003",
+    "headSha": "81fc1580439e000a049e714120894a8c63da91ef",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

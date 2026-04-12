@@ -1,0 +1,64 @@
+{
+  "taskId": "HCK-0022",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-check-ts",
+  "sourceTitle": "tests: add low-level coverage for check.ts",
+  "sourceEvidence": [],
+  "candidatePaths": [
+    "packages/cli/src/lib/umes/check.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "judge_pending",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "cli"
+  ],
+  "validationProfileIds": [
+    "cli-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0022",
+  "branchName": "fix/hackon/hck-0022-tests-add-low-level-coverage-for-check-ts",
+  "prNumber": 1230,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1230",
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-check-ts",
+  "portalStatus": "submitted",
+  "judgeStatus": "pending",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T18:14:47Z",
+    "decision": "Rehydrated from open PR #1230 during runtime reset.",
+    "rationale": "Preserved the PR as awaiting portal submission after the previous reviewer run marked it ready.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:14:47Z",
+      "type": "task.rehydrated",
+      "message": "Rehydrated from open PR #1230 during runtime reset.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:52:35.575Z",
+      "type": "portal.submitted",
+      "message": "Manual portal submission confirmed.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:52:35.578Z",
+      "type": "judge.pending",
+      "message": "Submission is now waiting for judge handling.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:14:47Z",
+  "updatedAt": "2026-04-11T18:52:35.578Z"
+}

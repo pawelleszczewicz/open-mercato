@@ -1,0 +1,20 @@
+{
+  "taskId": "HCK-0089",
+  "prCommand": "sync",
+  "preparedAt": "2026-04-11T23:50:41.845Z",
+  "branchState": {
+    "changedFiles": [
+      ".ai/lessons.md",
+      "packages/cli/src/lib/generators/__tests__/module-subset.test.ts",
+      "packages/create-app/template/src/modules/example/__integration__/TC-UMES-011.spec.ts"
+    ],
+    "addedLines": 178,
+    "removedLines": 2,
+    "totalDiffLines": 180,
+    "branchName": "fix/hackon/hck-0089-tests-add-low-level-coverage-for-module-registry-ts",
+    "headSha": "5a9a4d7966f129edf557566048115b60a21821bf",
+    "aheadBy": 2,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

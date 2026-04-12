@@ -1,0 +1,24 @@
+{
+  "taskId": "HCK-0086",
+  "prCommand": "sync",
+  "preparedAt": "2026-04-12T01:01:29.882Z",
+  "branchState": {
+    "changedFiles": [
+      ".ai/lessons.md",
+      "apps/mercato/src/modules/example/__integration__/TC-UMES-011.spec.ts",
+      "packages/cli/src/lib/umes/__tests__/inspect.test.ts",
+      "packages/cli/src/lib/umes/__tests__/source-analysis.test.ts",
+      "packages/cli/src/lib/umes/collector.ts",
+      "packages/cli/src/lib/umes/source-analysis.ts",
+      "packages/create-app/template/src/modules/example/__integration__/TC-UMES-011.spec.ts"
+    ],
+    "addedLines": 991,
+    "removedLines": 72,
+    "totalDiffLines": 1063,
+    "branchName": "fix/hackon/hck-0086-tests-add-low-level-coverage-for-inspect-ts",
+    "headSha": "5cffa48ed620e35657eee9ee6dc2dea6ee2417e6",
+    "aheadBy": 4,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

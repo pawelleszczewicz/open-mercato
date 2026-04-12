@@ -1,0 +1,36 @@
+{
+  "taskId": "HCK-0050",
+  "prNumber": 1259,
+  "checkedAt": "2026-04-11T18:54:37.772Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": "REVIEW_REQUIRED",
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf",
+        "createdAt": "2026-04-11T17:24:36Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking findings in the current diff.\n\nThe updated `TC-SEC-004` test now covers the real UI path instead of the old simplified API-only contract, and the new helper usage stays within the QA guide expectations: tenant-scoped fixture setup, cleanup in `afterAll`, no seeded data dependency, no per-test retry overrides, and selectors that match the current security UI implementation.\n\nI confirmed the targeted gap is closed in spec coverage under the enterprise-enabled discovery mode used for these tests: `OM_ENABLE_ENTERPRISE_MODULES=1 yarn test:integration:spec-coverage` reports `SEC: scenarios 7/7, tests 8, coverage 100.00%`, and `TC-SEC-004` is no longer listed as uncovered.\n\nResidual risk: I did not boot a fresh ephemeral app to rerun the full passkey browser flow end-to-end in this review turn. My review used the branch diff, source/selector alignment, existing Playwright artifacts, and the scoped spec-coverage check.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T17:55:14Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: no blocking issues found in the current HCK-0050 changes.\n\nUnder the relevant enterprise-security profile, `OM_ENABLE_ENTERPRISE_MODULES=1 OM_ENABLE_ENTERPRISE_MODULES_SECURITY=1 yarn test:integration:spec-coverage --json` now reports `SEC` scenario coverage at `7/7`, and `TC-SEC-004` is no longer in `uncoveredScenarioIds`. The updated [TC-SEC-004.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0050/packages/enterprise/src/modules/security/__integration__/TC-SEC-004.spec.ts:1) also matches the scenario and QA-guide requirements more closely by using real UI flow coverage and a scenario source comment, while [securityFixtures.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0050/packages/enterprise/src/modules/security/__integration__/helpers/securityFixtures.ts:1) moves shared API helper imports onto the preferred `@open-mercato/core/helpers/integration/*` path.\n\nResidual risk: the preserved `.ai/qa/test-results/results.json` only shows this spec as skipped in the recorded run, and I could not rerun the live spec here because Docker CLI is unavailable for ephemeral startup and no local app was running on `http://localhost:3000`. That is a verification gap, not a branch defect.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T18:31:14Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

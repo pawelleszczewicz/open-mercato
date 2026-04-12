@@ -1,0 +1,23 @@
+{
+  "taskId": "HCK-0091",
+  "checkpoint": "before_validation",
+  "lane": "simple_bugs",
+  "guardrail": {
+    "maxChangedFiles": 35,
+    "maxDiffLines": 20000,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        "packages/create-app/template/.ai/qa/test-results/",
+        "packages/create-app/template/.ai/qa/tests/TC-UMES-021.spec.ts"
+      ],
+      "addedLines": 296,
+      "removedLines": 0,
+      "totalDiffLines": 296
+    }
+  }
+}

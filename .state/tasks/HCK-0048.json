@@ -1,0 +1,253 @@
+{
+  "taskId": "HCK-0048",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-integration-scenario-tc-sec-002",
+  "sourceTitle": "tests: implement missing integration scenario TC-SEC-002",
+  "sourceEvidence": [],
+  "candidatePaths": [
+    ".ai/qa/scenarios/TC-SEC-002.md"
+  ],
+  "expectedContributionClasses": [
+    "tests"
+  ],
+  "lane": "tests",
+  "riskZone": "low",
+  "state": "abandoned",
+  "duplicateRiskClass": "likely_duplicate",
+  "duplicateSignals": [
+    {
+      "kind": "upstream-open-similarity",
+      "duplicateRiskClass": "likely_duplicate",
+      "summary": "Open upstream PR #1259 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1259,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1259",
+      "overlapPaths": []
+    }
+  ],
+  "primaryAreaOwners": [
+    "qa"
+  ],
+  "validationProfileIds": [
+    "integration-tests",
+    "integration-test-gap-coverage"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0048",
+  "branchName": "test/hackon/hck-0048-tests-implement-missing-integration-scenario-tc-sec-002",
+  "prNumber": 1258,
+  "prUrl": "https://github.com/open-mercato/open-mercato/pull/1258",
+  "contributionGroupId": "TESTSIG-integration-scenario-tc-sec-002",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T22:04:29.420Z",
+    "decision": "Blocked at duplicate checkpoint before_portal_submission.",
+    "rationale": "Open upstream PR #1259 is strongly similar to this task title.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:14:47Z",
+      "type": "task.rehydrated",
+      "message": "Rehydrated from open draft PR #1258 during runtime reset.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:25:59.039Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:31:52.445Z",
+      "type": "review.blocking",
+      "message": "Reviewer reported blocking findings.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T18-25-59-043Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T18-25-59-043Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:48:50.835Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:52:43.032Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T18-48-50-855Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T18-48-50-855Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T18:52:43.566Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:52:44.819Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:53:23.200Z",
+      "type": "duplicate.before_draft_pr_open",
+      "message": "Duplicate checkpoint before_draft_pr_open blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:23:50.781Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:32:05.791Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:59:57.613Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:08:11.466Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:05:54Z",
+      "type": "state.repaired",
+      "message": "Coordinator cleared false duplicate block after implementer rerun and returned the existing PR to reviewer flow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:15:24.559Z",
+      "type": "review.started",
+      "message": "Reviewer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/prompts/reviewer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T20:21:39.510Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:41:08.687Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:45:36.269Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:01:44.125Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:07:20.068Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:19:24.692Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:24:09.210Z",
+      "type": "review.blocking",
+      "message": "Reviewer reported blocking findings.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T21-19-24-790Z-reviewer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T21-19-24-790Z-reviewer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:40:23.474Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:48:32.288Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T21-40-23-479Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0048/runs/2026-04-11T21-40-23-479Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:48:32.811Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:48:34.073Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:49:13.077Z",
+      "type": "duplicate.before_draft_pr_open",
+      "message": "Duplicate checkpoint before_draft_pr_open blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:59:16.025Z",
+      "type": "ready.retry.duplicate",
+      "message": "Retrying ready after a duplicate-checkpoint reassessment.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:04:29.420Z",
+      "type": "duplicate.before_portal_submission",
+      "message": "Duplicate checkpoint before_portal_submission blocked the task.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T22:29:11.177Z",
+      "type": "task.closed",
+      "message": "Task closed as abandoned.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:14:47Z",
+  "updatedAt": "2026-04-11T22:29:11.177Z"
+}

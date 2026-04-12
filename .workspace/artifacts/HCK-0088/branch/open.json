@@ -1,0 +1,18 @@
+{
+  "taskId": "HCK-0088",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T22:40:19.412Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/cli/src/lib/umes/__tests__/collector.test.ts"
+    ],
+    "addedLines": 389,
+    "removedLines": 0,
+    "totalDiffLines": 389,
+    "branchName": "fix/hackon/hck-0088-tests-add-low-level-coverage-for-collector-ts",
+    "headSha": "c45c5969381a09c90726250f941b26da5d899772",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

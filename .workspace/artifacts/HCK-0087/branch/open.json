@@ -1,0 +1,29 @@
+{
+  "taskId": "HCK-0087",
+  "prCommand": "open",
+  "preparedAt": "2026-04-12T00:26:20.715Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/cli/coverage/clover.xml",
+      "packages/cli/coverage/coverage-final.json",
+      "packages/cli/coverage/lcov-report/base.css",
+      "packages/cli/coverage/lcov-report/block-navigation.js",
+      "packages/cli/coverage/lcov-report/favicon.png",
+      "packages/cli/coverage/lcov-report/index.html",
+      "packages/cli/coverage/lcov-report/list.ts.html",
+      "packages/cli/coverage/lcov-report/prettify.css",
+      "packages/cli/coverage/lcov-report/prettify.js",
+      "packages/cli/coverage/lcov-report/sort-arrow-sprite.png",
+      "packages/cli/coverage/lcov-report/sorter.js",
+      "packages/cli/coverage/lcov.info"
+    ],
+    "addedLines": 1046,
+    "removedLines": 0,
+    "totalDiffLines": 1046,
+    "branchName": "fix/hackon/hck-0087-tests-add-low-level-coverage-for-list-ts",
+    "headSha": "aa50171d9fb207f2b80849326d8a5e8497827f68",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

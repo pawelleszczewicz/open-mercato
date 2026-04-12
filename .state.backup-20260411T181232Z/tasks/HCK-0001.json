@@ -1,0 +1,62 @@
+{
+  "taskId": "HCK-0001",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-integration-scenario-tc-docker-001",
+  "sourceTitle": "tests: implement missing integration scenario TC-DOCKER-001",
+  "sourceEvidence": [
+    "Integration spec coverage reports TC-DOCKER-001 as uncovered.",
+    "Scenario file: .ai/qa/scenarios/TC-DOCKER-001-dev-stack-startup-shutdown.md.",
+    "Create a module-local Playwright integration spec that implements this scenario."
+  ],
+  "candidatePaths": [
+    ".ai/qa/scenarios/TC-DOCKER-001-dev-stack-startup-shutdown.md"
+  ],
+  "expectedContributionClasses": [
+    "tests"
+  ],
+  "lane": "tests",
+  "riskZone": "low",
+  "state": "qualified",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "qa"
+  ],
+  "validationProfileIds": [
+    "integration-tests",
+    "integration-test-gap-coverage"
+  ],
+  "worktreePath": null,
+  "branchName": "test/hackon/hck-0001-tests-implement-missing-integration-scenario-tc-docker-001",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-integration-scenario-tc-docker-001",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T17:58:12.031Z",
+    "decision": "Qualified for coordinator workflow.",
+    "rationale": "No duplicate risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T17:56:59.086Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0001 discovered from repo_signal:TESTSIG-integration-scenario-tc-docker-001.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T17:58:12.031Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T17:56:59.086Z",
+  "updatedAt": "2026-04-11T17:58:12.031Z"
+}

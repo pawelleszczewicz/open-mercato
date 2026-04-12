@@ -1,0 +1,28 @@
+{
+  "taskId": "HCK-0084",
+  "profileId": "shared-package-checks",
+  "required": true,
+  "command": [
+    "yarn",
+    "workspace",
+    "@open-mercato/shared",
+    "typecheck"
+  ],
+  "targetResult": {
+    "exitCode": 1,
+    "findings": [
+      "Usage Error: Couldn't find the node_modules state file - running an install might help (findPackageLocation)",
+      "$ yarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] [--require #0] <scriptName> ..."
+    ]
+  },
+  "worktreeResult": {
+    "exitCode": 1,
+    "findings": [
+      "Usage Error: Couldn't find the node_modules state file - running an install might help (findPackageLocation)",
+      "$ yarn run [--inspect] [--inspect-brk] [-T,--top-level] [-B,--binaries-only] [--require #0] <scriptName> ..."
+    ]
+  },
+  "newFindings": [],
+  "status": "passed",
+  "note": null
+}

@@ -1,0 +1,139 @@
+{
+  "taskId": "HCK-0057",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-integration-scenario-tc-docker-001",
+  "sourceTitle": "tests: implement missing integration scenario TC-DOCKER-001",
+  "sourceEvidence": [
+    "Integration spec coverage reports TC-DOCKER-001 as uncovered.",
+    "Scenario file: .ai/qa/scenarios/TC-DOCKER-001-dev-stack-startup-shutdown.md.",
+    "Create a module-local Playwright integration spec that implements this scenario."
+  ],
+  "candidatePaths": [
+    ".ai/qa/scenarios/TC-DOCKER-001-dev-stack-startup-shutdown.md"
+  ],
+  "expectedContributionClasses": [
+    "tests"
+  ],
+  "lane": "tests",
+  "riskZone": "low",
+  "state": "abandoned",
+  "duplicateRiskClass": "likely_duplicate",
+  "duplicateSignals": [
+    {
+      "kind": "upstream-open-similarity",
+      "duplicateRiskClass": "likely_duplicate",
+      "summary": "Open upstream PR #1279 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1279,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1279",
+      "overlapPaths": []
+    },
+    {
+      "kind": "upstream-open-similarity",
+      "duplicateRiskClass": "likely_duplicate",
+      "summary": "Open upstream PR #1280 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1280,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1280",
+      "overlapPaths": []
+    }
+  ],
+  "primaryAreaOwners": [
+    "qa"
+  ],
+  "validationProfileIds": [
+    "integration-tests",
+    "integration-test-gap-coverage"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0057",
+  "branchName": "test/hackon/hck-0057-tests-implement-missing-integration-scenario-tc-docker-001",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-integration-scenario-tc-docker-001",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T21:03:06.801Z",
+    "decision": "Duplicate checkpoint before_draft_pr_open auto-closed the task before draft PR open.",
+    "rationale": "Open upstream PR #1279 is strongly similar to this task title. Open upstream PR #1280 is strongly similar to this task title.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:34:59.718Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0057 discovered from repo_signal:TESTSIG-integration-scenario-tc-docker-001.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:36:16.630Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:43:36.706Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0057.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0057/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T19:43:36.710Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0057/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T19:55:35.622Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0057/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0057/runs/2026-04-11T19-43-36-713Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0057/runs/2026-04-11T19-43-36-713Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T20:41:09.559Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:41:12.218Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:01:44.982Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:01:49.184Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:03:06.801Z",
+      "type": "task.closed",
+      "message": "Task auto-closed as abandoned after duplicate checkpoint before_draft_pr_open blocked it before a draft PR was opened.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:34:59.718Z",
+  "updatedAt": "2026-04-11T21:03:06.801Z"
+}

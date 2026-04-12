@@ -1,0 +1,25 @@
+{
+  "taskId": "HCK-0064",
+  "checkpoint": "before_draft_pr_open",
+  "lane": "tests",
+  "guardrail": {
+    "maxChangedFiles": 30,
+    "maxDiffLines": 1500,
+    "forbiddenPathPatterns": []
+  },
+  "result": {
+    "status": "passed",
+    "reasons": [],
+    "summary": {
+      "changedFiles": [
+        ".ai/qa/tests/playwright.config.ts",
+        "packages/cli/src/lib/testing/__tests__/integration.test.ts",
+        "packages/cli/src/lib/testing/integration.ts",
+        "packages/core/src/modules/core/__integration__/integration/TC-DOCKER-008.spec.ts"
+      ],
+      "addedLines": 463,
+      "removedLines": 5,
+      "totalDiffLines": 468
+    }
+  }
+}

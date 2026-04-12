@@ -1,0 +1,75 @@
+{
+  "taskId": "HCK-0075",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-skipped-packages-cli-src-lib-generators-tests-generators-test-ts-should-export-generatea",
+  "sourceTitle": "tests: re-enable skipped test \"should export generateApiClient\"",
+  "sourceEvidence": [
+    "Skipped test found in packages/cli/src/lib/generators/__tests__/generators.test.ts:36.",
+    "Declaration: it.skip('should export generateApiClient'",
+    "async () => {"
+  ],
+  "candidatePaths": [
+    "packages/cli/src/lib/generators/__tests__/generators.test.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "tests",
+  "riskZone": "medium",
+  "state": "duplicate_closed",
+  "duplicateRiskClass": "hard_duplicate",
+  "duplicateSignals": [
+    {
+      "kind": "upstream-merged-similarity",
+      "duplicateRiskClass": "hard_duplicate",
+      "summary": "Merged upstream PR #1197 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1197,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1197",
+      "overlapPaths": [
+        "packages/cli/src/lib/generators/__tests__/generators.test.ts"
+      ]
+    }
+  ],
+  "primaryAreaOwners": [
+    "cli"
+  ],
+  "validationProfileIds": [
+    "cli-package-checks"
+  ],
+  "worktreePath": null,
+  "branchName": "test/hackon/hck-0075-tests-re-enable-skipped-test-should-export-generateapiclient",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-skipped-packages-cli-src-lib-generators-tests-generators-test-ts-should-export-generatea",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T19:04:21.340Z",
+    "decision": "Closed as a hard duplicate.",
+    "rationale": "Merged upstream PR #1197 is strongly similar to this task title.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T19:03:05.892Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0075 discovered from repo_signal:TESTSIG-skipped-packages-cli-src-lib-generators-tests-generators-test-ts-should-export-generatea.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:04:21.340Z",
+      "type": "task.duplicate_closed",
+      "message": "Closed as a hard duplicate.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T19:03:05.892Z",
+  "updatedAt": "2026-04-11T19:04:21.340Z"
+}

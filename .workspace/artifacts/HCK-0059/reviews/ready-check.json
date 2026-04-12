@@ -1,0 +1,36 @@
+{
+  "taskId": "HCK-0059",
+  "prNumber": 1280,
+  "checkedAt": "2026-04-11T20:46:08.085Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": "REVIEW_REQUIRED",
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf",
+        "createdAt": "2026-04-11T19:25:19Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking issues found in the current branch diff.\n\n`TC-DOCKER-003` is no longer uncovered in spec-coverage output: `yarn test:integration:spec-coverage --json` reports `DOCKER` coverage at `1/8`, and `uncoveredScenarioIds` no longer contains `TC-DOCKER-003`. The added spec at [TC-DOCKER-003.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0059/packages/core/src/modules/core/__integration__/integration/TC-DOCKER-003.spec.ts:124) is discovered by the integration runner and exercises the `package.json` wrapper plus `scripts/docker-exec.mjs` forwarding/streaming path required by the Docker parity spec.\n\nResidual risk only: this test uses a fake `docker` shim rather than a live container, so it does not cover the manual scenario’s post-reinit app-accessibility check in [TC-DOCKER-003-exec-initialize-reinstall.md](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0059/.ai/qa/scenarios/TC-DOCKER-003-exec-initialize-reinstall.md:27). For this targeted gap task, I would treat that as broader Docker end-to-end coverage debt rather than a merge blocker.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T19:29:20Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking findings in the current branch diff.\n\nThe new coverage in [TC-DOCKER-003.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0059/packages/core/src/modules/core/__integration__/integration/TC-DOCKER-003.spec.ts:1) is discovered correctly, and `yarn mercato test:integration:spec-coverage --json` no longer reports `TC-DOCKER-003` as uncovered. The scenario text in [TC-DOCKER-003-exec-initialize-reinstall.md](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0059/.ai/qa/scenarios/TC-DOCKER-003-exec-initialize-reinstall.md:1) also matches the current wrapper behavior: the forwarded command is `yarn initialize -- --reinstall`.\n\nValidation evidence is consistent: `.ai/qa/test-results/results.json` already records this spec as passed, and I re-ran `npx playwright test --config .ai/qa/tests/playwright.config.ts packages/core/src/modules/core/__integration__/integration/TC-DOCKER-003.spec.ts --retries=0` successfully. Scope note only: other `TC-DOCKER-*` gaps still appear in spec-coverage output, but per the review instructions I did not treat non-targeted gap IDs as blocking.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T20:04:37Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "taskId": "HCK-0087",
+  "prCommand": "sync",
+  "preparedAt": "2026-04-12T01:06:36.385Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/cli/src/lib/umes/__integration__/TC-INT-008.spec.ts"
+    ],
+    "addedLines": 150,
+    "removedLines": 0,
+    "totalDiffLines": 150,
+    "branchName": "fix/hackon/hck-0087-tests-add-low-level-coverage-for-list-ts",
+    "headSha": "e992f9c78c47cb3e76384db4331bac656f3d2f56",
+    "aheadBy": 2,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "taskId": "HCK-0066",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-integration-scenario-tc-sec-005",
+  "sourceTitle": "tests: implement missing integration scenario TC-SEC-005",
+  "sourceEvidence": [
+    "Integration spec coverage reports TC-SEC-005 as uncovered.",
+    "Scenario file: .ai/qa/scenarios/TC-SEC-005-enforcement-cascade-redirect-and-lockout.md.",
+    "Create a module-local Playwright integration spec that implements this scenario."
+  ],
+  "candidatePaths": [
+    ".ai/qa/scenarios/TC-SEC-005-enforcement-cascade-redirect-and-lockout.md"
+  ],
+  "expectedContributionClasses": [
+    "tests"
+  ],
+  "lane": "tests",
+  "riskZone": "low",
+  "state": "blocked",
+  "duplicateRiskClass": "likely_duplicate",
+  "duplicateSignals": [
+    {
+      "kind": "upstream-open-similarity",
+      "duplicateRiskClass": "likely_duplicate",
+      "summary": "Open upstream PR #1258 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1258,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1258",
+      "overlapPaths": []
+    },
+    {
+      "kind": "upstream-open-similarity",
+      "duplicateRiskClass": "likely_duplicate",
+      "summary": "Open upstream PR #1259 is strongly similar to this task title.",
+      "source": "github",
+      "relatedTaskId": null,
+      "prNumber": 1259,
+      "prUrl": "https://github.com/open-mercato/open-mercato/pull/1259",
+      "overlapPaths": []
+    }
+  ],
+  "primaryAreaOwners": [
+    "qa"
+  ],
+  "validationProfileIds": [
+    "integration-tests",
+    "integration-test-gap-coverage"
+  ],
+  "worktreePath": null,
+  "branchName": "test/hackon/hck-0066-tests-implement-missing-integration-scenario-tc-sec-005",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-integration-scenario-tc-sec-005",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T18:46:02.408Z",
+    "decision": "Blocked pending human override due to duplicate risk.",
+    "rationale": "Open upstream PR #1258 is strongly similar to this task title. Open upstream PR #1259 is strongly similar to this task title.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T18:45:25.271Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0066 discovered from repo_signal:TESTSIG-integration-scenario-tc-sec-005.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T18:46:02.408Z",
+      "type": "task.blocked",
+      "message": "Blocked pending human override due to duplicate risk.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T18:45:25.271Z",
+  "updatedAt": "2026-04-11T18:46:02.408Z"
+}

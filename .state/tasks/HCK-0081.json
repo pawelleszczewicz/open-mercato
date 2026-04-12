@@ -1,0 +1,120 @@
+{
+  "taskId": "HCK-0081",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-featurematch-ts",
+  "sourceTitle": "tests: add low-level coverage for featureMatch.ts",
+  "sourceEvidence": [
+    "packages/shared/src/lib/auth/featureMatch.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/shared/src/lib/auth/featureMatch.ts.",
+    "Checked: packages/shared/src/lib/auth/featureMatch.test.ts",
+    "packages/shared/src/lib/auth/__tests__/featureMatch.test.ts",
+    "packages/shared/src/lib/auth/featureMatch.spec.ts",
+    "packages/shared/src/lib/auth/__tests__/featureMatch.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/shared/src/lib/auth/featureMatch.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "medium",
+  "state": "blocked",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "shared"
+  ],
+  "validationProfileIds": [
+    "shared-package-checks"
+  ],
+  "worktreePath": "/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0081",
+  "branchName": "fix/hackon/hck-0081-tests-add-low-level-coverage-for-featurematch-ts",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-featurematch-ts",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [
+    {
+      "reason": "github_provider_unavailable",
+      "summary": "GitHub MCP created a pull request but returned an unexpected payload.",
+      "artifactPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/blockers/pr.open.github.json",
+      "createdAt": "2026-04-11T21:41:44.170Z"
+    }
+  ],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T21:41:44.170Z",
+    "decision": "Blocked at pr.open.github.",
+    "rationale": "GitHub MCP created a pull request but returned an unexpected payload.",
+    "overrideApplied": false,
+    "artifactRefs": [
+      "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/blockers/pr.open.github.json"
+    ]
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T19:35:50.968Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0081 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-featurematch-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:37:05.228Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:12:45.601Z",
+      "type": "workspace.prepared",
+      "message": "Prepared worktree /home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0081.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/task-context.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:12:45.604Z",
+      "type": "run.implementer.started",
+      "message": "Implementer run started.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/prompts/implementer.md"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:17:20.444Z",
+      "type": "run.implementer",
+      "message": "Implementer run completed.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/prompts/implementer.md",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/runs/2026-04-11T21-12-45-605Z-implementer.stdout.log",
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/runs/2026-04-11T21-12-45-605Z-implementer.stderr.log"
+      ]
+    },
+    {
+      "at": "2026-04-11T21:40:23.674Z",
+      "type": "validation.started",
+      "message": "Validation started.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:40:28.128Z",
+      "type": "validation.completed",
+      "message": "Required validation passed without new baseline regressions.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T21:41:44.170Z",
+      "type": "blocker.pr.open.github",
+      "message": "GitHub MCP created a pull request but returned an unexpected payload.",
+      "artifactRefs": [
+        "/home/hacker/repo/open-mercato/.workspace/artifacts/HCK-0081/blockers/pr.open.github.json"
+      ]
+    }
+  ],
+  "createdAt": "2026-04-11T19:35:50.968Z",
+  "updatedAt": "2026-04-11T21:41:44.170Z"
+}

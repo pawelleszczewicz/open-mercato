@@ -1,0 +1,1369 @@
+{
+  "cycleId": "cycle-0001-2026-04-11T19-23-47-877Z",
+  "cycleNumber": 1,
+  "activeGreenTasks": 4,
+  "targetActive": 10,
+  "dispatchCapacity": 6,
+  "startedAt": "2026-04-11T19:23:47.877Z",
+  "completedAt": "2026-04-11T19:57:54.603Z",
+  "durationMs": 2046726,
+  "queuedTaskIds": [
+    "HCK-0077",
+    "HCK-0057",
+    "HCK-0061",
+    "HCK-0062",
+    "HCK-0063",
+    "HCK-0076"
+  ],
+  "dispatchedTaskIds": [
+    "HCK-0077",
+    "HCK-0057",
+    "HCK-0061",
+    "HCK-0062",
+    "HCK-0063",
+    "HCK-0076"
+  ],
+  "progressedTaskIds": [
+    "HCK-0048",
+    "HCK-0059",
+    "HCK-0064",
+    "HCK-0071"
+  ],
+  "queueSnapshotBeforeDispatch": {
+    "queuedTotal": 15,
+    "queuedGithub": 1,
+    "queuedRepoSignal": 14
+  },
+  "queueSnapshotAfterCycle": {
+    "queuedTotal": 11,
+    "queuedGithub": 0,
+    "queuedRepoSignal": 11
+  },
+  "discoveryBatches": [
+    {
+      "sourceKind": "repo_signal",
+      "attempt": 1,
+      "startedAt": "2026-04-11T19:32:05.805Z",
+      "completedAt": "2026-04-11T19:43:34.688Z",
+      "durationMs": 688892,
+      "excludedSourceKeyCount": 0,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T19-32-06-714Z.json",
+      "selection": {
+        "selected": [
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-bootstrap-appresolver-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-bootstrap-appresolver-ts",
+            "sourceTitle": "tests: add low-level coverage for appResolver.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-bootstrap-appresolver-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/bootstrap/appResolver.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/bootstrap/appResolver.ts.",
+              "Checked: packages/shared/src/lib/bootstrap/appResolver.test.ts, packages/shared/src/lib/bootstrap/__tests__/appResolver.test.ts, packages/shared/src/lib/bootstrap/appResolver.spec.ts, packages/shared/src/lib/bootstrap/__tests__/appResolver.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/bootstrap/appResolver.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.239Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-boolean-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-boolean-ts",
+            "sourceTitle": "tests: add low-level coverage for boolean.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-boolean-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/boolean.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/boolean.ts.",
+              "Checked: packages/shared/src/lib/boolean.test.ts, packages/shared/src/lib/__tests__/boolean.test.ts, packages/shared/src/lib/boolean.spec.ts, packages/shared/src/lib/__tests__/boolean.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/boolean.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.239Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-passwordpolicy-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-passwordpolicy-ts",
+            "sourceTitle": "tests: add low-level coverage for passwordPolicy.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-passwordpolicy-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/auth/passwordPolicy.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/auth/passwordPolicy.ts.",
+              "Checked: packages/shared/src/lib/auth/passwordPolicy.test.ts, packages/shared/src/lib/auth/__tests__/passwordPolicy.test.ts, packages/shared/src/lib/auth/passwordPolicy.spec.ts, packages/shared/src/lib/auth/__tests__/passwordPolicy.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/auth/passwordPolicy.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.238Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-featurematch-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-featurematch-ts",
+            "sourceTitle": "tests: add low-level coverage for featureMatch.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-featurematch-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/auth/featureMatch.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/auth/featureMatch.ts.",
+              "Checked: packages/shared/src/lib/auth/featureMatch.test.ts, packages/shared/src/lib/auth/__tests__/featureMatch.test.ts, packages/shared/src/lib/auth/featureMatch.spec.ts, packages/shared/src/lib/auth/__tests__/featureMatch.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/auth/featureMatch.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.237Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-jwt-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-jwt-ts",
+            "sourceTitle": "tests: add low-level coverage for jwt.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-auth-jwt-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/auth/jwt.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/auth/jwt.ts.",
+              "Checked: packages/shared/src/lib/auth/jwt.test.ts, packages/shared/src/lib/auth/__tests__/jwt.test.ts, packages/shared/src/lib/auth/jwt.spec.ts, packages/shared/src/lib/auth/__tests__/jwt.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/auth/jwt.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.237Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-crud-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-crud-ts",
+            "sourceTitle": "tests: add low-level coverage for crud.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-api-crud-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/api/crud.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/api/crud.ts.",
+              "Checked: packages/shared/src/lib/api/crud.test.ts, packages/shared/src/lib/api/__tests__/crud.test.ts, packages/shared/src/lib/api/crud.spec.ts, packages/shared/src/lib/api/__tests__/crud.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/api/crud.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.236Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-context-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-shared-src-lib-api-context-ts",
+            "sourceTitle": "tests: add low-level coverage for context.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-shared-src-lib-api-context-ts",
+            "sourceEvidence": [
+              "packages/shared/src/lib/api/context.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/shared/src/lib/api/context.ts.",
+              "Checked: packages/shared/src/lib/api/context.test.ts, packages/shared/src/lib/api/__tests__/context.test.ts, packages/shared/src/lib/api/context.spec.ts, packages/shared/src/lib/api/__tests__/context.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/shared/src/lib/api/context.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "shared"
+            ],
+            "validationProfileIds": [
+              "shared-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.235Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-create-app-template-src-lib-metadata-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-create-app-template-src-lib-metadata-ts",
+            "sourceTitle": "tests: add low-level coverage for metadata.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-create-app-template-src-lib-metadata-ts",
+            "sourceEvidence": [
+              "packages/create-app/template/src/lib/metadata.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/create-app/template/src/lib/metadata.ts.",
+              "Checked: packages/create-app/template/src/lib/metadata.test.ts, packages/create-app/template/src/lib/__tests__/metadata.test.ts, packages/create-app/template/src/lib/metadata.spec.ts, packages/create-app/template/src/lib/__tests__/metadata.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/create-app/template/src/lib/metadata.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "create-app"
+            ],
+            "validationProfileIds": [
+              "create-app-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.232Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-inspect-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-inspect-ts",
+            "sourceTitle": "tests: add low-level coverage for inspect.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-inspect-ts",
+            "sourceEvidence": [
+              "packages/cli/src/lib/umes/inspect.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/cli/src/lib/umes/inspect.ts.",
+              "Checked: packages/cli/src/lib/umes/inspect.test.ts, packages/cli/src/lib/umes/__tests__/inspect.test.ts, packages/cli/src/lib/umes/inspect.spec.ts, packages/cli/src/lib/umes/__tests__/inspect.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/cli/src/lib/umes/inspect.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "cli"
+            ],
+            "validationProfileIds": [
+              "cli-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.231Z"
+          },
+          {
+            "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-list-ts",
+            "targetId": "open-mercato",
+            "sourceType": "repo_signal",
+            "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-list-ts",
+            "sourceTitle": "tests: add low-level coverage for list.ts",
+            "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-list-ts",
+            "sourceEvidence": [
+              "packages/cli/src/lib/umes/list.ts exports runtime logic in a low-level package path.",
+              "No nearby test file was found for packages/cli/src/lib/umes/list.ts.",
+              "Checked: packages/cli/src/lib/umes/list.test.ts, packages/cli/src/lib/umes/__tests__/list.test.ts, packages/cli/src/lib/umes/list.spec.ts, packages/cli/src/lib/umes/__tests__/list.spec.ts ..."
+            ],
+            "candidatePaths": [
+              "packages/cli/src/lib/umes/list.ts"
+            ],
+            "expectedContributionClasses": [
+              "tests",
+              "bugfix"
+            ],
+            "lane": "simple_bugs",
+            "riskZone": "medium",
+            "primaryAreaOwners": [
+              "cli"
+            ],
+            "validationProfileIds": [
+              "cli-package-checks"
+            ],
+            "duplicateRiskClass": "none",
+            "duplicateSignals": [],
+            "score": 112,
+            "scoreReasons": [
+              "Repository signal includes exact local evidence.",
+              "Repository signal points at concrete file paths.",
+              "Single-file scope signal."
+            ],
+            "labels": [],
+            "assigneeLogins": [],
+            "comments": 0,
+            "updatedAt": "2026-04-11T19:32:06.231Z"
+          }
+        ],
+        "skipped": [
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-tutorials-testing-test-watch",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-tutorials-testing-test-watch",
+              "sourceTitle": "docs: replace stale command \"test:watch\" in tutorials/testing",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-tutorials-testing-test-watch",
+              "sourceEvidence": [
+                "Command \"yarn test:watch\" in apps/docs/docs/tutorials/testing.mdx:19 references a missing root script.",
+                "package.json does not define the script \"test:watch\".",
+                "Declaration: - Watch mode: `yarn test:watch`"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/tutorials/testing.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.954Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-installation-setup-docker",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-installation-setup-docker",
+              "sourceTitle": "docs: replace stale command \"docker:\" in installation/setup",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-installation-setup-docker",
+              "sourceEvidence": [
+                "Command \"yarn docker:\" in apps/docs/docs/installation/setup.mdx:214 references a missing root script.",
+                "package.json does not define the script \"docker:\".",
+                "Declaration: The repository also exposes root-level `yarn docker:*` commands that run the matching workflow inside the running `app` container. These wrappers exist so container-first contributors can use the same command surface without translating eve"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/installation/setup.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.952Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+              "sourceTitle": "docs: replace stale command \"test:workflows\" in framework/workflows/testing",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+              "sourceEvidence": [
+                "Command \"yarn test:workflows\" in apps/docs/docs/framework/workflows/testing.mdx:562 references a missing root script.",
+                "package.json does not define the script \"test:workflows\".",
+                "Declaration: run: yarn test:workflows"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/workflows/testing.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.952Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-runtime-workers-start-workers",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-runtime-workers-start-workers",
+              "sourceTitle": "docs: replace stale command \"start:workers\" in framework/runtime/workers",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-runtime-workers-start-workers",
+              "sourceEvidence": [
+                "Command \"yarn start:workers\" in apps/docs/docs/framework/runtime/workers.mdx:169 references a missing root script.",
+                "package.json does not define the script \"start:workers\".",
+                "Declaration: 2. Run workers as separate processes using `yarn start:workers`"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/runtime/workers.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.948Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-modules-overview-db",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-modules-overview-db",
+              "sourceTitle": "docs: replace stale command \"db:\" in framework/modules/overview",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-modules-overview-db",
+              "sourceEvidence": [
+                "Command \"yarn db:\" in apps/docs/docs/framework/modules/overview.mdx:249 references a missing root script.",
+                "package.json does not define the script \"db:\".",
+                "Declaration: - Generators (`yarn generate`) and migrations (`yarn db:*`) only include enabled modules."
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/modules/overview.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.945Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+              "sourceTitle": "docs: replace stale command \"modules:prepare\" in framework/modules/checkout",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+              "sourceEvidence": [
+                "Command \"npm run modules:prepare\" in apps/docs/docs/framework/modules/checkout.mdx:29 references a missing root script.",
+                "package.json does not define the script \"modules:prepare\".",
+                "Declaration: After enabling the module, run migrations and `npm run modules:prepare` when you add or modify auto-discovered module files."
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/modules/checkout.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.940Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-events-queue-workers-start-app",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-events-queue-workers-start-app",
+              "sourceTitle": "docs: replace stale command \"start:app\" in framework/events/queue-workers",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-events-queue-workers-start-app",
+              "sourceEvidence": [
+                "Command \"yarn start:app\" in apps/docs/docs/framework/events/queue-workers.mdx:211 references a missing root script.",
+                "package.json does not define the script \"start:app\".",
+                "Declaration: | `yarn start:app` | Production mode (app only) |"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/events/queue-workers.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.938Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+              "sourceTitle": "docs: replace stale command \"start:workers\" in framework/events/queue-workers",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+              "sourceEvidence": [
+                "Command \"yarn start:workers\" in apps/docs/docs/framework/events/queue-workers.mdx:180 references a missing root script.",
+                "package.json does not define the script \"start:workers\".",
+                "Declaration: 2. Run worker processes separately using `yarn start:workers` or `yarn mercato queue worker --all`"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/events/queue-workers.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.938Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+              "sourceTitle": "docs: replace stale command \"openapi:generate\" in framework/api/building-api-modules",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+              "sourceEvidence": [
+                "Command \"yarn openapi:generate\" in apps/docs/docs/framework/api/building-api-modules.mdx:890 references a missing root script.",
+                "package.json does not define the script \"openapi:generate\".",
+                "Declaration: yarn openapi:generate"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/framework/api/building-api-modules.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.932Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-cli-db-generate-script",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-cli-db-generate-script",
+              "sourceTitle": "docs: replace stale command \"script\" in cli/db-generate",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-generate-script",
+              "sourceEvidence": [
+                "Command \"yarn script\" in apps/docs/docs/cli/db-generate.mdx:12 references a missing root script.",
+                "package.json does not define the script \"script\".",
+                "Declaration: # Using yarn script"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/cli/db-generate.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.924Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-cli-db-greenfield-script",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-cli-db-greenfield-script",
+              "sourceTitle": "docs: replace stale command \"script\" in cli/db-greenfield",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-greenfield-script",
+              "sourceEvidence": [
+                "Command \"yarn script\" in apps/docs/docs/cli/db-greenfield.mdx:12 references a missing root script.",
+                "package.json does not define the script \"script\".",
+                "Declaration: # Using yarn script"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/cli/db-greenfield.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.924Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "DOCSIG-stale-command-cli-db-migrate-script",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "DOCSIG-stale-command-cli-db-migrate-script",
+              "sourceTitle": "docs: replace stale command \"script\" in cli/db-migrate",
+              "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-migrate-script",
+              "sourceEvidence": [
+                "Command \"yarn script\" in apps/docs/docs/cli/db-migrate.mdx:16 references a missing root script.",
+                "package.json does not define the script \"script\".",
+                "Declaration: # Using yarn script (includes generators + entity install)"
+              ],
+              "candidatePaths": [
+                "package.json",
+                "apps/docs/docs/cli/db-migrate.mdx"
+              ],
+              "expectedContributionClasses": [
+                "docs"
+              ],
+              "lane": "docs",
+              "riskZone": "low",
+              "primaryAreaOwners": [
+                "docs"
+              ],
+              "validationProfileIds": [
+                "docs-basic",
+                "docs-app-build"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 130,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Low risk zone.",
+                "Repository signal points at concrete file paths."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:05.924Z"
+            },
+            "reasons": [
+              "Docs auto-dispatch requires a documentation label or docs-only file scope."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-collector-ts",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-collector-ts",
+              "sourceTitle": "tests: add low-level coverage for collector.ts",
+              "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-collector-ts",
+              "sourceEvidence": [
+                "packages/cli/src/lib/umes/collector.ts exports runtime logic in a low-level package path.",
+                "No nearby test file was found for packages/cli/src/lib/umes/collector.ts.",
+                "Checked: packages/cli/src/lib/umes/collector.test.ts, packages/cli/src/lib/umes/__tests__/collector.test.ts, packages/cli/src/lib/umes/collector.spec.ts, packages/cli/src/lib/umes/__tests__/collector.spec.ts ..."
+              ],
+              "candidatePaths": [
+                "packages/cli/src/lib/umes/collector.ts"
+              ],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "cli"
+              ],
+              "validationProfileIds": [
+                "cli-package-checks"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 112,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Repository signal points at concrete file paths.",
+                "Single-file scope signal."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:06.230Z"
+            },
+            "reasons": [
+              "Selection limit reached."
+            ]
+          },
+          {
+            "candidate": {
+              "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-registry-ts",
+              "targetId": "open-mercato",
+              "sourceType": "repo_signal",
+              "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-registry-ts",
+              "sourceTitle": "tests: add low-level coverage for module-registry.ts",
+              "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-registry-ts",
+              "sourceEvidence": [
+                "packages/cli/src/lib/generators/module-registry.ts exports runtime logic in a low-level package path.",
+                "No nearby test file was found for packages/cli/src/lib/generators/module-registry.ts.",
+                "Checked: packages/cli/src/lib/generators/module-registry.test.ts, packages/cli/src/lib/generators/__tests__/module-registry.test.ts, packages/cli/src/lib/generators/module-registry.spec.ts, packages/cli/src/lib/generators/__tests__/module-registry.spec.ts ..."
+              ],
+              "candidatePaths": [
+                "packages/cli/src/lib/generators/module-registry.ts"
+              ],
+              "expectedContributionClasses": [
+                "tests",
+                "bugfix"
+              ],
+              "lane": "simple_bugs",
+              "riskZone": "medium",
+              "primaryAreaOwners": [
+                "cli"
+              ],
+              "validationProfileIds": [
+                "cli-package-checks"
+              ],
+              "duplicateRiskClass": "none",
+              "duplicateSignals": [],
+              "score": 112,
+              "scoreReasons": [
+                "Repository signal includes exact local evidence.",
+                "Repository signal points at concrete file paths.",
+                "Single-file scope signal."
+              ],
+              "labels": [],
+              "assigneeLogins": [],
+              "comments": 0,
+              "updatedAt": "2026-04-11T19:32:06.226Z"
+            },
+            "reasons": [
+              "Selection limit reached."
+            ]
+          }
+        ]
+      },
+      "qualifiedTaskIds": [
+        "HCK-0078",
+        "HCK-0079",
+        "HCK-0080",
+        "HCK-0081",
+        "HCK-0083",
+        "HCK-0084",
+        "HCK-0085",
+        "HCK-0086",
+        "HCK-0087"
+      ],
+      "discoveredCandidates": 24,
+      "queueSnapshot": {
+        "queuedTotal": 15,
+        "queuedGithub": 1,
+        "queuedRepoSignal": 14
+      }
+    }
+  ],
+  "judgeSyncResults": [],
+  "startResults": [
+    {
+      "taskId": "HCK-0063",
+      "result": {
+        "exitCode": 1,
+        "stdout": "",
+        "stderr": "(node:388239) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\nerror: could not lock config file .git/config: File exists\n\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0076",
+      "result": {
+        "exitCode": 1,
+        "stdout": "",
+        "stderr": "(node:388250) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\nerror: could not lock config file .git/config: File exists\n\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0062",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0062\timplementing\t/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0062\n",
+        "stderr": "(node:388233) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0061",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0061\timplementing\t/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0061\n",
+        "stderr": "(node:388227) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0057",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0057\timplementing\t/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0057\n",
+        "stderr": "(node:388226) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0077",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0077\timplementing\t/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0077\n",
+        "stderr": "(node:388225) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    }
+  ],
+  "progressResults": [
+    {
+      "taskId": "HCK-0071",
+      "step": "validate",
+      "result": {
+        "exitCode": 1,
+        "stdout": "",
+        "stderr": "(node:385646) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\nerror: could not lock config file .git/config: File exists\n\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0064",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0064\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:385640) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0064",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0064\tdraft_pr_open\thttps://github.com/open-mercato/open-mercato/pull/1279\n",
+        "stderr": "(node:386062) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0064",
+      "step": "ready",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0064\tchanges_requested\n",
+        "stderr": "(node:386349) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0059",
+      "step": "validate",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0059\timplementing\t2 validation artifacts\n",
+        "stderr": "(node:385639) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0059",
+      "step": "pr_open",
+      "result": {
+        "exitCode": 0,
+        "stdout": "HCK-0059\tdraft_pr_open\thttps://github.com/open-mercato/open-mercato/pull/1280\n",
+        "stderr": "(node:386081) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0059",
+      "step": "ready",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0059\tblocked\tlikely_duplicate\n",
+        "stderr": "(node:386372) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    },
+    {
+      "taskId": "HCK-0048",
+      "step": "ready",
+      "result": {
+        "exitCode": 1,
+        "stdout": "HCK-0048\tblocked\tlikely_duplicate\n",
+        "stderr": "(node:385638) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///home/hacker/repo/open-mercato/packages/hackonctl/dist/bin.js is not specified and it doesn't parse as CommonJS.\nReparsing as ES module because module syntax was detected. This incurs a performance overhead.\nTo eliminate this warning, add \"type\": \"module\" to /home/hacker/repo/open-mercato/package.json.\n(Use `node --trace-warnings ...` to show where the warning was created)\n",
+        "timedOut": false
+      }
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-04-11T19:23:47.877Z",
+      "phase": "judge_sync",
+      "status": "started",
+      "taskIds": [
+        "HCK-0022",
+        "HCK-0024",
+        "HCK-0035",
+        "HCK-0036"
+      ],
+      "message": "Checking 4 submitted PR(s) for merged, changes-requested, or rejected outcomes."
+    },
+    {
+      "at": "2026-04-11T19:23:50.548Z",
+      "phase": "judge_sync",
+      "status": "completed",
+      "taskIds": [
+        "HCK-0022",
+        "HCK-0024",
+        "HCK-0035",
+        "HCK-0036"
+      ],
+      "successCount": 0,
+      "message": "Checked 4 submitted PR(s) and applied 0 submitted-PR update(s)."
+    },
+    {
+      "at": "2026-04-11T19:23:47.877Z",
+      "phase": "progress",
+      "status": "started",
+      "taskIds": [
+        "HCK-0048",
+        "HCK-0059",
+        "HCK-0064",
+        "HCK-0071"
+      ],
+      "message": "Starting progression for 4 active green-lane task(s)."
+    },
+    {
+      "at": "2026-04-11T19:32:05.805Z",
+      "phase": "progress",
+      "status": "completed",
+      "taskIds": [
+        "HCK-0048",
+        "HCK-0059",
+        "HCK-0064",
+        "HCK-0071"
+      ],
+      "successCount": 4,
+      "failureCount": 4,
+      "message": "Completed progression for 4 active green-lane task(s)."
+    },
+    {
+      "at": "2026-04-11T19:43:34.688Z",
+      "phase": "discover",
+      "status": "completed",
+      "label": "repo_signal-batch",
+      "sourceKind": "repo_signal",
+      "attempt": 1,
+      "durationMs": 688892,
+      "discoveredCandidates": 24,
+      "selectedCount": 10,
+      "skippedCount": 14,
+      "qualifiedCount": 9,
+      "excludedSourceKeyCount": 0,
+      "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T19-32-06-714Z.json",
+      "message": "Discovery batch completed for repo_signal."
+    },
+    {
+      "at": "2026-04-11T19:43:34.688Z",
+      "phase": "queue",
+      "status": "snapshot",
+      "sourceKind": "repo_signal",
+      "attempt": 1,
+      "queuedTotal": 15,
+      "queuedGithub": 1,
+      "queuedRepoSignal": 14,
+      "message": "Queue snapshot after repo_signal discovery."
+    },
+    {
+      "at": "2026-04-11T19:43:34.717Z",
+      "phase": "start",
+      "status": "started",
+      "taskIds": [
+        "HCK-0077",
+        "HCK-0057",
+        "HCK-0061",
+        "HCK-0062",
+        "HCK-0063",
+        "HCK-0076"
+      ],
+      "dispatchCount": 6,
+      "message": "Starting 6 queued green-lane task(s)."
+    },
+    {
+      "at": "2026-04-11T19:57:54.593Z",
+      "phase": "start",
+      "status": "completed",
+      "taskIds": [
+        "HCK-0077",
+        "HCK-0057",
+        "HCK-0061",
+        "HCK-0062",
+        "HCK-0063",
+        "HCK-0076"
+      ],
+      "dispatchCount": 6,
+      "successCount": 4,
+      "failureCount": 2,
+      "message": "Completed start attempts for 6 queued green-lane task(s)."
+    }
+  ]
+}

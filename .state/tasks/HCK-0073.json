@@ -1,0 +1,76 @@
+{
+  "taskId": "HCK-0073",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "DOCSIG-orphan-api-modules",
+  "sourceTitle": "docs: surface orphan doc page api/modules",
+  "sourceEvidence": [
+    "apps/docs/docs/api/modules.mdx exists as a documentation page.",
+    "apps/docs/sidebars.ts does not reference \"api/modules\".",
+    "No other docs pages link to \"api/modules\"."
+  ],
+  "candidatePaths": [
+    "apps/docs/sidebars.ts",
+    "apps/docs/docs/api/modules.mdx"
+  ],
+  "expectedContributionClasses": [
+    "docs"
+  ],
+  "lane": "docs",
+  "riskZone": "low",
+  "state": "blocked",
+  "duplicateRiskClass": "split_risk",
+  "duplicateSignals": [
+    {
+      "kind": "local-path-overlap",
+      "duplicateRiskClass": "split_risk",
+      "summary": "Local active task HCK-0071 overlaps changed paths (apps/docs/sidebars.ts).",
+      "source": "local",
+      "relatedTaskId": "HCK-0071",
+      "prNumber": null,
+      "prUrl": null,
+      "overlapPaths": [
+        "apps/docs/sidebars.ts"
+      ]
+    }
+  ],
+  "primaryAreaOwners": [
+    "docs"
+  ],
+  "validationProfileIds": [
+    "docs-basic",
+    "docs-app-build"
+  ],
+  "worktreePath": null,
+  "branchName": "docs/hackon/hck-0073-docs-surface-orphan-doc-page-api-modules",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "DOCSIG-orphan-api-modules",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T19:01:50.166Z",
+    "decision": "Blocked pending human override due to duplicate risk.",
+    "rationale": "Local active task HCK-0071 overlaps changed paths (apps/docs/sidebars.ts).",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T19:00:32.600Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0073 discovered from repo_signal:DOCSIG-orphan-api-modules.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T19:01:50.166Z",
+      "type": "task.blocked",
+      "message": "Blocked pending human override due to duplicate risk.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T19:00:32.600Z",
+  "updatedAt": "2026-04-11T19:01:50.166Z"
+}

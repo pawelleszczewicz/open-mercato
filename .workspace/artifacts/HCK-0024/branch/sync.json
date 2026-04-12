@@ -1,0 +1,19 @@
+{
+  "taskId": "HCK-0024",
+  "prCommand": "sync",
+  "preparedAt": "2026-04-12T04:59:56.119Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/cli/src/lib/generators/__tests__/openapi-paths.test.ts",
+      "packages/cli/src/lib/generators/__tests__/openapi.test.ts"
+    ],
+    "addedLines": 29,
+    "removedLines": 23,
+    "totalDiffLines": 52,
+    "branchName": "fix/hackon/hck-0024-tests-add-low-level-coverage-for-openapi-paths-ts",
+    "headSha": "8cf33c1ae1f88ccad50492bbc1afaa7085980044",
+    "aheadBy": 1,
+    "behindBy": 1,
+    "commitCreated": true
+  }
+}

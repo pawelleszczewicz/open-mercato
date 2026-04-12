@@ -1,0 +1,19 @@
+{
+  "taskId": "HCK-0092",
+  "prCommand": "sync",
+  "preparedAt": "2026-04-12T01:06:36.287Z",
+  "branchState": {
+    "changedFiles": [
+      ".ai/qa/tests/integration/TC-INT-008.spec.ts",
+      "packages/cli/src/lib/generators/__tests__/module-entities.test.ts"
+    ],
+    "addedLines": 274,
+    "removedLines": 0,
+    "totalDiffLines": 274,
+    "branchName": "fix/hackon/hck-0092-tests-add-low-level-coverage-for-module-entities-ts",
+    "headSha": "afe49a42f59d79a6263e0e9e203f7e9edb142aa6",
+    "aheadBy": 2,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

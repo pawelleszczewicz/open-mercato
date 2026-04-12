@@ -1,0 +1,65 @@
+{
+  "taskId": "HCK-0097",
+  "targetId": "open-mercato",
+  "sourceType": "repo_signal",
+  "sourceId": "TESTSIG-lowlevel-untested-packages-search-src-lib-merger-ts",
+  "sourceTitle": "tests: add low-level coverage for merger.ts",
+  "sourceEvidence": [
+    "packages/search/src/lib/merger.ts exports runtime logic in a low-level package path.",
+    "No nearby test file was found for packages/search/src/lib/merger.ts.",
+    "Checked: packages/search/src/lib/merger.test.ts",
+    "packages/search/src/lib/__tests__/merger.test.ts",
+    "packages/search/src/lib/merger.spec.ts",
+    "packages/search/src/lib/__tests__/merger.spec.ts ..."
+  ],
+  "candidatePaths": [
+    "packages/search/src/lib/merger.ts"
+  ],
+  "expectedContributionClasses": [
+    "tests",
+    "bugfix"
+  ],
+  "lane": "simple_bugs",
+  "riskZone": "high",
+  "state": "qualified",
+  "duplicateRiskClass": "none",
+  "duplicateSignals": [],
+  "primaryAreaOwners": [
+    "search"
+  ],
+  "validationProfileIds": [
+    "search-package-checks"
+  ],
+  "worktreePath": null,
+  "branchName": "fix/hackon/hck-0097-tests-add-low-level-coverage-for-merger-ts",
+  "prNumber": null,
+  "prUrl": null,
+  "contributionGroupId": "TESTSIG-lowlevel-untested-packages-search-src-lib-merger-ts",
+  "portalStatus": "not_started",
+  "judgeStatus": "not_started",
+  "blockers": [],
+  "lastCoordinatorDecision": {
+    "at": "2026-04-11T20:20:49.288Z",
+    "decision": "Qualified for coordinator workflow.",
+    "rationale": "No duplicate risk signals found.",
+    "overrideApplied": false,
+    "artifactRefs": []
+  },
+  "differentiationNote": null,
+  "eventLog": [
+    {
+      "at": "2026-04-11T20:19:34.128Z",
+      "type": "task.discovered",
+      "message": "Task HCK-0097 discovered from repo_signal:TESTSIG-lowlevel-untested-packages-search-src-lib-merger-ts.",
+      "artifactRefs": []
+    },
+    {
+      "at": "2026-04-11T20:20:49.288Z",
+      "type": "task.qualified",
+      "message": "Qualified for coordinator workflow.",
+      "artifactRefs": []
+    }
+  ],
+  "createdAt": "2026-04-11T20:19:34.128Z",
+  "updatedAt": "2026-04-11T20:20:49.288Z"
+}

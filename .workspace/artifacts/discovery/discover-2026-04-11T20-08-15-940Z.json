@@ -1,0 +1,1012 @@
+{
+  "snapshotId": "discover-2026-04-11T20-08-15-940Z",
+  "generatedAt": "2026-04-11T20:08:15.940Z",
+  "targetId": "open-mercato",
+  "lanes": [
+    "docs",
+    "tests",
+    "simple_bugs"
+  ],
+  "limit": 24,
+  "queries": [
+    {
+      "lane": "docs",
+      "query": "state:open label:documentation"
+    },
+    {
+      "lane": "docs",
+      "query": "state:open label:docs"
+    },
+    {
+      "lane": "docs",
+      "query": "state:open readme"
+    },
+    {
+      "lane": "docs",
+      "query": "state:open \"user guide\""
+    },
+    {
+      "lane": "docs",
+      "query": "state:open \"broken link\" docs"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open label:test"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open label:qa"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open coverage"
+    },
+    {
+      "lane": "tests",
+      "query": "state:open \"regression test\""
+    },
+    {
+      "lane": "tests",
+      "query": "state:open \"skipped test\""
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open label:bug"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open regression"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open fix"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open typo"
+    },
+    {
+      "lane": "simple_bugs",
+      "query": "state:open \"empty state\""
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "DOCSIG-stale-command-tutorials-testing-test-watch",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-tutorials-testing-test-watch",
+      "sourceTitle": "docs: replace stale command \"test:watch\" in tutorials/testing",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-tutorials-testing-test-watch",
+      "sourceEvidence": [
+        "Command \"yarn test:watch\" in apps/docs/docs/tutorials/testing.mdx:19 references a missing root script.",
+        "package.json does not define the script \"test:watch\".",
+        "Declaration: - Watch mode: `yarn test:watch`"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/tutorials/testing.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.175Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-installation-setup-docker",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-installation-setup-docker",
+      "sourceTitle": "docs: replace stale command \"docker:\" in installation/setup",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-installation-setup-docker",
+      "sourceEvidence": [
+        "Command \"yarn docker:\" in apps/docs/docs/installation/setup.mdx:214 references a missing root script.",
+        "package.json does not define the script \"docker:\".",
+        "Declaration: The repository also exposes root-level `yarn docker:*` commands that run the matching workflow inside the running `app` container. These wrappers exist so container-first contributors can use the same command surface without translating eve"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/installation/setup.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.173Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+      "sourceTitle": "docs: replace stale command \"test:workflows\" in framework/workflows/testing",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-workflows-testing-test-workflows",
+      "sourceEvidence": [
+        "Command \"yarn test:workflows\" in apps/docs/docs/framework/workflows/testing.mdx:562 references a missing root script.",
+        "package.json does not define the script \"test:workflows\".",
+        "Declaration: run: yarn test:workflows"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/workflows/testing.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.172Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-runtime-workers-start-workers",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-runtime-workers-start-workers",
+      "sourceTitle": "docs: replace stale command \"start:workers\" in framework/runtime/workers",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-runtime-workers-start-workers",
+      "sourceEvidence": [
+        "Command \"yarn start:workers\" in apps/docs/docs/framework/runtime/workers.mdx:169 references a missing root script.",
+        "package.json does not define the script \"start:workers\".",
+        "Declaration: 2. Run workers as separate processes using `yarn start:workers`"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/runtime/workers.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.166Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-modules-overview-db",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-modules-overview-db",
+      "sourceTitle": "docs: replace stale command \"db:\" in framework/modules/overview",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-modules-overview-db",
+      "sourceEvidence": [
+        "Command \"yarn db:\" in apps/docs/docs/framework/modules/overview.mdx:249 references a missing root script.",
+        "package.json does not define the script \"db:\".",
+        "Declaration: - Generators (`yarn generate`) and migrations (`yarn db:*`) only include enabled modules."
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/modules/overview.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.163Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+      "sourceTitle": "docs: replace stale command \"modules:prepare\" in framework/modules/checkout",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-modules-checkout-modules-prepare",
+      "sourceEvidence": [
+        "Command \"npm run modules:prepare\" in apps/docs/docs/framework/modules/checkout.mdx:29 references a missing root script.",
+        "package.json does not define the script \"modules:prepare\".",
+        "Declaration: After enabling the module, run migrations and `npm run modules:prepare` when you add or modify auto-discovered module files."
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/modules/checkout.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.158Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-events-queue-workers-start-app",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-events-queue-workers-start-app",
+      "sourceTitle": "docs: replace stale command \"start:app\" in framework/events/queue-workers",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-events-queue-workers-start-app",
+      "sourceEvidence": [
+        "Command \"yarn start:app\" in apps/docs/docs/framework/events/queue-workers.mdx:211 references a missing root script.",
+        "package.json does not define the script \"start:app\".",
+        "Declaration: | `yarn start:app` | Production mode (app only) |"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/events/queue-workers.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.156Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+      "sourceTitle": "docs: replace stale command \"start:workers\" in framework/events/queue-workers",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-events-queue-workers-start-workers",
+      "sourceEvidence": [
+        "Command \"yarn start:workers\" in apps/docs/docs/framework/events/queue-workers.mdx:180 references a missing root script.",
+        "package.json does not define the script \"start:workers\".",
+        "Declaration: 2. Run worker processes separately using `yarn start:workers` or `yarn mercato queue worker --all`"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/events/queue-workers.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.155Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+      "sourceTitle": "docs: replace stale command \"openapi:generate\" in framework/api/building-api-modules",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-framework-api-building-api-modules-openapi-generate",
+      "sourceEvidence": [
+        "Command \"yarn openapi:generate\" in apps/docs/docs/framework/api/building-api-modules.mdx:890 references a missing root script.",
+        "package.json does not define the script \"openapi:generate\".",
+        "Declaration: yarn openapi:generate"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/framework/api/building-api-modules.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.150Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-cli-db-generate-script",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-cli-db-generate-script",
+      "sourceTitle": "docs: replace stale command \"script\" in cli/db-generate",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-generate-script",
+      "sourceEvidence": [
+        "Command \"yarn script\" in apps/docs/docs/cli/db-generate.mdx:12 references a missing root script.",
+        "package.json does not define the script \"script\".",
+        "Declaration: # Using yarn script"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/cli/db-generate.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.141Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-cli-db-greenfield-script",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-cli-db-greenfield-script",
+      "sourceTitle": "docs: replace stale command \"script\" in cli/db-greenfield",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-greenfield-script",
+      "sourceEvidence": [
+        "Command \"yarn script\" in apps/docs/docs/cli/db-greenfield.mdx:12 references a missing root script.",
+        "package.json does not define the script \"script\".",
+        "Declaration: # Using yarn script"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/cli/db-greenfield.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.141Z"
+    },
+    {
+      "candidateId": "DOCSIG-stale-command-cli-db-migrate-script",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "DOCSIG-stale-command-cli-db-migrate-script",
+      "sourceTitle": "docs: replace stale command \"script\" in cli/db-migrate",
+      "sourceUrl": "repo-signal://DOCSIG-stale-command-cli-db-migrate-script",
+      "sourceEvidence": [
+        "Command \"yarn script\" in apps/docs/docs/cli/db-migrate.mdx:16 references a missing root script.",
+        "package.json does not define the script \"script\".",
+        "Declaration: # Using yarn script (includes generators + entity install)"
+      ],
+      "candidatePaths": [
+        "package.json",
+        "apps/docs/docs/cli/db-migrate.mdx"
+      ],
+      "expectedContributionClasses": [
+        "docs"
+      ],
+      "lane": "docs",
+      "riskZone": "low",
+      "primaryAreaOwners": [
+        "docs"
+      ],
+      "validationProfileIds": [
+        "docs-basic",
+        "docs-app-build"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 130,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Low risk zone.",
+        "Repository signal points at concrete file paths."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.141Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-collector-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-collector-ts",
+      "sourceTitle": "tests: add low-level coverage for collector.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-umes-collector-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/umes/collector.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/umes/collector.ts.",
+        "Checked: packages/cli/src/lib/umes/collector.test.ts, packages/cli/src/lib/umes/__tests__/collector.test.ts, packages/cli/src/lib/umes/collector.spec.ts, packages/cli/src/lib/umes/__tests__/collector.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/umes/collector.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.471Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-registry-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-registry-ts",
+      "sourceTitle": "tests: add low-level coverage for module-registry.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-registry-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/generators/module-registry.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/generators/module-registry.ts.",
+        "Checked: packages/cli/src/lib/generators/module-registry.test.ts, packages/cli/src/lib/generators/__tests__/module-registry.test.ts, packages/cli/src/lib/generators/module-registry.spec.ts, packages/cli/src/lib/generators/__tests__/module-registry.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/generators/module-registry.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.465Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-entity-ids-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-entity-ids-ts",
+      "sourceTitle": "tests: add low-level coverage for entity-ids.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-entity-ids-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/generators/entity-ids.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/generators/entity-ids.ts.",
+        "Checked: packages/cli/src/lib/generators/entity-ids.test.ts, packages/cli/src/lib/generators/__tests__/entity-ids.test.ts, packages/cli/src/lib/generators/entity-ids.spec.ts, packages/cli/src/lib/generators/__tests__/entity-ids.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/generators/entity-ids.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.463Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-di-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-di-ts",
+      "sourceTitle": "tests: add low-level coverage for module-di.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-di-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/generators/module-di.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/generators/module-di.ts.",
+        "Checked: packages/cli/src/lib/generators/module-di.test.ts, packages/cli/src/lib/generators/__tests__/module-di.test.ts, packages/cli/src/lib/generators/module-di.spec.ts, packages/cli/src/lib/generators/__tests__/module-di.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/generators/module-di.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.463Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-entities-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-entities-ts",
+      "sourceTitle": "tests: add low-level coverage for module-entities.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-generators-module-entities-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/generators/module-entities.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/generators/module-entities.ts.",
+        "Checked: packages/cli/src/lib/generators/module-entities.test.ts, packages/cli/src/lib/generators/__tests__/module-entities.test.ts, packages/cli/src/lib/generators/module-entities.spec.ts, packages/cli/src/lib/generators/__tests__/module-entities.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/generators/module-entities.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.463Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-setup-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-setup-ts",
+      "sourceTitle": "tests: add low-level coverage for agentic-setup.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-setup-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/agentic-setup.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/agentic-setup.ts.",
+        "Checked: packages/cli/src/lib/agentic-setup.test.ts, packages/cli/src/lib/__tests__/agentic-setup.test.ts, packages/cli/src/lib/agentic-setup.spec.ts, packages/cli/src/lib/__tests__/agentic-setup.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/agentic-setup.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.461Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-init-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-init-ts",
+      "sourceTitle": "tests: add low-level coverage for agentic-init.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-cli-src-lib-agentic-init-ts",
+      "sourceEvidence": [
+        "packages/cli/src/lib/agentic-init.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/cli/src/lib/agentic-init.ts.",
+        "Checked: packages/cli/src/lib/agentic-init.test.ts, packages/cli/src/lib/__tests__/agentic-init.test.ts, packages/cli/src/lib/agentic-init.spec.ts, packages/cli/src/lib/__tests__/agentic-init.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/cli/src/lib/agentic-init.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "medium",
+      "primaryAreaOwners": [
+        "cli"
+      ],
+      "validationProfileIds": [
+        "cli-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 112,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.460Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-search-src-lib-presenter-enricher-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-search-src-lib-presenter-enricher-ts",
+      "sourceTitle": "tests: add low-level coverage for presenter-enricher.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-search-src-lib-presenter-enricher-ts",
+      "sourceEvidence": [
+        "packages/search/src/lib/presenter-enricher.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/search/src/lib/presenter-enricher.ts.",
+        "Checked: packages/search/src/lib/presenter-enricher.test.ts, packages/search/src/lib/__tests__/presenter-enricher.test.ts, packages/search/src/lib/presenter-enricher.spec.ts, packages/search/src/lib/__tests__/presenter-enricher.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/search/src/lib/presenter-enricher.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "high",
+      "primaryAreaOwners": [
+        "search"
+      ],
+      "validationProfileIds": [
+        "search-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 94,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "High risk zone penalty.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.475Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-search-src-lib-field-policy-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-search-src-lib-field-policy-ts",
+      "sourceTitle": "tests: add low-level coverage for field-policy.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-search-src-lib-field-policy-ts",
+      "sourceEvidence": [
+        "packages/search/src/lib/field-policy.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/search/src/lib/field-policy.ts.",
+        "Checked: packages/search/src/lib/field-policy.test.ts, packages/search/src/lib/__tests__/field-policy.test.ts, packages/search/src/lib/field-policy.spec.ts, packages/search/src/lib/__tests__/field-policy.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/search/src/lib/field-policy.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "high",
+      "primaryAreaOwners": [
+        "search"
+      ],
+      "validationProfileIds": [
+        "search-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 94,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "High risk zone penalty.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.474Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-search-src-lib-merger-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-search-src-lib-merger-ts",
+      "sourceTitle": "tests: add low-level coverage for merger.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-search-src-lib-merger-ts",
+      "sourceEvidence": [
+        "packages/search/src/lib/merger.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/search/src/lib/merger.ts.",
+        "Checked: packages/search/src/lib/merger.test.ts, packages/search/src/lib/__tests__/merger.test.ts, packages/search/src/lib/merger.spec.ts, packages/search/src/lib/__tests__/merger.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/search/src/lib/merger.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "high",
+      "primaryAreaOwners": [
+        "search"
+      ],
+      "validationProfileIds": [
+        "search-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 94,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "High risk zone penalty.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.474Z"
+    },
+    {
+      "candidateId": "TESTSIG-lowlevel-untested-packages-search-src-lib-debug-ts",
+      "targetId": "open-mercato",
+      "sourceType": "repo_signal",
+      "sourceId": "TESTSIG-lowlevel-untested-packages-search-src-lib-debug-ts",
+      "sourceTitle": "tests: add low-level coverage for debug.ts",
+      "sourceUrl": "repo-signal://TESTSIG-lowlevel-untested-packages-search-src-lib-debug-ts",
+      "sourceEvidence": [
+        "packages/search/src/lib/debug.ts exports runtime logic in a low-level package path.",
+        "No nearby test file was found for packages/search/src/lib/debug.ts.",
+        "Checked: packages/search/src/lib/debug.test.ts, packages/search/src/lib/__tests__/debug.test.ts, packages/search/src/lib/debug.spec.ts, packages/search/src/lib/__tests__/debug.spec.ts ..."
+      ],
+      "candidatePaths": [
+        "packages/search/src/lib/debug.ts"
+      ],
+      "expectedContributionClasses": [
+        "tests",
+        "bugfix"
+      ],
+      "lane": "simple_bugs",
+      "riskZone": "high",
+      "primaryAreaOwners": [
+        "search"
+      ],
+      "validationProfileIds": [
+        "search-package-checks"
+      ],
+      "duplicateRiskClass": "none",
+      "duplicateSignals": [],
+      "score": 94,
+      "scoreReasons": [
+        "Repository signal includes exact local evidence.",
+        "High risk zone penalty.",
+        "Repository signal points at concrete file paths.",
+        "Single-file scope signal."
+      ],
+      "labels": [],
+      "assigneeLogins": [],
+      "comments": 0,
+      "updatedAt": "2026-04-11T20:08:15.473Z"
+    }
+  ],
+  "snapshotPath": "/home/hacker/repo/open-mercato/.workspace/artifacts/discovery/discover-2026-04-11T20-08-15-940Z.json"
+}

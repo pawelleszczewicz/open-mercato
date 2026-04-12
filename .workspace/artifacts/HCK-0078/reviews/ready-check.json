@@ -1,0 +1,31 @@
+{
+  "taskId": "HCK-0078",
+  "prNumber": 1289,
+  "checkedAt": "2026-04-11T21:06:42.315Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": null,
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf[bot]",
+        "createdAt": "2026-04-11T21:03:13Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking findings in the current diff.\n\nThe production change in [appResolver.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0078/packages/shared/src/lib/bootstrap/appResolver.ts:10) correctly stops treating directories named `next.config.*` as valid app configs, and the added coverage in [appResolver.test.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0078/packages/shared/src/lib/bootstrap/__tests__/appResolver.test.ts:24) exercises both affected paths: nearest-root resolution and monorepo app discovery. I did not find a behavioral regression in the touched area.\n\nResidual gap: I could not execute the shared Jest test locally because this worktree lacks Yarn’s `node_modules` state file. The scoped validation artifacts for this task show the same failure in both baseline and worktree runs, so there is no new validation regression attributable to this branch. `git diff --check origin/develop...HEAD` is clean.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T21:06:41Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

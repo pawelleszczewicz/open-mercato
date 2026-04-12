@@ -1,0 +1,18 @@
+{
+  "taskId": "HCK-0064",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T19:25:07.961Z",
+  "branchState": {
+    "changedFiles": [
+      "packages/core/src/modules/core/__integration__/integration/TC-DOCKER-008.spec.ts"
+    ],
+    "addedLines": 387,
+    "removedLines": 0,
+    "totalDiffLines": 387,
+    "branchName": "test/hackon/hck-0064-tests-implement-missing-integration-scenario-tc-docker-008",
+    "headSha": "d70a83f9d7fc7dd078a058bd5c69d48be547ff2e",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}

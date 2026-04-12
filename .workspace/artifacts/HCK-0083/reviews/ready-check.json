@@ -1,0 +1,51 @@
+{
+  "taskId": "HCK-0083",
+  "prNumber": 1307,
+  "checkedAt": "2026-04-11T23:54:57.777Z",
+  "reviewerDirective": "ready",
+  "reviewGate": {
+    "disposition": "ready",
+    "summary": "No unresolved blocking review signals remain.",
+    "latestReviewerDirective": "ready",
+    "requestedChangesReviewActive": false,
+    "unresolvedThreadCount": 0,
+    "disputedThreadCount": 0
+  },
+  "reviewSnapshot": {
+    "reviewDecision": null,
+    "comments": [
+      {
+        "body": "### 🚨 Preview Deployment Blocked - Security Protection\n\n**Your pull request was blocked from triggering preview deployments**\n\n#### Why was this blocked?\n- **User**: `pawelleszczewicz`\n- **Repository**: `open-mercato`\n- **Permission Level**: `read`\n- **Required Level**: `write`, `maintain`, or `admin`\n\n#### How to resolve this:\n\n**Option 1: Get Collaborator Access (Recommended)**\nAsk a repository maintainer to invite you as a collaborator with **write permissions** or higher.\n\n**Option 2: Request Permission Override**\nAsk a repository administrator to disable security validation for this specific application if appropriate.\n\n#### For Repository Administrators:\nTo disable this security check (⚠️ **not recommended for public repositories**):\nEnter to preview settings and disable the security check.\n\n---\n*This security measure protects against malicious code execution in preview deployments. Only trusted collaborators should have the ability to trigger deployments.*\n\n<details>\n<summary>🛡️ Learn more about this security feature</summary>\n\nThis protection prevents unauthorized users from:\n- Executing malicious code on the deployment server\n- Accessing environment variables and secrets\n- Potentially compromising the infrastructure\n\nPreview deployments are powerful but require trust. Only users with repository write access can trigger them.\n</details>",
+        "authorLogin": "dokploy-2026-01-23-pkwvuf[bot]",
+        "createdAt": "2026-04-11T22:40:42Z"
+      },
+      {
+        "body": "[reviewer-agent] Blocking:\n- The added Playwright spec does not validate the behavior changed in [crud.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/api/crud.ts:15). This patch only trims whitespace inside `scope.organizationIds` before building the scoped filter ([crud.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/api/crud.ts:15)), and the updated low-level Jest coverage does exercise that path ([crud.test.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/api/__tests__/crud.test.ts:32)). But the new integration test [TC-UMES-021.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/apps/mercato/src/modules/example/__integration__/TC-UMES-021.spec.ts:16) only builds cookies with exact org IDs and checks cross-organization update/delete behavior ([TC-UMES-021.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/apps/mercato/src/modules/example/__integration__/TC-UMES-021.spec.ts:156), [TC-UMES-021.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/apps/mercato/src/modules/example/__integration__/TC-UMES-021.spec.ts:179), [TC-UMES-021.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/apps/mercato/src/modules/example/__integration__/TC-UMES-021.spec.ts:201)). It never supplies whitespace-padded `organizationIds` or otherwise forces the normalization branch, so it would pass before and after this fix. The branch therefore still lacks the required Playwright evidence for the bug it claims to cover.\n\nScoped verification: `npx jest packages/shared/src/lib/api/__tests__/crud.test.ts --runInBand` passed.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T22:43:35Z"
+      },
+      {
+        "body": "[implementer-agent] Updated: Branch fix/hackon/hck-0083-tests-add-low-level-coverage-for-crud-ts was synchronized by the coordinator.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T23:12:19Z"
+      },
+      {
+        "body": "[reviewer-agent] Blocking:\n- The fix in [crud.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/api/crud.ts:15) is on the wrong side of the failure. In the superadmin tenant-override path, the padded org cookie is preserved as `selectedId` in [organizationScope.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/core/src/modules/directory/utils/organizationScope.ts:103), then converted to `organizationIds = []` in [factory.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/crud/factory.ts:1087), and update/delete still call `buildScopedWhere` with that empty array in [factory.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/crud/factory.ts:2240) and [factory.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/crud/factory.ts:2542). I reproduced this with a scoped Node script against the compiled helpers: padded selected org => `filterIds: []` and `where.organizationId = { $in: [] }`. So the branch does not actually repair the `TC-UMES-021` scenario.\n- The new low-level coverage in [crud.test.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/api/__tests__/crud.test.ts:32) only checks trimming when `organizationIds` already contains padded values. It never exercises the real request path where the padded cookie is turned into an empty scoped filter set upstream, so the added unit test can pass while the regression remains.\n\n`yarn workspace @open-mercato/shared test src/lib/api/__tests__/crud.test.ts --runInBand` passes. I did not run the full Playwright suite.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T23:17:33Z"
+      },
+      {
+        "body": "[implementer-agent] Updated: Branch fix/hackon/hck-0083-tests-add-low-level-coverage-for-crud-ts was synchronized by the coordinator.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T23:50:50Z"
+      },
+      {
+        "body": "[reviewer-agent] Ready: No blocking findings in the reviewed changes for [packages/shared/src/lib/api/crud.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/packages/shared/src/lib/api/crud.ts:5). The `organizationIds` normalization change matches the failure mode exercised by the new low-level tests and the added integration coverage for the superadmin tenant-override path.\n\nScoped verification passed for the touched area: `packages/shared/src/lib/api/__tests__/crud.test.ts`, `packages/shared/src/lib/crud/__tests__/crud-factory.test.ts`, and `packages/core/src/modules/directory/utils/__tests__/organizationScope.test.ts`. I also confirmed the new Playwright spec is discoverable at [apps/mercato/src/modules/example/__integration__/TC-UMES-021.spec.ts](/home/hacker/repo/open-mercato/.workspace/worktrees/open-mercato/HCK-0083/apps/mercato/src/modules/example/__integration__/TC-UMES-021.spec.ts:157). I did not rerun the full Playwright scenario locally.",
+        "authorLogin": "pawelleszczewicz",
+        "createdAt": "2026-04-11T23:54:56Z"
+      }
+    ],
+    "reviews": [],
+    "reviewThreads": []
+  }
+}

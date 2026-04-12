@@ -1,0 +1,19 @@
+{
+  "taskId": "HCK-0077",
+  "prCommand": "open",
+  "preparedAt": "2026-04-11T20:00:31.241Z",
+  "branchState": {
+    "changedFiles": [
+      "apps/docs/docs/user-guide/workflows/creating-workflows.mdx",
+      "apps/docs/static/screenshots/open-mercato-workflows-visual-editor.png"
+    ],
+    "addedLines": 4,
+    "removedLines": 0,
+    "totalDiffLines": 4,
+    "branchName": "docs/hackon/hck-0077-bug-add-screenshot-to-workflows-documentation",
+    "headSha": "9529b8c6813db86af0e8b99ded66017fdbb6ca1e",
+    "aheadBy": 1,
+    "behindBy": 0,
+    "commitCreated": true
+  }
+}
