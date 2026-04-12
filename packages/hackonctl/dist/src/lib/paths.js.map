@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../src/lib/paths.ts"],
+  "sourcesContent": ["import { resolve } from 'node:path'\nimport type { HackonConfig } from '../config/schema'\n\nexport interface WorkspacePaths {\n  root: string\n  targetDir: string\n  worktreeDir: string\n  registryFile: string\n  configFile: string\n}\n\nexport function resolveWorkspacePaths(rootDir: string, config: HackonConfig): WorkspacePaths {\n  return {\n    root: rootDir,\n    targetDir: resolve(rootDir, config.workspace.targetDir),\n    worktreeDir: resolve(rootDir, config.workspace.worktreeDir),\n    registryFile: resolve(rootDir, config.workspace.registryFile),\n    configFile: resolve(rootDir, 'hackonctl.config.json'),\n  }\n}\n\nexport function worktreePath(worktreeDir: string, taskId: string): string {\n  return resolve(worktreeDir, taskId)\n}\n"],
+  "mappings": "AAAA,SAAS,eAAe;AAWjB,SAAS,sBAAsB,SAAiB,QAAsC;AAC3F,SAAO;AAAA,IACL,MAAM;AAAA,IACN,WAAW,QAAQ,SAAS,OAAO,UAAU,SAAS;AAAA,IACtD,aAAa,QAAQ,SAAS,OAAO,UAAU,WAAW;AAAA,IAC1D,cAAc,QAAQ,SAAS,OAAO,UAAU,YAAY;AAAA,IAC5D,YAAY,QAAQ,SAAS,uBAAuB;AAAA,EACtD;AACF;AAEO,SAAS,aAAa,aAAqB,QAAwB;AACxE,SAAO,QAAQ,aAAa,MAAM;AACpC;",
+  "names": []
+}
